@@ -25,12 +25,12 @@ jobs:
           cp -a .github/workflows/gitbook.yaml rollup/docs/.github/workflows/
           cp book.json rollup/docs
           cd rollup/docs
+          mv 00-introduction.md README.md
           npm init -f
           npm install gitbook-summary
           npx book sm -t "[Rollup 英文文档](https://github.com/rollup/rollup)" -i node_modules
           rm -rf node_modules package.json package-lock.json
           ls -la
-          mv 00-introduction.md README.md
       - name: Push docs src
         if: github.event_name == 'push'
         uses: docker://pcit/pages
