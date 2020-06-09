@@ -670,9 +670,9 @@ The location of the generated bundle. If this is an absolute path, all the `sour
 `sourcemapFile` is not required if `output` is specified, in which case an output filename will be inferred by adding ".map"  to the output filename for the bundle.
 
 #### output.sourcemapPathTransform
-Type: `(sourcePath: string) => string`
+Type: `(relativeSourcePath: string, sourcemapPath: string) => string`
 
-A transformation to apply to each path in a sourcemap. For instance the following will change all paths to be relative to the `src` directory.
+A transformation to apply to each path in a sourcemap. `relativeSourcePath` is a relative path from the generated `.map` file to the corresponding source file while `sourcemapPath` is the fully resolved path of the generated sourcemap file.
 
 ```js
 import path from 'path';
@@ -680,9 +680,9 @@ export default ({
   input: 'src/main',
   output: [{
     file: 'bundle.js',
-    sourcemapPathTransform: relativePath => {
-      // will transform e.g. "src/main.js" -> "main.js"
-      return path.relative('src', relativePath)
+    sourcemapPathTransform: (relativeSourcePath, sourcemapPath) => {
+      // will replace relative paths with absolute paths
+      return path.resolve(path.dirname(sourcemapPath), relativeSourcePath)
     },
     format: 'es',
     sourcemap: true
@@ -1279,6 +1279,26 @@ For each key, the first number represents the elapsed time while the second repr
 
 ### Watch options
 
+Type: `{ buildDelay?: number, chokidar?: ChokidarOptions, clearScreen?: boolean, exclude?: string, include?: string, skipWrite?: boolean } | false`<br>
+Default: `{}`<br>
+
+Specify options for watch mode or prevent this configuration from being watched. Specifying `false` is only really useful when an array of configurations is used. In that case, this configuration will not be built or rebuilt on change in watch mode, but it will be built when running Rollup regularly:
+
+```js
+// rollup.config.js
+export default [
+  {
+    input: 'main.js',
+    output: { file: 'bundle.cjs.js', format: 'cjs' }
+  },
+  {
+    input: 'main.js',
+    watch: false,
+    output: { file: 'bundle.es.js', format: 'es' }
+  }
+]
+```
+
 These options only take effect when running Rollup with the `--watch` flag, or using `rollup.watch`.
 
 #### watch.buildDelay
@@ -1299,13 +1319,6 @@ CLI: `--watch.clearScreen`/`--no-watch.clearScreen`<br>
 Default: `true`
 
 Whether to clear the screen when a rebuild is triggered.
-
-#### watch.skipWrite
-Type: `boolean`<br>
-CLI: `--watch.skipWrite`/`--no-watch.skipWrite`<br>
-Default: `false`
-
-Whether to skip the `bundle.write()` step when a rebuild is triggered.
 
 #### watch.exclude
 Type: `string`<br>
@@ -1338,6 +1351,13 @@ export default {
   }
 };
 ```
+
+#### watch.skipWrite
+Type: `boolean`<br>
+CLI: `--watch.skipWrite`/`--no-watch.skipWrite`<br>
+Default: `false`
+
+Whether to skip the `bundle.write()` step when a rebuild is triggered.
 
 ### Deprecated options
 
