@@ -1,7 +1,7 @@
 # [Rollup 英文文档](https://github.com/rollup/rollup)
 
 * [Command Line Interface](01-command-line-reference.md)
-* [Java Script API](02-javascript-api.md)
+* [02 Javascript Api](02-javascript-api.md)
 * [ES Module Syntax](03-es-module-syntax.md)
 * [Tutorial](04-tutorial.md)
 * [Plugin Development](05-plugin-development.md)
