@@ -1,0 +1,694 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Command Line Interface · Rollup 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02-javascript-api.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="01-command-line-reference.html">
+            
+                <a href="01-command-line-reference.html">
+            
+                    
+                    Command Line Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="02-javascript-api.html">
+            
+                <a href="02-javascript-api.html">
+            
+                    
+                    02 Javascript Api
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="03-es-module-syntax.html">
+            
+                <a href="03-es-module-syntax.html">
+            
+                    
+                    ES Module Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04-tutorial.html">
+            
+                <a href="04-tutorial.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="05-plugin-development.html">
+            
+                <a href="05-plugin-development.html">
+            
+                    
+                    Plugin Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="06-faqs.html">
+            
+                <a href="06-faqs.html">
+            
+                    
+                    Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="07-tools.html">
+            
+                <a href="07-tools.html">
+            
+                    
+                    Integrating Rollup With Other Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="08-troubleshooting.html">
+            
+                <a href="08-troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="999-big-list-of-options.html">
+            
+                <a href="999-big-list-of-options.html">
+            
+                    
+                    Big List Of Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Command Line Interface</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Rollup should typically be used from the command line. You can provide an  optional Rollup configuration file to simplify command line usage and enable advanced Rollup functionality.</p>
+<h3 id="configuration-files">Configuration Files</h3>
+<p>Rollup configuration files are optional, but they are powerful and convenient and thus <strong>recommended</strong>. A config file is an ES module that exports a default object with the desired options:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token string">&apos;src/main.js&apos;</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;cjs&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Typically, it is called <code>rollup.config.js</code> and sits in the root directory of your project. Behind the scenes, Rollup will transpile and bundle this file and its relative dependencies to CommonJS before requiring it, which has the advantage that you can share code with an ES module code base while having full interoperability with the Node ecosystem.</p>
+<p>If you want to write your config as a CommonJS module using <code>require</code> and <code>module.exports</code>, you should change the file extension to <code>.cjs</code>, which will prevent Rollup from trying to transpile the file. Furthermore if you are on Node 13+, changing the file extension to <code>.mjs</code> will also prevent Rollup from transpiling it but import the file as an ES module instead. See <a href="guide/en#using-untranspiled-config-files">using untranspiled config files</a> for more details and why you might want to do this.</p>
+<p>Config files support the options listed below. Consult the <a href="guide/en#big-list-of-options">big list of options</a> for details on each option:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// rollup.config.js</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span> <span class="token comment">// can be an array (for multiple inputs)</span>
+  <span class="token comment">// core input options</span>
+  external<span class="token punctuation">,</span>
+  input<span class="token punctuation">,</span> <span class="token comment">// conditionally required</span>
+  plugins<span class="token punctuation">,</span>
+
+  <span class="token comment">// advanced input options</span>
+  cache<span class="token punctuation">,</span>
+  onwarn<span class="token punctuation">,</span>
+  preserveEntrySignatures<span class="token punctuation">,</span>
+  strictDeprecations<span class="token punctuation">,</span>
+
+  <span class="token comment">// danger zone</span>
+  acorn<span class="token punctuation">,</span>
+  acornInjectPlugins<span class="token punctuation">,</span>
+  context<span class="token punctuation">,</span>
+  moduleContext<span class="token punctuation">,</span>
+  preserveSymlinks<span class="token punctuation">,</span>
+  shimMissingExports<span class="token punctuation">,</span>
+  treeshake<span class="token punctuation">,</span>
+
+  <span class="token comment">// experimental</span>
+  experimentalCacheExpiry<span class="token punctuation">,</span>
+  perf<span class="token punctuation">,</span>
+
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment">// required (can be an array, for multiple outputs)</span>
+    <span class="token comment">// core output options</span>
+    dir<span class="token punctuation">,</span>
+    file<span class="token punctuation">,</span>
+    format<span class="token punctuation">,</span> <span class="token comment">// required</span>
+    globals<span class="token punctuation">,</span>
+    name<span class="token punctuation">,</span>
+    plugins<span class="token punctuation">,</span>
+
+    <span class="token comment">// advanced output options</span>
+    assetFileNames<span class="token punctuation">,</span>
+    banner<span class="token punctuation">,</span>
+    chunkFileNames<span class="token punctuation">,</span>
+    compact<span class="token punctuation">,</span>
+    entryFileNames<span class="token punctuation">,</span>
+    extend<span class="token punctuation">,</span>
+    footer<span class="token punctuation">,</span>
+    hoistTransitiveImports<span class="token punctuation">,</span>
+    inlineDynamicImports<span class="token punctuation">,</span>
+    interop<span class="token punctuation">,</span>
+    intro<span class="token punctuation">,</span>
+    manualChunks<span class="token punctuation">,</span>
+    minifyInternalExports<span class="token punctuation">,</span>
+    outro<span class="token punctuation">,</span>
+    paths<span class="token punctuation">,</span>
+    preserveModules<span class="token punctuation">,</span>
+    preserveModulesRoot<span class="token punctuation">,</span>
+    sourcemap<span class="token punctuation">,</span>
+    sourcemapExcludeSources<span class="token punctuation">,</span>
+    sourcemapFile<span class="token punctuation">,</span>
+    sourcemapPathTransform<span class="token punctuation">,</span>
+    validate<span class="token punctuation">,</span>
+
+    <span class="token comment">// danger zone</span>
+    amd<span class="token punctuation">,</span>
+    esModule<span class="token punctuation">,</span>
+    exports<span class="token punctuation">,</span>
+    externalLiveBindings<span class="token punctuation">,</span>
+    freeze<span class="token punctuation">,</span>
+    indent<span class="token punctuation">,</span>
+    namespaceToStringTag<span class="token punctuation">,</span>
+    noConflict<span class="token punctuation">,</span>
+    preferConst<span class="token punctuation">,</span>
+    sanitizeFileName<span class="token punctuation">,</span>
+    strict<span class="token punctuation">,</span>
+    systemNullSetters
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    buildDelay<span class="token punctuation">,</span>
+    chokidar<span class="token punctuation">,</span>
+    clearScreen<span class="token punctuation">,</span>
+    skipWrite<span class="token punctuation">,</span>
+    exclude<span class="token punctuation">,</span>
+    include
+  <span class="token punctuation">}</span> <span class="token operator">|</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>You can export an <strong>array</strong> from your config file to build bundles from several different unrelated inputs at once, even in watch mode. To build different bundles with the same input, you supply an array of output options for each input:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// rollup.config.js (building more than one bundle)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token string">&apos;main-a.js&apos;</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span> <span class="token string">&apos;dist/bundle-a.js&apos;</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;cjs&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token string">&apos;main-b.js&apos;</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      file<span class="token punctuation">:</span> <span class="token string">&apos;dist/bundle-b1.js&apos;</span><span class="token punctuation">,</span>
+      format<span class="token punctuation">:</span> <span class="token string">&apos;cjs&apos;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      file<span class="token punctuation">:</span> <span class="token string">&apos;dist/bundle-b2.js&apos;</span><span class="token punctuation">,</span>
+      format<span class="token punctuation">:</span> <span class="token string">&apos;es&apos;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If you want to create your config asynchronously, Rollup can also handle a <code>Promise</code> which resolves to an object or an array.</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">import</span> fetch <span class="token keyword">from</span> <span class="token string">&apos;node-fetch&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&apos;/some-remote-service-or-file-which-returns-actual-config&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Similarly, you can do this as well:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// rollup.config.js (Promise resolving an array)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&apos;get-config-1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&apos;get-config-2&apos;</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>To use Rollup with a configuration file, pass the <code>--config</code> or <code>-c</code> flags:</p>
+<pre class="language-"><code># pass a custom config file location to Rollup
+rollup --config my.config.js
+
+# if you do not pass a file name, Rollup will try to load
+# configuration files in the following order:
+# rollup.config.mjs -&gt; rollup.config.cjs -&gt; rollup.config.js
+rollup --config
+</code></pre><p>You can also export a function that returns any of the above configuration formats. This function will be passed the current command line arguments so that you can dynamically adapt your configuration to respect e.g. <a href="guide/en#--silent"><code>--silent</code></a>. You can even define your own command line options if you prefix them with <code>config</code>:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">import</span> defaultConfig <span class="token keyword">from</span> <span class="token string">&apos;./rollup.default.config.js&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> debugConfig <span class="token keyword">from</span> <span class="token string">&apos;./rollup.debug.config.js&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token parameter">commandLineArgs</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>commandLineArgs<span class="token punctuation">.</span>configDebug <span class="token operator">===</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> debugConfig<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> defaultConfig<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>If you now run <code>rollup --config --configDebug</code>, the debug configuration will be used.</p>
+<p>By default, command line arguments will always override the respective values exported from a config file. If you want to change this behaviour, you can make Rollup ignore command line arguments by deleting them from the <code>commandLineArgs</code> object:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token parameter">commandLineArgs</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> inputBase <span class="token operator">=</span> commandLineArgs<span class="token punctuation">.</span>input <span class="token operator">||</span> <span class="token string">&apos;main.js&apos;</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// this will make Rollup ignore the CLI argument</span>
+  <span class="token keyword">delete</span> commandLineArgs<span class="token punctuation">.</span>input<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    input<span class="token punctuation">:</span> <span class="token string">&apos;src/entries/&apos;</span> <span class="token operator">+</span> inputBase<span class="token punctuation">,</span>
+    output<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="differences-to-the-javascript-api">Differences to the JavaScript API</h3>
+<p>While config files provide an easy way to configure Rollup, they also limit how Rollup can be invoked and where configuration is taken from. Especially if you are rebundling Rollup in another build tool or want to integrate it into an advanced build process, it may be better to directly invoke Rollup programmatically from your scripts.</p>
+<p>If you want to switch from config files to using the <a href="guide/en#javascript-api">JavaScript API</a> at some point, there are some important differences to be aware of:</p>
+<ul>
+<li>When using the JavaScript API, the configuration passed to <code>rollup.rollup</code> must be an object and cannot be wrapped in a Promise or a function.</li>
+<li>You can no longer use an array of configurations. Instead, you should run <code>rollup.rollup</code> once for each set of <code>inputOptions</code>.</li>
+<li>The <code>output</code> option will be ignored. Instead, you should run <code>bundle.generate(outputOptions)</code> or <code>bundle.write(outputOptions)</code> once for each set of <code>outputOptions</code>.</li>
+</ul>
+<h3 id="loading-a-configuration-from-a-node-package">Loading a configuration from a Node package</h3>
+<p>For interoperability, Rollup also supports loading configuration files from packages installed into <code>node_modules</code>:</p>
+<pre class="language-"><code># this will first try to load the package &quot;rollup-config-my-special-config&quot;;
+# if that fails, it will then try to load &quot;my-special-config&quot;
+rollup --config node:my-special-config
+</code></pre><h3 id="using-untranspiled-config-files">Using untranspiled config files</h3>
+<p>By default, Rollup will expect config files to be ES modules and bundle and transpile them and their relative imports to CommonJS before requiring them. This is a fast process and has the advantage that it is easy to share code between your configuration and an ES module code base. If you want to write your configuration as CommonJS instead, you can skip this process by using the <code>.cjs</code> extension:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// rollup.config.cjs</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token string">&apos;src/main.js&apos;</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;cjs&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>It may be pertinent if you want to use the config file not only from the command line, but also from your custom scripts programmatically.</p>
+<p>On the other hand if you are using at least Node 13 and have <code>&quot;type&quot;: &quot;module&quot;</code> in your <code>package.json</code> file, Rollup&apos;s transpilation will prevent your configuration file from importing packages that are themselves ES modules. In that case, changing your file extension to <code>.mjs</code> will instruct Rollup to import your configuration directly as an ES module. However note that this is specific to Node 13+; on older Node versions, <code>.mjs</code> is treated just like <code>.js</code>.</p>
+<p>There are some potential gotchas when using <code>.mjs</code> on Node 13+:</p>
+<ul>
+<li>You will only get a default export from CommonJS plugins</li>
+<li><p>You may not be able to import JSON files such as your <code>package.json file</code>. There are two ways to go around this:</p>
+<ul>
+<li><p>run Rollup CLI via</p>
+<pre class="language-"><code>node --experimental-json-modules ./node_modules/.bin/rollup --config
+</code></pre></li>
+<li><p>create a CommonJS wrapper that requires the JSON file:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// load-package.cjs</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;./package.json&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// rollup.config.mjs</span>
+<span class="token keyword">import</span> pkg <span class="token keyword">from</span> <span class="token string">&apos;./load-package.cjs&apos;</span><span class="token punctuation">;</span>
+<span class="token operator">...</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="command-line-flags">Command line flags</h3>
+<p>Many options have command line equivalents. In those cases, any arguments passed here will override the config file, if you&apos;re using one. This is a list of all supported options:</p>
+<pre class="language-"><code class="lang-text">-c, --config <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filename</span><span class="token punctuation">&gt;</span></span>     Use this config file (if argument is used but value
+                              is unspecified, defaults to rollup.config.js)
+-d, --dir <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dirname</span><span class="token punctuation">&gt;</span></span>         Directory for chunks (if absent, prints to stdout)
+-e, --external <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ids</span><span class="token punctuation">&gt;</span></span>        Comma-separate list of module IDs to exclude
+-f, --format <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>format</span><span class="token punctuation">&gt;</span></span>       Type of output (amd, cjs, es, iife, umd, system)
+-g, --globals <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pairs</span><span class="token punctuation">&gt;</span></span>       Comma-separate list of `moduleID:Global` pairs
+-h, --help                  Show this help message
+-i, --input <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filename</span><span class="token punctuation">&gt;</span></span>      Input (alternative to <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>entry</span> <span class="token attr-name">file</span><span class="token punctuation">&gt;</span></span>)
+-m, --sourcemap             Generate sourcemap (`-m inline` for inline map)
+-n, --name <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>           Name for UMD export
+-o, --file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>output</span><span class="token punctuation">&gt;</span></span>         Single output file (if absent, prints to stdout)
+-p, --plugin <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>       Use the plugin specified (may be repeated)
+-v, --version               Show version number
+-w, --watch                 Watch files in bundle and rebuild on changes
+--amd.id <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>               ID for AMD module (default is anonymous)
+--amd.autoId                Generate the AMD ID based off the chunk name
+--amd.basePath <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>prefix</span><span class="token punctuation">&gt;</span></span>     Path to prepend to auto generated AMD ID
+--amd.define <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>         Function to use in place of `define`
+--assetFileNames <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pattern</span><span class="token punctuation">&gt;</span></span>  Name pattern for emitted assets
+--banner <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span><span class="token punctuation">&gt;</span></span>             Code to insert at top of bundle (outside wrapper)
+--chunkFileNames <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pattern</span><span class="token punctuation">&gt;</span></span>  Name pattern for emitted secondary chunks
+--compact                   Minify wrapper code
+--context <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>variable</span><span class="token punctuation">&gt;</span></span>        Specify top-level `this` value
+--entryFileNames <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pattern</span><span class="token punctuation">&gt;</span></span>  Name pattern for emitted entry chunks
+--environment <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>values</span><span class="token punctuation">&gt;</span></span>      Settings passed to config file (see example)
+--no-esModule               Do not add __esModule property
+--exports <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mode</span><span class="token punctuation">&gt;</span></span>            Specify export mode (auto, default, named, none)
+--extend                    Extend global variable defined by --name
+--no-externalLiveBindings   Do not generate code to support live bindings
+--failAfterWarnings         Exit with an error if the build produced warnings
+--footer <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span><span class="token punctuation">&gt;</span></span>             Code to insert at end of bundle (outside wrapper)
+--no-freeze                 Do not freeze namespace objects
+--no-hoistTransitiveImports Do not hoist transitive imports into entry chunks
+--no-indent                 Don&apos;t indent result
+--no-interop                Do not include interop block
+--inlineDynamicImports      Create single bundle when using dynamic imports
+--intro <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span><span class="token punctuation">&gt;</span></span>              Code to insert at top of bundle (inside wrapper)
+--minifyInternalExports     Force or disable minification of internal exports
+--namespaceToStringTag      Create proper `.toString` methods for namespaces
+--noConflict                Generate a noConflict method for UMD globals
+--outro <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span><span class="token punctuation">&gt;</span></span>              Code to insert at end of bundle (inside wrapper)
+--preferConst               Use `const` instead of `var` for exports
+--no-preserveEntrySignatures Avoid facade chunks for entry points
+--preserveModules           Preserve module structure
+--preserveModulesRoot       Put preserved modules under this path at root level
+--preserveSymlinks          Do not follow symlinks when resolving files
+--no-sanitizeFileName       Do not replace invalid characters in file names
+--shimMissingExports        Create shim variables for missing exports
+--silent                    Don&apos;t print warnings
+--sourcemapExcludeSources   Do not include source code in source maps
+--sourcemapFile <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span>      Specify bundle position for source maps
+--stdin=ext                 Specify file extension used for stdin input
+--no-stdin                  Do not read &quot;-&quot; from stdin
+--no-strict                 Don&apos;t emit `&quot;use strict&quot;;` in the generated modules
+--strictDeprecations        Throw errors for deprecated features
+--systemNullSetters         Replace empty SystemJS setters with `null`
+--no-treeshake              Disable tree-shaking optimisations
+--no-treeshake.annotations  Ignore pure call annotations
+--no-treeshake.moduleSideEffects Assume modules have no side-effects
+--no-treeshake.propertyReadSideEffects Ignore property access side-effects
+--no-treeshake.tryCatchDeoptimization Do not turn off try-catch-tree-shaking
+--no-treeshake.unknownGlobalSideEffects Assume unknown globals do not throw
+--waitForBundleInput        Wait for bundle input files
+--watch.buildDelay <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span> Throttle watch rebuilds
+--no-watch.clearScreen      Do not clear the screen when rebuilding
+--watch.skipWrite           Do not write files to disk when watching
+--watch.exclude <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>files</span><span class="token punctuation">&gt;</span></span>     Exclude files from being watched
+--watch.include <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>files</span><span class="token punctuation">&gt;</span></span>     Limit watching to specified files
+--validate                  Validate output
+</code></pre>
+<p>The flags listed below are only available via the command line interface. All other flags correspond to and override their config file equivalents, see the <a href="guide/en#big-list-of-options">big list of options</a> for details.</p>
+<h4 id="h--help"><code>-h</code>/<code>--help</code></h4>
+<p>Print the help document.</p>
+<h4 id="p-plugin---plugin-plugin"><code>-p <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span></code>, <code>--plugin <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span></code></h4>
+<p>Use the specified plugin. There are several ways to specify plugins here:</p>
+<ul>
+<li><p>Via a relative path:</p>
+<pre class="language-"><code>rollup -i input.js -f es -p ./my-plugin.js
+</code></pre><p>The file should export a function returning a plugin object.</p>
+</li>
+<li><p>Via the name of a plugin that is installed in a local or global <code>node_modules</code> folder:</p>
+<pre class="language-"><code>rollup -i input.js -f es -p @rollup/plugin-node-resolve
+</code></pre><p>If the plugin name does not start with <code>rollup-plugin-</code> or <code>@rollup/plugin-</code>, Rollup will automatically try adding these prefixes:</p>
+<pre class="language-"><code>rollup -i input.js -f es -p node-resolve
+</code></pre></li>
+<li><p>Via an inline implementation:</p>
+<pre class="language-"><code>rollup -i input.js -f es -p &apos;{transform: (c, i) =&gt; `/* ${JSON.stringify(i)} */\n${c}`}&apos;
+</code></pre></li>
+</ul>
+<p>If you want to load more than one plugin, you can repeat the option or supply a comma-separated list of names:</p>
+<pre class="language-"><code>rollup -i input.js -f es -p node-resolve -p commonjs,json
+</code></pre><p>By default, plugin functions be called with no argument to create the plugin. You can however pass a custom argument as well:</p>
+<pre class="language-"><code>rollup -i input.js -f es -p &apos;terser={output: {beautify: true, indent_level: 2}}&apos;
+</code></pre><h4 id="v--version"><code>-v</code>/<code>--version</code></h4>
+<p>Print the installed version number.</p>
+<h4 id="w--watch"><code>-w</code>/<code>--watch</code></h4>
+<p>Rebuild the bundle when its source files change on disk.</p>
+<p><em>Note: While in watch mode, the <code>ROLLUP_WATCH</code> environment variable will be set to <code>&quot;true&quot;</code> by Rollup&apos;s command line interface and can be checked by other processes. Plugins should instead check <a href="guide/en#thismeta-rollupversion-string-watchmode-boolean"><code>this.meta.watchMode</code></a>, which is independent of the command line interface.</em></p>
+<h4 id="-silent"><code>--silent</code></h4>
+<p>Don&apos;t print warnings to the console. If your configuration file contains an <code>onwarn</code> handler, this handler will still be called. To manually prevent that, you can access the command line options in your configuration file as described at the end of <a href="guide/en#configuration-files">Configuration Files</a>.</p>
+<h4 id="-failafterwarnings"><code>--failAfterWarnings</code></h4>
+<p>Exit the build with an error if any warnings occurred, once the build is complete.</p>
+<h4 id="-environment-values"><code>--environment <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>values</span><span class="token punctuation">&gt;</span></span></code></h4>
+<p>Pass additional settings to the config file via <code>process.ENV</code>.</p>
+<pre class="language-"><code class="lang-sh">rollup -c --environment INCLUDE_DEPS,BUILD:production
+</code></pre>
+<p>will set <code>process.env.INCLUDE_DEPS === &apos;true&apos;</code> and <code>process.env.BUILD === &apos;production&apos;</code>. You can use this option several times. In that case, subsequently set variables will overwrite previous definitions. This enables you for instance to overwrite environment variables in <code>package.json</code> scripts:</p>
+<pre class="language-"><code class="lang-json"><span class="token comment">// in package.json</span>
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;rollup -c --environment INCLUDE_DEPS,BUILD:production&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>If you call this script via:</p>
+<pre class="language-"><code>npm run build -- --environment BUILD:development
+</code></pre><p>then the config file will receive <code>process.env.INCLUDE_DEPS === &apos;true&apos;</code> and <code>process.env.BUILD === &apos;development&apos;</code>.</p>
+<h4 id="-waitforbundleinput"><code>--waitForBundleInput</code></h4>
+<p>This will not throw an error if one of the entry point files is not available. Instead, it will wait until all files are present before starting the build. This is useful, especially in watch mode, when Rollup is consuming the output of another process.</p>
+<h4 id="-stdinext"><code>--stdin=ext</code></h4>
+<p>Specify a virtual file extension when reading content from stdin. By default, Rollup will use the virtual file name <code>-</code> without an extension for content read from stdin. Some plugins, however, rely on file extensions to determine if they should process a file. See also <a href="guide/en#reading-a-file-from-stdin">Reading a file from stdin</a>.</p>
+<h4 id="-no-stdin"><code>--no-stdin</code></h4>
+<p>Do not read files from <code>stdin</code>. Setting this flag will prevent piping content to Rollup and make sure Rollup interprets <code>-</code> and <code>-.[ext]</code> as a regular file names instead of interpreting these as the name of <code>stdin</code>. See also <a href="guide/en#reading-a-file-from-stdin">Reading a file from stdin</a>.</p>
+<h3 id="reading-a-file-from-stdin">Reading a file from stdin</h3>
+<p>When using the command line interface, Rollup can also read content from stdin:</p>
+<pre class="language-"><code>echo &quot;export const foo = 42;&quot; | rollup --format cjs --file out.js
+</code></pre><p>When this file contains imports, Rollup will try to resolve them relative to the current working directory. When a config file is used, Rollup will only use <code>stdin</code> as an entry point if the file name of the entry point is <code>-</code>. To read a non-entry-point file from stdin, just call it <code>-</code>, which is the file name that is used internally to reference <code>stdin</code>. I.e.</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> foo <span class="token keyword">from</span> <span class="token string">&quot;-&quot;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>in any file will prompt Rollup to try to read the imported file from <code>stdin</code> and assign the default export to <code>foo</code>. You can pass the <a href="guide/en#--no-stdin"><code>--no-stdin</code></a> CLI flag to Rollup to treat <code>-</code> as a regular file name instead.</p>
+<p>As some plugins rely on file extensions to process files, you can specify a file extension for stdin via <code>--stdin=ext</code> where <code>ext</code> is the desired extension. In that case, the virtual file name will be <code>-.ext</code>:</p>
+<pre class="language-"><code>echo &apos;{&quot;foo&quot;: 42, &quot;bar&quot;: &quot;ok&quot;}&apos; | rollup --stdin=json -p json
+</code></pre><p>The JavaScript API will always treat <code>-</code> and <code>-.ext</code> as regular file names.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="02-javascript-api.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 02 Javascript Api">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Command Line Interface","level":"1.1","depth":1,"next":{"title":"02 Javascript Api","level":"1.2","depth":1,"path":"02-javascript-api.md","ref":"02-javascript-api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Rollup 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"01-command-line-reference.md","mtime":"2021-05-16T01:16:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-16T01:16:38.048Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

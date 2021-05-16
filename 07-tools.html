@@ -1,0 +1,527 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Integrating Rollup With Other Tools · Rollup 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="08-troubleshooting.html" />
+    
+    
+    <link rel="prev" href="06-faqs.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="01-command-line-reference.html">
+            
+                <a href="01-command-line-reference.html">
+            
+                    
+                    Command Line Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="02-javascript-api.html">
+            
+                <a href="02-javascript-api.html">
+            
+                    
+                    02 Javascript Api
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="03-es-module-syntax.html">
+            
+                <a href="03-es-module-syntax.html">
+            
+                    
+                    ES Module Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04-tutorial.html">
+            
+                <a href="04-tutorial.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="05-plugin-development.html">
+            
+                <a href="05-plugin-development.html">
+            
+                    
+                    Plugin Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="06-faqs.html">
+            
+                <a href="06-faqs.html">
+            
+                    
+                    Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="07-tools.html">
+            
+                <a href="07-tools.html">
+            
+                    
+                    Integrating Rollup With Other Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="08-troubleshooting.html">
+            
+                <a href="08-troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="999-big-list-of-options.html">
+            
+                <a href="999-big-list-of-options.html">
+            
+                    
+                    Big List Of Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Integrating Rollup With Other Tools</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="with-npm-packages">With NPM Packages</h3>
+<p>At some point, it&apos;s likely that your project will depend on packages installed from NPM into your <code>node_modules</code> folder. Unlike other bundlers such as Webpack and Browserify, Rollup doesn&apos;t know &quot;out of the box&quot; how to handle these dependencies - we need to add some configuration.</p>
+<p>Let&apos;s add a simple dependency called <a href="https://www.npmjs.com/package/the-answer" target="_blank">the-answer</a>, which exports the answer to the question of life, the universe and everything:</p>
+<pre class="language-"><code>npm install the-answer
+# or `npm i the-answer`
+</code></pre><p>If we update our <code>src/main.js</code> file&#x2026;</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// src/main.js</span>
+<span class="token keyword">import</span> answer <span class="token keyword">from</span> <span class="token string">&apos;the-answer&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;the answer is &apos;</span> <span class="token operator">+</span> answer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x2026;and run Rollup&#x2026;</p>
+<pre class="language-"><code>npm run build
+</code></pre><p>&#x2026;we&apos;ll see a warning like this:</p>
+<pre class="language-"><code>(!) Unresolved dependencies
+https://github.com/rollup/rollup/wiki/Troubleshooting#treating-module-as-external-dependency
+the-answer (imported by main.js)
+</code></pre><p>The resulting <code>bundle.js</code> will still work in Node.js, because the <code>import</code> declaration gets turned into a CommonJS <code>require</code> statement, but <code>the-answer</code> does <em>not</em> get included in the bundle. For that, we need a plugin.</p>
+<h4 id="rollupplugin-node-resolve">@rollup/plugin-node-resolve</h4>
+<p>The <a href="https://github.com/rollup/plugins/tree/master/packages/node-resolve" target="_blank">@rollup/plugin-node-resolve</a> plugin teaches Rollup how to find external modules. Install it&#x2026;</p>
+<pre class="language-"><code>npm install --save-dev @rollup/plugin-node-resolve
+</code></pre><p>&#x2026;and add it to your config file:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">import</span> resolve <span class="token keyword">from</span> <span class="token string">&apos;@rollup/plugin-node-resolve&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token string">&apos;src/main.js&apos;</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;cjs&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>This time, when you <code>npm run build</code>, no warning is emitted &#x2014; the bundle contains the imported module.</p>
+<h4 id="rollupplugin-commonjs">@rollup/plugin-commonjs</h4>
+<p>Some libraries expose ES modules that you can import as-is &#x2014; <code>the-answer</code> is one such module. But at the moment, the majority of packages on NPM are exposed as CommonJS modules instead. Until that changes, we need to convert CommonJS to ES2015 before Rollup can process them.</p>
+<p>The <a href="https://github.com/rollup/plugins/tree/master/packages/commonjs" target="_blank">@rollup/plugin-commonjs</a> plugin does exactly that.</p>
+<p>Note that most of the times <code>@rollup/plugin-commonjs</code> should go <em>before</em> other plugins that transform your modules &#x2014; this is to prevent other plugins from making changes that break the CommonJS detection. An exception for this rule is the Babel plugin, if you&apos;re using it then place it before the commonjs one.</p>
+<h3 id="peer-dependencies">Peer dependencies</h3>
+<p>Let&apos;s say that you&apos;re building a library that has a peer dependency, such as React or Lodash. If you set up externals as described above, your rollup will bundle <em>all</em> imports:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> answer <span class="token keyword">from</span> <span class="token string">&apos;the-answer&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> _ <span class="token keyword">from</span> <span class="token string">&apos;lodash&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>You can finely tune which imports are bundled and which are treated as external. For this example, we&apos;ll treat <code>lodash</code> as external, but not <code>the-answer</code>.</p>
+<p>Here is the config file:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">import</span> resolve <span class="token keyword">from</span> <span class="token string">&apos;@rollup/plugin-node-resolve&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token string">&apos;src/main.js&apos;</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;cjs&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// pass custom options to the resolve plugin</span>
+    customResolveOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      moduleDirectory<span class="token punctuation">:</span> <span class="token string">&apos;node_modules&apos;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token comment">// indicate which modules should be treated as external</span>
+  external<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;lodash&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Voil&#xE0;, <code>lodash</code> will now be treated as external, and not be bundled with your library.</p>
+<p>The <code>external</code> key accepts either an array of module names, or a function which takes the module name and returns true if it should be treated as external. For example:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token function-variable function">external</span><span class="token punctuation">:</span> <span class="token parameter">id</span> <span class="token operator">=&gt;</span> <span class="token regex">/lodash/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>You might use this form if you&apos;re using <a href="https://github.com/lodash/babel-plugin-lodash" target="_blank">babel-plugin-lodash</a> to cherry-pick <code>lodash</code> modules. In this case, Babel will convert your import statements to look like this:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> _merge <span class="token keyword">from</span> <span class="token string">&apos;lodash/merge&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The array form of <code>external</code> does not handle wildcards, so this import will only be treated as external in the functional form.</p>
+<h3 id="babel">Babel</h3>
+<p>Many developers use <a href="https://babeljs.io/" target="_blank">Babel</a> in their projects in order to use the latest JavaScript features that aren&apos;t yet supported by browsers and Node.js.</p>
+<p>The easiest way to use both Babel and Rollup is with <a href="https://github.com/rollup/plugins/tree/master/packages/babel" target="_blank">@rollup/plugin-babel</a>. First, install the plugin:</p>
+<pre class="language-"><code>npm i -D @rollup/plugin-babel @rollup/plugin-node-resolve
+</code></pre><p>Add it to <code>rollup.config.js</code>:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">import</span> resolve <span class="token keyword">from</span> <span class="token string">&apos;@rollup/plugin-node-resolve&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> babel <span class="token keyword">from</span> <span class="token string">&apos;@rollup/plugin-babel&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token string">&apos;src/main.js&apos;</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;cjs&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">babel</span><span class="token punctuation">(</span><span class="token punctuation">{</span> babelHelpers<span class="token punctuation">:</span> <span class="token string">&apos;bundled&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Before Babel will actually compile your code, it needs to be configured. Create a new file, <code>src/.babelrc.json</code>:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;presets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;@babel/env&quot;</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>We&apos;re putting our <code>.babelrc.json</code> file in <code>src</code>, rather than the project root. This allows us to have a different <code>.babelrc.json</code> for things like tests, if we need that later &#x2013; See the <a href="https://babeljs.io/docs/en/config-files#project-wide-configuration" target="_blank">Babel documentation</a> for more information on both project wide and file relative configuration. </p>
+<p>Now, before we run rollup, we need to install
+<a href="https://babeljs.io/docs/en/babel-core" target="_blank"><code>babel-core</code></a>
+and the
+<a href="https://babeljs.io/docs/en/babel-preset-env" target="_blank"><code>env</code></a>
+preset:</p>
+<pre class="language-"><code>npm i -D @babel/core @babel/preset-env
+</code></pre><p>Running Rollup now will create a bundle - except we&apos;re not actually using any ES2015 features. Let&apos;s change that by editing <code>src/main.js</code>:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// src/main.js</span>
+<span class="token keyword">import</span> answer <span class="token keyword">from</span> <span class="token string">&apos;the-answer&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">the answer is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>answer<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Run Rollup with <code>npm run build</code>, and check the bundle:</p>
+<pre class="language-"><code class="lang-js"><span class="token string">&apos;use strict&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> index <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> main <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;the answer is &apos;</span> <span class="token operator">+</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> main<span class="token punctuation">;</span>
+</code></pre>
+<h3 id="gulp">Gulp</h3>
+<p>Rollup returns Promises which are understood by gulp so integration is relatively painless.</p>
+<p>The syntax is very similar to the configuration file, but the properties are split across two different operations corresponding to the <a href="guide/en#javascript-api">JavaScript API</a>:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> gulp <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;gulp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> rollup <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;rollup&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> rollupTypescript <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;@rollup/plugin-typescript&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">&apos;build&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> rollup<span class="token punctuation">.</span><span class="token function">rollup</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    input<span class="token punctuation">:</span> <span class="token string">&apos;./src/main.ts&apos;</span><span class="token punctuation">,</span>
+    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token function">rollupTypescript</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">bundle</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> bundle<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      file<span class="token punctuation">:</span> <span class="token string">&apos;./dist/library.js&apos;</span><span class="token punctuation">,</span>
+      format<span class="token punctuation">:</span> <span class="token string">&apos;umd&apos;</span><span class="token punctuation">,</span>
+      name<span class="token punctuation">:</span> <span class="token string">&apos;library&apos;</span><span class="token punctuation">,</span>
+      sourcemap<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>You may also use the <code>async/await</code> syntax:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> gulp <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;gulp&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> rollup <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;rollup&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> rollupTypescript <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;@rollup/plugin-typescript&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">&apos;build&apos;</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> bundle <span class="token operator">=</span> <span class="token keyword">await</span> rollup<span class="token punctuation">.</span><span class="token function">rollup</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    input<span class="token punctuation">:</span> <span class="token string">&apos;./src/main.ts&apos;</span><span class="token punctuation">,</span>
+    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token function">rollupTypescript</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">await</span> bundle<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span> <span class="token string">&apos;./dist/library.js&apos;</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;umd&apos;</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">&apos;library&apos;</span><span class="token punctuation">,</span>
+    sourcemap<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06-faqs.html" class="navigation navigation-prev " aria-label="Previous page: Frequently Asked Questions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="08-troubleshooting.html" class="navigation navigation-next " aria-label="Next page: Troubleshooting">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Integrating Rollup With Other Tools","level":"1.7","depth":1,"next":{"title":"Troubleshooting","level":"1.8","depth":1,"path":"08-troubleshooting.md","ref":"08-troubleshooting.md","articles":[]},"previous":{"title":"Frequently Asked Questions","level":"1.6","depth":1,"path":"06-faqs.md","ref":"06-faqs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Rollup 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"07-tools.md","mtime":"2021-05-16T01:16:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-16T01:16:38.048Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

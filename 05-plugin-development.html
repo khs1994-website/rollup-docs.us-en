@@ -1,0 +1,1155 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Plugin Development · Rollup 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06-faqs.html" />
+    
+    
+    <link rel="prev" href="04-tutorial.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="01-command-line-reference.html">
+            
+                <a href="01-command-line-reference.html">
+            
+                    
+                    Command Line Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="02-javascript-api.html">
+            
+                <a href="02-javascript-api.html">
+            
+                    
+                    02 Javascript Api
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="03-es-module-syntax.html">
+            
+                <a href="03-es-module-syntax.html">
+            
+                    
+                    ES Module Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04-tutorial.html">
+            
+                <a href="04-tutorial.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="05-plugin-development.html">
+            
+                <a href="05-plugin-development.html">
+            
+                    
+                    Plugin Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="06-faqs.html">
+            
+                <a href="06-faqs.html">
+            
+                    
+                    Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="07-tools.html">
+            
+                <a href="07-tools.html">
+            
+                    
+                    Integrating Rollup With Other Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="08-troubleshooting.html">
+            
+                <a href="08-troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="999-big-list-of-options.html">
+            
+                <a href="999-big-list-of-options.html">
+            
+                    
+                    Big List Of Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Plugin Development</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="plugins-overview">Plugins Overview</h3>
+<p>A Rollup plugin is an object with one or more of the <a href="guide/en#properties">properties</a>, <a href="guide/en#build-hooks">build hooks</a>, and <a href="guide/en#output-generation-hooks">output generation hooks</a> described below, and which follows our <a href="guide/en#conventions">conventions</a>. A plugin should be distributed as a package which exports a function that can be called with plugin specific options and returns such an object.</p>
+<p>Plugins allow you to customise Rollup&apos;s behaviour by, for example, transpiling code before bundling, or finding third-party modules in your <code>node_modules</code> folder. For an example on how to use them, see <a href="guide/en#using-plugins">Using plugins</a>.</p>
+<p>A List of Plugins may be found at <a href="https://github.com/rollup/awesome" target="_blank">github.com/rollup/awesome</a>. If you would like to make a suggestion for a plugin, please submit a Pull Request.</p>
+<h3 id="a-simple-example">A Simple Example</h3>
+<p>The following plugin will intercept any imports of <code>virtual-module</code> without accessing the file system. This is for instance necessary if you want to use Rollup in a browser. It can even be used to replace entry points as shown in the example.</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup-plugin-my-example.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">myExample</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">&apos;my-example&apos;</span><span class="token punctuation">,</span> <span class="token comment">// this name will show up in warnings and errors</span>
+    <span class="token function">resolveId</span> <span class="token punctuation">(</span> <span class="token parameter">source</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>source <span class="token operator">===</span> <span class="token string">&apos;virtual-module&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> source<span class="token punctuation">;</span> <span class="token comment">// this signals that rollup should not ask other plugins or check the file system to find this id</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// other ids should be handled as usually</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">load</span> <span class="token punctuation">(</span> <span class="token parameter">id</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>id <span class="token operator">===</span> <span class="token string">&apos;virtual-module&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&apos;export default &quot;This is virtual!&quot;&apos;</span><span class="token punctuation">;</span> <span class="token comment">// the source code for &quot;virtual-module&quot;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// other ids should be handled as usually</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// rollup.config.js</span>
+<span class="token keyword">import</span> myExample <span class="token keyword">from</span> <span class="token string">&apos;./rollup-plugin-my-example.js&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token string">&apos;virtual-module&apos;</span><span class="token punctuation">,</span> <span class="token comment">// resolved by our plugin</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token function">myExample</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;es&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="conventions">Conventions</h3>
+<ul>
+<li>Plugins should have a clear name with <code>rollup-plugin-</code> prefix.</li>
+<li>Include <code>rollup-plugin</code> keyword in <code>package.json</code>.</li>
+<li>Plugins should be tested. We recommend <a href="https://github.com/mochajs/mocha" target="_blank">mocha</a> or <a href="https://github.com/avajs/ava" target="_blank">ava</a> which support promises out of the box.</li>
+<li>Use asynchronous methods when it is possible.</li>
+<li>Document your plugin in English.</li>
+<li>Make sure your plugin outputs correct source mappings if appropriate.</li>
+<li>If your plugin uses &apos;virtual modules&apos; (e.g. for helper functions), prefix the module ID with <code>\0</code>. This prevents other plugins from trying to process it.</li>
+</ul>
+<h3 id="properties">Properties</h3>
+<h4 id="name"><code>name</code></h4>
+<p>Type: <code>string</code></p>
+<p>The name of the plugin, for use in error messages and warnings.</p>
+<h3 id="build-hooks">Build Hooks</h3>
+<p>To interact with the build process, your plugin object includes &apos;hooks&apos;. Hooks are functions which are called at various stages of the build. Hooks can affect how a build is run, provide information about a build, or modify a build once complete. There are different kinds of hooks:</p>
+<ul>
+<li><code>async</code>: The hook may also return a promise resolving to the same type of value; otherwise, the hook is marked as <code>sync</code>.</li>
+<li><code>first</code>: If several plugins implement this hook, the hooks are run sequentially until a hook returns a value other than <code>null</code> or <code>undefined</code>.</li>
+<li><code>sequential</code>: If several plugins implement this hook, all of them will be run in the specified plugin order. If a hook is async, subsequent hooks of this kind will wait until the current hook is resolved.</li>
+<li><code>parallel</code>: If several plugins implement this hook, all of them will be run in the specified plugin order. If a hook is async, subsequent hooks of this kind will be run in parallel and not wait for the current hook.</li>
+</ul>
+<p>Build hooks are run during the build phase, which is triggered by <code>rollup.rollup(inputOptions)</code>. They are mainly concerned with locating, providing and transforming input files before they are processed by Rollup. The first hook of the build phase is <a href="guide/en#options"><code>options</code></a>, the last one is always <a href="guide/en#buildend"><code>buildEnd</code></a>, unless there is a build error in which case <a href="guide/en#closebundle"><code>closeBundle</code></a> will be called after that.</p>
+<p>Additionally, in watch mode the <a href="guide/en#watchchange"><code>watchChange</code></a> hook can be triggered at any time to notify a new run will be triggered once the current run has generated its outputs. Also, when watcher closes, the <a href="guide/en#closewatcher"><code>closeWatcher</code></a> hook will be triggered.</p>
+<p>See <a href="guide/en#output-generation-hooks">Output Generation Hooks</a> for hooks that run during the output generation phase to modify the generated output.</p>
+<h4 id="buildend"><code>buildEnd</code></h4>
+<p>Type: <code>(error?: Error) =&gt; void</code><br>
+Kind: <code>async, parallel</code><br>
+Previous Hook: <a href="guide/en#moduleparsed"><code>moduleParsed</code></a>, <a href="guide/en#resolveid"><code>resolveId</code></a> or <a href="guide/en#resolvedynamicimport"><code>resolveDynamicImport</code></a>.<br>
+Next Hook: <a href="guide/en#outputoptions"><code>outputOptions</code></a> in the output generation phase as this is the last hook of the build phase.</p>
+<p>Called when rollup has finished bundling, but before <code>generate</code> or <code>write</code> is called; you can also return a Promise. If an error occurred during the build, it is passed on to this hook.</p>
+<h4 id="buildstart"><code>buildStart</code></h4>
+<p>Type: <code>(options: InputOptions) =&gt; void</code><br>
+Kind: <code>async, parallel</code><br>
+Previous Hook: <a href="guide/en#options"><code>options</code></a><br>
+Next Hook: <a href="guide/en#resolveid"><code>resolveId</code></a> to resolve each entry point in parallel.</p>
+<p>Called on each <code>rollup.rollup</code> build. This is the recommended hook to use when you need access to the options passed to <code>rollup.rollup()</code> as it takes the transformations by all <a href="guide/en#options"><code>options</code></a> hooks into account and also contains the right default values for unset options.</p>
+<h4 id="closewatcher"><code>closeWatcher</code></h4>
+<p>Type: <code>() =&gt; void</code><br>
+Kind: <code>sync, sequential</code><br>
+Previous/Next Hook: This hook can be triggered at any time both during the build and the output generation phases. If that is the case, the current build will still proceed but no new <a href="guide/en#watchchange"><code>watchChange</code></a> events will be triggered ever.</p>
+<p>Notifies a plugin when watcher process closes and all open resources should be closed too. This hook cannot be used by output plugins.</p>
+<h4 id="load"><code>load</code></h4>
+<p>Type: <code>(id: string) =&gt; string | null | {code: string, map?: string | SourceMap, ast? : ESTree.Program, moduleSideEffects?: boolean | &quot;no-treeshake&quot; | null, syntheticNamedExports?: boolean | string | null, meta?: {[plugin: string]: any} | null}</code><br>
+Kind: <code>async, first</code><br>
+Previous Hook: <a href="guide/en#resolveid"><code>resolveId</code></a> or <a href="guide/en#resolvedynamicimport"><code>resolveDynamicImport</code></a> where the loaded id was resolved.<br>
+Next Hook: <a href="guide/en#transform"><code>transform</code></a> to transform the loaded file.</p>
+<p>Defines a custom loader. Returning <code>null</code> defers to other <code>load</code> functions (and eventually the default behavior of loading from the file system). To prevent additional parsing overhead in case e.g. this hook already used <code>this.parse</code> to generate an AST for some reason, this hook can optionally return a <code>{ code, ast, map }</code> object. The <code>ast</code> must be a standard ESTree AST with <code>start</code> and <code>end</code> properties for each node. If the transformation does not move code, you can preserve existing sourcemaps by setting <code>map</code> to <code>null</code>. Otherwise you might need to generate the source map. See <a href="#source-code-transformations">the section on source code transformations</a>.</p>
+<p>If <code>false</code> is returned for <code>moduleSideEffects</code> and no other module imports anything from this module, then this module will not be included in the bundle even if the module would have side-effects. If <code>true</code> is returned, Rollup will use its default algorithm to include all statements in the module that have side-effects (such as modifying a global or exported variable). If <code>&quot;no-treeshake&quot;</code> is returned, treeshaking will be turned off for this module and it will also be included in one of the generated chunks even if it is empty. If <code>null</code> is returned or the flag is omitted, then <code>moduleSideEffects</code> will be determined by the first <code>resolveId</code> hook that resolved this module, the <code>treeshake.moduleSideEffects</code> option, or eventually default to <code>true</code>. The <code>transform</code> hook can override this.</p>
+<p>See <a href="guide/en#synthetic-named-exports">synthetic named exports</a> for the effect of the <code>syntheticNamedExports</code> option. If <code>null</code> is returned or the flag is omitted, then <code>syntheticNamedExports</code> will be determined by the first <code>resolveId</code> hook that resolved this module or eventually default to <code>false</code>. The <code>transform</code> hook can override this.</p>
+<p>See <a href="guide/en#custom-module-meta-data">custom module meta-data</a> for how to use the <code>meta</code> option. If a <code>meta</code> object is returned by this hook, it will be merged shallowly with any <code>meta</code> object returned by the resolveId hook. If no hook returns a <code>meta</code> object it will default to an empty object. The <code>transform</code> hook can further add or replace properties of this object.</p>
+<p>You can use <a href="guide/en#thisgetmoduleinfomoduleid-string--moduleinfo--null"><code>this.getModuleInfo</code></a> to find out the previous values of <code>moduleSideEffects</code>, <code>syntheticNamedExports</code> and <code>meta</code> inside this hook.</p>
+<h4 id="moduleparsed"><code>moduleParsed</code></h4>
+<p>Type: <code>(moduleInfo: ModuleInfo) =&gt; void</code><br>
+Kind: <code>async, parallel</code><br>
+Previous Hook: <a href="guide/en#transform"><code>transform</code></a> where the currently handled file was transformed.<br>
+NextHook: <a href="guide/en#resolveid"><code>resolveId</code></a> and <a href="guide/en#resolvedynamicimport"><code>resolveDynamicImport</code></a> to resolve all discovered static and dynamic imports in parallel if present, otherwise <a href="guide/en#buildend"><code>buildEnd</code></a>.</p>
+<p>This hook is called each time a module has been fully parsed by Rollup. See <a href="guide/en#thisgetmoduleinfomoduleid-string--moduleinfo--null"><code>this.getModuleInfo</code></a> for what information is passed to this hook.</p>
+<p>In contrast to the <a href="guide/en#transform"><code>transform</code></a> hook, this hook is never cached and can be used to get information about both cached and other modules, including the final shape of the <code>meta</code> property, the <code>code</code> and the <code>ast</code>.</p>
+<p>Note that information about imported modules is not yet available in this hook, and information about importing modules may be incomplete as additional importers could be discovered later. If you need this information, use the <a href="guide/en#buildend"><code>buildEnd</code></a> hook.</p>
+<h4 id="options"><code>options</code></h4>
+<p>Type: <code>(options: InputOptions) =&gt; InputOptions | null</code><br>
+Kind: <code>async, sequential</code><br>
+Previous Hook: This is the first hook of the build phase.<br>
+Next Hook: <a href="guide/en#buildstart"><code>buildStart</code></a></p>
+<p>Replaces or manipulates the options object passed to <code>rollup.rollup</code>. Returning <code>null</code> does not replace anything. If you just need to read the options, it is recommended to use the <a href="guide/en#buildstart"><code>buildStart</code></a> hook as that hook has access to the options after the transformations from all <code>options</code> hooks have been taken into account.</p>
+<p>This is the only hook that does not have access to most <a href="guide/en#plugin-context">plugin context</a> utility functions as it is run before rollup is fully configured.</p>
+<h4 id="resolvedynamicimport"><code>resolveDynamicImport</code></h4>
+<p>Type: <code>(specifier: string | ESTree.Node, importer: string) =&gt; string | false | null | {id: string, external?: boolean}</code><br>
+Kind: <code>async, first</code><br>
+Previous Hook: <a href="guide/en#moduleparsed"><code>moduleParsed</code></a> for the importing file.<br>
+Next Hook: <a href="guide/en#load"><code>load</code></a> if the hook resolved with an id that has not yet been loaded, <a href="guide/en#resolveid"><code>resolveId</code></a> if the dynamic import contains a string and was not resolved by the hook, otherwise <a href="guide/en#buildend"><code>buildEnd</code></a>.</p>
+<p>Defines a custom resolver for dynamic imports. Returning <code>false</code> signals that the import should be kept as it is and not be passed to other resolvers thus making it external. Similar to the <a href="guide/en#resolveid"><code>resolveId</code></a> hook, you can also return an object to resolve the import to a different id while marking it as external at the same time.</p>
+<p>In case a dynamic import is passed a string as argument, a string returned from this hook will be interpreted as an existing module id while returning <code>null</code> will defer to other resolvers and eventually to <code>resolveId</code> .</p>
+<p>In case a dynamic import is not passed a string as argument, this hook gets access to the raw AST nodes to analyze and behaves slightly different in the following ways:</p>
+<ul>
+<li>If all plugins return <code>null</code>, the import is treated as <code>external</code> without a warning.</li>
+<li>If a string is returned, this string is <em>not</em> interpreted as a module id but is instead used as a replacement for the import argument. It is the responsibility of the plugin to make sure the generated code is valid.</li>
+<li>To resolve such an import to an existing module, you can still return an object <code>{id, external}</code>.</li>
+</ul>
+<p>Note that the return value of this hook will not be passed to <code>resolveId</code> afterwards; if you need access to the static resolution algorithm, you can use <a href="guide/en#thisresolvesource-string-importer-string-options-skipself-boolean-custom-plugin-string-any--promiseid-string-external-boolean-modulesideeffects-boolean--no-treeshake-syntheticnamedexports-boolean--string-meta-plugin-string-any--null"><code>this.resolve(source, importer)</code></a> on the plugin context.</p>
+<h4 id="resolveid"><code>resolveId</code></h4>
+<p>Type: <code>(source: string, importer: string | undefined, options: {custom?: {[plugin: string]: any}) =&gt; string | false | null | {id: string, external?: boolean | &quot;relative&quot; | &quot;absolute&quot;, moduleSideEffects?: boolean | &quot;no-treeshake&quot; | null, syntheticNamedExports?: boolean | string | null, meta?: {[plugin: string]: any} | null}</code><br>
+Kind: <code>async, first</code><br>
+Previous Hook: <a href="guide/en#buildstart"><code>buildStart</code></a> if we are resolving an entry point, <a href="guide/en#moduleparsed"><code>moduleParsed</code></a> if we are resolving an import, or as fallback for <a href="guide/en#resolvedynamicimport"><code>resolveDynamicImport</code></a>. Additionally this hook can be triggered during the build phase from plugin hooks by calling <a href="guide/en#thisemitfileemittedfile-emittedchunk--emittedasset--string"><code>this.emitFile</code></a> to emit an entry point or at any time by calling <a href="guide/en#thisresolvesource-string-importer-string-options-skipself-boolean-custom-plugin-string-any--promiseid-string-external-boolean-modulesideeffects-boolean--no-treeshake-syntheticnamedexports-boolean--string-meta-plugin-string-any--null"><code>this.resolve</code></a> to manually resolve an id.<br>
+Next Hook: <a href="guide/en#load"><code>load</code></a> if the resolved id that has not yet been loaded, otherwise <a href="guide/en#buildend"><code>buildEnd</code></a>.</p>
+<p>Defines a custom resolver. A resolver can be useful for e.g. locating third-party dependencies. Here <code>source</code> is the importee exactly as it is written in the import statement, i.e. for</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> foo <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;../bar.js&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>the source will be <code>&quot;../bar.js&quot;&quot;</code>. </p>
+<p>The <code>importer</code> is the fully resolved id of the importing module. When resolving entry points, importer will be <code>undefined</code>. You can use this for instance as a mechanism to define custom proxy modules for entry points. </p>
+<p>The following plugin will only expose the default export from entry points while still keeping named exports available for internal usage:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">async</span> <span class="token function">resolveId</span><span class="token punctuation">(</span><span class="token parameter">source<span class="token punctuation">,</span>importer</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>importer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// We need to skip this plugin to avoid an infinite loop</span>
+    <span class="token keyword">const</span> resolution <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>source<span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> skipSelf<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// If it cannot be resolved, return `null` so that Rollup displays an error</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>resolution<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>resolution<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">?entry-proxy</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token function">load</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>id<span class="token punctuation">.</span><span class="token function">endsWith</span><span class="token punctuation">(</span><span class="token string">&apos;?entry-proxy&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> importee <span class="token operator">=</span> id<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token string">&apos;?entry-proxy&apos;</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Note that this will throw if there is no default export</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">export {default} from &apos;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>importee<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&apos;;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Returning <code>null</code> defers to other <code>resolveId</code> functions and eventually the default resolution behavior. Returning <code>false</code> signals that <code>source</code> should be treated as an external module and not included in the bundle. If this happens for a relative import, the id will be renormalized the same way as when the <code>external</code> option is used.</p>
+<p>If you return an object, then it is possible to resolve an import to a different id while excluding it from the bundle at the same time. This allows you to replace dependencies with external dependencies without the need for the user to mark them as &quot;external&quot; manually via the <code>external</code> option:</p>
+<pre class="language-"><code class="lang-js"><span class="token function">resolveId</span><span class="token punctuation">(</span><span class="token parameter">source</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>source <span class="token operator">===</span> <span class="token string">&apos;my-dependency&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>id<span class="token punctuation">:</span> <span class="token string">&apos;my-dependency-develop&apos;</span><span class="token punctuation">,</span> external<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>If <code>external</code> is <code>true</code>, then absolute ids will be converted to relative ids based on the user&apos;s choice for the <a href="guide/en#makeabsoluteexternalsrelative"><code>makeAbsoluteExternalsRelative</code></a> option. This choice can be overridden by passing either <code>external: &quot;relative&quot;</code> to always convert an absolute id to a relative id or <code>external: &quot;absolute&quot;</code> to keep it as an absolute id. When returning an object, relative external ids, i.e. ids starting with <code>./</code> or <code>../</code>, will <em>not</em> be internally converted to an absolute id and converted back to a relative id in the output, but are instead included in the output unchanged. If you want relative ids to be renormalised and deduplicated instead, return an absolute file system location as <code>id</code> and choose <code>external: &quot;relative&quot;</code>.</p>
+<p>If <code>false</code> is returned for <code>moduleSideEffects</code> in the first hook that resolves a module id and no other module imports anything from this module, then this module will not be included even if the module would have side-effects. If <code>true</code> is returned, Rollup will use its default algorithm to include all statements in the module that have side-effects (such as modifying a global or exported variable). If <code>&quot;no-treeshake&quot;</code> is returned, treeshaking will be turned off for this module and it will also be included in one of the generated chunks even if it is empty. If <code>null</code> is returned or the flag is omitted, then <code>moduleSideEffects</code> will be determined by the <code>treeshake.moduleSideEffects</code> option or default to <code>true</code>. The <code>load</code> and <code>transform</code> hooks can override this.</p>
+<p>See <a href="guide/en#synthetic-named-exports">synthetic named exports</a> for the effect of the <code>syntheticNamedExports</code> option. If <code>null</code> is returned or the flag is omitted, then <code>syntheticNamedExports</code> will default to <code>false</code>. The <code>load</code> and <code>transform</code> hooks can override this.</p>
+<p>See <a href="guide/en#custom-module-meta-data">custom module meta-data</a> for how to use the <code>meta</code> option. If <code>null</code> is returned or the option is omitted, then <code>meta</code> will default to an empty object. The <code>load</code> and <code>transform</code> hooks can add or replace properties of this object.</p>
+<p>When triggering this hook from a plugin via <a href="guide/en#thisresolvesource-string-importer-string-options-skipself-boolean-custom-plugin-string-any--promiseid-string-external-boolean-modulesideeffects-boolean--no-treeshake-syntheticnamedexports-boolean--string-meta-plugin-string-any--null"><code>this.resolve(source, importer, options)</code></a>, it is possible to pass a custom options object to this hook. While this object will be passed unmodified, plugins should follow the convention of adding a <code>custom</code> property with an object where the keys correspond to the names of the plugins that the options are intended for. For details see <a href="guide/en#custom-resolver-options">custom resolver options</a>.</p>
+<h4 id="transform"><code>transform</code></h4>
+<p>Type: <code>(code: string, id: string) =&gt; string | null | {code?: string, map?: string | SourceMap, ast? : ESTree.Program, moduleSideEffects?: boolean | &quot;no-treeshake&quot; | null, syntheticNamedExports?: boolean | string | null, meta?: {[plugin: string]: any} | null}</code><br>
+Kind: <code>async, sequential</code><br>
+Previous Hook: <a href="guide/en#load"><code>load</code></a> where the currently handled file was loaded.<br>
+NextHook: <a href="guide/en#moduleparsed"><code>moduleParsed</code></a> once the file has been processed and parsed.</p>
+<p>Can be used to transform individual modules. To prevent additional parsing overhead in case e.g. this hook already used <code>this.parse</code> to generate an AST for some reason, this hook can optionally return a <code>{ code, ast, map }</code> object. The <code>ast</code> must be a standard ESTree AST with <code>start</code> and <code>end</code> properties for each node. If the transformation does not move code, you can preserve existing sourcemaps by setting <code>map</code> to <code>null</code>. Otherwise you might need to generate the source map. See <a href="#source-code-transformations">the section on source code transformations</a>.</p>
+<p>Note that in watch mode, the result of this hook is cached when rebuilding and the hook is only triggered again for a module <code>id</code> if either the <code>code</code> of the module has changed or a file has changed that was added via <code>this.addWatchFile</code> the last time the hook was triggered for this module.</p>
+<p>You can also use the object form of the return value to configure additional properties of the module. Note that it&apos;s possible to return only properties and no code transformations.</p>
+<p>If <code>false</code> is returned for <code>moduleSideEffects</code> and no other module imports anything from this module, then this module will not be included even if the module would have side-effects. </p>
+<p>If <code>true</code> is returned, Rollup will use its default algorithm to include all statements in the module that have side-effects (such as modifying a global or exported variable). </p>
+<p>If <code>&quot;no-treeshake&quot;</code> is returned, treeshaking will be turned off for this module and it will also be included in one of the generated chunks even if it is empty. </p>
+<p>If <code>null</code> is returned or the flag is omitted, then <code>moduleSideEffects</code> will be determined by the <code>load</code> hook that loaded this module, the first <code>resolveId</code> hook that resolved this module, the <code>treeshake.moduleSideEffects</code> option, or eventually default to <code>true</code>.</p>
+<p>See <a href="guide/en#synthetic-named-exports">synthetic named exports</a> for the effect of the <code>syntheticNamedExports</code> option. If <code>null</code> is returned or the flag is omitted, then <code>syntheticNamedExports</code> will be determined by the <code>load</code> hook that loaded this module, the first <code>resolveId</code> hook that resolved this module, the <code>treeshake.moduleSideEffects</code> option, or eventually default to <code>false</code>.</p>
+<p>See <a href="guide/en#custom-module-meta-data">custom module meta-data</a> for how to use the <code>meta</code> option. If <code>null</code> is returned or the option is omitted, then <code>meta</code> will be determined by the <code>load</code> hook that loaded this module, the first <code>resolveId</code> hook that resolved this module or eventually default to an empty object.</p>
+<p>You can use <a href="guide/en#thisgetmoduleinfomoduleid-string--moduleinfo--null"><code>this.getModuleInfo</code></a> to find out the previous values of <code>moduleSideEffects</code>, <code>syntheticNamedExports</code> and <code>meta</code> inside this hook.</p>
+<h4 id="watchchange"><code>watchChange</code></h4>
+<p>Type: <code>watchChange: (id: string, change: {event: &apos;create&apos; | &apos;update&apos; | &apos;delete&apos;}) =&gt; void</code><br>
+Kind: <code>sync, sequential</code><br>
+Previous/Next Hook: This hook can be triggered at any time both during the build and the output generation phases. If that is the case, the current build will still proceed but a new build will be scheduled to start once the current build has completed, starting again with <a href="guide/en#options"><code>options</code></a>.</p>
+<p>Notifies a plugin whenever rollup has detected a change to a monitored file in <code>--watch</code> mode. This hook cannot be used by output plugins. Second argument contains additional details of change event.  </p>
+<h3 id="output-generation-hooks">Output Generation Hooks</h3>
+<p>Output generation hooks can provide information about a generated bundle and modify a build once complete. They work the same way and have the same types as <a href="guide/en#build-hooks">Build Hooks</a> but are called separately for each call to <code>bundle.generate(outputOptions)</code> or <code>bundle.write(outputOptions)</code>. Plugins that only use output generation hooks can also be passed in via the output options and therefore run only for certain outputs.</p>
+<p>The first hook of the output generation phase is <a href="guide/en#outputoptions"><code>outputOptions</code></a>, the last one is either <a href="guide/en#generatebundle"><code>generateBundle</code></a> if the output was successfully generated via <code>bundle.generate(...)</code>, <a href="guide/en#writebundle"><code>writeBundle</code></a> if the output was successfully generated via <code>bundle.write(...)</code>, or <a href="guide/en#rendererror"><code>renderError</code></a> if an error occurred at any time during the output generation.</p>
+<p>Additionally, <a href="guide/en#closebundle"><code>closeBundle</code></a> can be called as the very last hook, but it is the responsibility of the User to manually call <a href="guide/en#rolluprollup"><code>bundle.close()</code></a> to trigger this. The CLI will always make sure this is the case.</p>
+<h4 id="augmentchunkhash"><code>augmentChunkHash</code></h4>
+<p>Type: <code>(chunkInfo: ChunkInfo) =&gt; string</code><br>
+Kind: <code>sync, sequential</code><br>
+Previous Hook: <a href="guide/en#renderdynamicimport"><code>renderDynamicImport</code></a> for each dynamic import expression.<br>
+Next Hook: <a href="guide/en#resolvefileurl"><code>resolveFileUrl</code></a> for each use of <code>import.meta.ROLLUP_FILE_URL_referenceId</code> and <a href="guide/en#resolveimportmeta"><code>resolveImportMeta</code></a> for all other accesses to <code>import.meta</code>.</p>
+<p>Can be used to augment the hash of individual chunks. Called for each Rollup output chunk. Returning a falsy value will not modify the hash. Truthy values will be passed to <a href="https://nodejs.org/dist/latest-v12.x/docs/api/crypto.html#crypto_hash_update_data_inputencoding" target="_blank"><code>hash.update</code></a>. The <code>chunkInfo</code> is a reduced version of the one in <a href="guide/en#generatebundle"><code>generateBundle</code></a> without properties that rely on file names.</p>
+<p>The following plugin will invalidate the hash of chunk <code>foo</code> with the timestamp of the last build:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// rollup.config.js</span>
+<span class="token function">augmentChunkHash</span><span class="token punctuation">(</span><span class="token parameter">chunkInfo</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>chunkInfo<span class="token punctuation">.</span>name <span class="token operator">===</span> <span class="token string">&apos;foo&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="banner"><code>banner</code></h4>
+<p>Type: <code>string | (() =&gt; string)</code><br>
+Kind: <code>async, parallel</code><br>
+Previous Hook: <a href="guide/en#renderstart"><code>renderStart</code></a><br>
+Next Hook: <a href="guide/en#renderdynamicimport"><code>renderDynamicImport</code></a> for each dynamic import expression.</p>
+<p>Cf. <a href="guide/en#outputbanneroutputfooter"><code>output.banner/output.footer</code></a>.</p>
+<h4 id="closebundle"><code>closeBundle</code></h4>
+<p>Type: <code>closeBundle: () =&gt; Promise<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>void</span><span class="token punctuation">&gt;</span></span> | void</code><br>
+Kind: <code>async, parallel</code><br>
+Previous Hook: <a href="guide/en#buildend"><code>buildEnd</code></a> if there was a build error, otherwise when <a href="guide/en#rolluprollup"><code>bundle.close()</code></a> is called, in which case this would be the last hook to be triggered.</p>
+<p>Can be used to clean up any external service that may be running. Rollup&apos;s CLI will make sure this hook is called after each run, but it is the responsibility of users of the JavaScript API to manually call <code>bundle.close()</code> once they are done generating bundles. For that reason, any plugin relying on this feature should carefully mention this in its documentation.</p>
+<p>If a plugin wants to retain resources across builds in watch mode, they can check for <a href="guide/en#thismeta-rollupversion-string-watchmode-boolean"><code>this.meta.watchMode</code></a> in this hook and perform the necessary cleanup for watch mode in <a href="guide/en#closewatcher"><code>closeWatcher</code></a>.</p>
+<h4 id="footer"><code>footer</code></h4>
+<p>Type: <code>string | (() =&gt; string)</code><br>
+Kind: <code>async, parallel</code><br>
+Previous Hook: <a href="guide/en#renderstart"><code>renderStart</code></a><br>
+Next Hook: <a href="guide/en#renderdynamicimport"><code>renderDynamicImport</code></a> for each dynamic import expression.</p>
+<p>Cf. <a href="guide/en#outputbanneroutputfooter"><code>output.banner/output.footer</code></a>.</p>
+<h4 id="generatebundle"><code>generateBundle</code></h4>
+<p>Type: <code>(options: OutputOptions, bundle: { [fileName: string]: AssetInfo | ChunkInfo }, isWrite: boolean) =&gt; void</code><br>
+Kind: <code>async, sequential</code><br>
+Previous Hook: <a href="guide/en#renderchunk"><code>renderChunk</code></a> for each chunk.<br>
+Next Hook: <a href="guide/en#writebundle"><code>writeBundle</code></a> if the output was generated via <code>bundle.write(...)</code>, otherwise this is the last hook of the output generation phase and may again be followed by <a href="guide/en#outputoptions"><code>outputOptions</code></a> if another output is generated.</p>
+<p>Called at the end of <code>bundle.generate()</code> or immediately before the files are written in <code>bundle.write()</code>. To modify the files after they have been written, use the <a href="guide/en#writebundle"><code>writeBundle</code></a> hook. <code>bundle</code> provides the full list of files being written or generated along with their details:</p>
+<pre class="language-"><code>// AssetInfo
+{
+  fileName: string,
+  name?: string,
+  source: string | Uint8Array,
+  type: &apos;asset&apos;,
+}
+
+// ChunkInfo
+{
+  code: string,
+  dynamicImports: string[],
+  exports: string[],
+  facadeModuleId: string | null,
+  fileName: string,
+  implicitlyLoadedBefore: string[],
+  imports: string[],
+  importedBindings: {[imported: string]: string[]},
+  isDynamicEntry: boolean,
+  isEntry: boolean,
+  isImplicitEntry: boolean,
+  map: SourceMap | null,
+  modules: {
+    [id: string]: {
+      renderedExports: string[],
+      removedExports: string[],
+      renderedLength: number,
+      originalLength: number,
+      code: string | null
+    },
+  },
+  name: string,
+  referencedFiles: string[],
+  type: &apos;chunk&apos;,
+}
+</code></pre><p>You can prevent files from being emitted by deleting them from the bundle object in this hook. To emit additional files, use the <a href="guide/en#thisemitfileemittedfile-emittedchunk--emittedasset--string"><code>this.emitFile</code></a>  plugin context function.</p>
+<h4 id="intro"><code>intro</code></h4>
+<p>Type: <code>string | (() =&gt; string)</code><br>
+Kind: <code>async, parallel</code><br>
+Previous Hook: <a href="guide/en#renderstart"><code>renderStart</code></a><br>
+Next Hook: <a href="guide/en#renderdynamicimport"><code>renderDynamicImport</code></a> for each dynamic import expression.</p>
+<p>Cf. <a href="guide/en#outputintrooutputoutro"><code>output.intro/output.outro</code></a>.</p>
+<h4 id="outputoptions"><code>outputOptions</code></h4>
+<p>Type: <code>(outputOptions: OutputOptions) =&gt; OutputOptions | null</code><br>
+Kind: <code>sync, sequential</code><br>
+Previous Hook: <a href="guide/en#buildend"><code>buildEnd</code></a> if this is the first time an output is generated, otherwise either <a href="guide/en#generatebundle"><code>generateBundle</code></a>, <a href="guide/en#writebundle"><code>writeBundle</code></a> or <a href="guide/en#rendererror"><code>renderError</code></a> depending on the previously generated output. This is the first hook of the output generation phase.<br>
+Next Hook: <a href="guide/en#renderstart"><code>renderStart</code></a>.</p>
+<p>Replaces or manipulates the output options object passed to <code>bundle.generate()</code> or <code>bundle.write()</code>. Returning <code>null</code> does not replace anything. If you just need to read the output options, it is recommended to use the <a href="guide/en#renderstart"><code>renderStart</code></a> hook as this hook has access to the output options after the transformations from all <code>outputOptions</code> hooks have been taken into account.</p>
+<h4 id="outro"><code>outro</code></h4>
+<p>Type: <code>string | (() =&gt; string)</code><br>
+Kind: <code>async, parallel</code><br>
+Previous Hook: <a href="guide/en#renderstart"><code>renderStart</code></a><br>
+Next Hook: <a href="guide/en#renderdynamicimport"><code>renderDynamicImport</code></a> for each dynamic import expression.</p>
+<p>Cf. <a href="guide/en#outputintrooutputoutro"><code>output.intro/output.outro</code></a>.</p>
+<h4 id="renderchunk"><code>renderChunk</code></h4>
+<p>Type: <code>(code: string, chunk: ChunkInfo, options: OutputOptions) =&gt; string | { code: string, map: SourceMap } | null</code><br>
+Kind: <code>async, sequential</code><br>
+Previous Hook: <a href="guide/en#resolvefileurl"><code>resolveFileUrl</code></a> for each use of <code>import.meta.ROLLUP_FILE_URL_referenceId</code> and <a href="guide/en#resolveimportmeta"><code>resolveImportMeta</code></a> for all other accesses to <code>import.meta</code>.<br>
+Next Hook: <a href="guide/en#generatebundle"><code>generateBundle</code></a>.</p>
+<p>Can be used to transform individual chunks. Called for each Rollup output chunk file. Returning <code>null</code> will apply no transformations.</p>
+<h4 id="renderdynamicimport"><code>renderDynamicImport</code></h4>
+<p>Type: <code>({format: string, moduleId: string, targetModuleId: string | null, customResolution: string | null}) =&gt; {left: string, right: string} | null</code><br>
+Kind: <code>sync, first</code><br>
+Previous Hook: <a href="guide/en#banner"><code>banner</code></a>, <a href="guide/en#footer"><code>footer</code></a>, <a href="guide/en#intro"><code>intro</code></a>, <a href="guide/en#outro"><code>outro</code></a>.<br>
+Next Hook: <a href="guide/en#augmentchunkhash"><code>augmentChunkHash</code></a> for each chunk that would contain a hash in the file name.</p>
+<p>This hook provides fine-grained control over how dynamic imports are rendered by providing replacements for the code to the left (<code>import(</code>) and right (<code>)</code>) of the argument of the import expression. Returning <code>null</code> defers to other hooks of this type and ultimately renders a format-specific default.</p>
+<p><code>format</code> is the rendered output format, <code>moduleId</code> the id of the module performing the dynamic import. If the import could be resolved to an internal or external id, then <code>targetModuleId</code> will be set to this id, otherwise it will be <code>null</code>. If the dynamic import contained a non-string expression that was resolved by a <a href="guide/en#resolvedynamicimport"><code>resolveDynamicImport</code></a> hook to a replacement string, then <code>customResolution</code> will contain that string.</p>
+<p>The following code will replace all dynamic imports with a custom handler, adding <code>import.meta.url</code> as a second argument to allow the handler to resolve relative imports correctly:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// plugin</span>
+<span class="token keyword">const</span> plugin <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token string">&apos;dynamic-import-polyfill&apos;</span><span class="token punctuation">,</span>
+  <span class="token function">renderDynamicImport</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      left<span class="token punctuation">:</span> <span class="token string">&apos;dynamicImportPolyfill(&apos;</span><span class="token punctuation">,</span>
+      right<span class="token punctuation">:</span> <span class="token string">&apos;, import.meta.url)&apos;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// input</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;./lib.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// output</span>
+<span class="token function">dynamicImportPolyfill</span><span class="token punctuation">(</span><span class="token string">&apos;./lib.js&apos;</span><span class="token punctuation">,</span> <span class="token keyword">import</span><span class="token punctuation">.</span>meta<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The next plugin will make sure all dynamic imports of <code>esm-lib</code> are marked as external and retained as import expressions to e.g. allow a CommonJS build to import an ES module in Node 13+, cf. how to <a href="https://nodejs.org/api/esm.html#esm_import_expressions" target="_blank">import ES modules from CommonJS</a> in the Node documentation.</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// plugin</span>
+<span class="token keyword">const</span> plugin <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token string">&apos;retain-import-expression&apos;</span><span class="token punctuation">,</span>
+  <span class="token function">resolveDynamicImport</span><span class="token punctuation">(</span><span class="token parameter">specifier</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>specifier <span class="token operator">===</span> <span class="token string">&apos;esm-lib&apos;</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">renderDynamicImport</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>targetModuleId<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>targetModuleId <span class="token operator">===</span> <span class="token string">&apos;esm-lib&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      left<span class="token punctuation">:</span> <span class="token string">&apos;import(&apos;</span><span class="token punctuation">,</span>
+      right<span class="token punctuation">:</span> <span class="token string">&apos;)&apos;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Note that when this hook rewrites dynamic imports in non-ES formats, no interop code to make sure that e.g. the default export is available as <code>.default</code> is generated. It is the responsibility of the plugin to make sure the rewritten dynamic import returns a Promise that resolves to a proper namespace object.</p>
+<h4 id="rendererror"><code>renderError</code></h4>
+<p>Type: <code>(error: Error) =&gt; void</code><br>
+Kind: <code>async, parallel</code><br>
+Previous Hook: Any hook from <a href="guide/en#renderstart"><code>renderStart</code></a> to <a href="guide/en#renderchunk"><code>renderChunk</code></a>.<br>
+Next Hook: If it is called, this is the last hook of the output generation phase and may again be followed by <a href="guide/en#outputoptions"><code>outputOptions</code></a> if another output is generated.</p>
+<p>Called when rollup encounters an error during <code>bundle.generate()</code> or <code>bundle.write()</code>. The error is passed to this hook. To get notified when generation completes successfully, use the <code>generateBundle</code> hook.</p>
+<h4 id="renderstart"><code>renderStart</code></h4>
+<p>Type: <code>(outputOptions: OutputOptions, inputOptions: InputOptions) =&gt; void</code><br>
+Kind: <code>async, parallel</code><br>
+Previous Hook: <a href="guide/en#outputoptions"><code>outputOptions</code></a><br>
+Next Hook: <a href="guide/en#banner"><code>banner</code></a>, <a href="guide/en#footer"><code>footer</code></a>, <a href="guide/en#intro"><code>intro</code></a> and <a href="guide/en#outro"><code>outro</code></a> run in parallel.</p>
+<p>Called initially each time <code>bundle.generate()</code> or <code>bundle.write()</code> is called. To get notified when generation has completed, use the <code>generateBundle</code> and <code>renderError</code> hooks. This is the recommended hook to use when you need access to the output options passed to <code>bundle.generate()</code> or <code>bundle.write()</code> as it takes the transformations by all <a href="guide/en#outputoptions"><code>outputOptions</code></a> hooks into account and also contains the right default values for unset options. It also receives the input options passed to <code>rollup.rollup()</code> so that plugins that can be used as output plugins, i.e. plugins that only use <code>generate</code> phase hooks, can get access to them.</p>
+<h4 id="resolvefileurl"><code>resolveFileUrl</code></h4>
+<p>Type: <code>({chunkId: string, fileName: string, format: string, moduleId: string, referenceId: string, relativePath: string}) =&gt; string | null</code><br>
+Kind: <code>sync, first</code><br>
+Previous Hook: <a href="guide/en#augmentchunkhash"><code>augmentChunkHash</code></a> for each chunk that would contain a hash in the file name.<br>
+Next Hook: <a href="guide/en#renderchunk"><code>renderChunk</code></a> for each chunk.</p>
+<p>Allows to customize how Rollup resolves URLs of files that were emitted by plugins via <code>this.emitFile</code>. By default, Rollup will generate code for <code>import.meta.ROLLUP_FILE_URL_referenceId</code> that should correctly generate absolute URLs of emitted files independent of the output format and the host system where the code is deployed.</p>
+<p>For that, all formats except CommonJS and UMD assume that they run in a browser environment where <code>URL</code> and <code>document</code> are available. In case that fails or to generate more optimized code, this hook can be used to customize this behaviour. To do that, the following information is available:</p>
+<ul>
+<li><code>chunkId</code>: The id of the chunk this file is referenced from.</li>
+<li><code>fileName</code>: The path and file name of the emitted asset, relative to <code>output.dir</code> without a leading <code>./</code>.</li>
+<li><code>format</code>: The rendered output format.</li>
+<li><code>moduleId</code>: The id of the original module this file is referenced from. Useful for conditionally resolving certain assets differently.</li>
+<li><code>referenceId</code>: The reference id of the file.</li>
+<li><code>relativePath</code>: The path and file name of the emitted file, relative to the chunk the file is referenced from. This will path will contain no leading <code>./</code> but may contain a leading <code>../</code>.</li>
+</ul>
+<p>Note that since this hook has access to the filename of the current chunk, its return value will not be considered when generating the hash of this chunk.</p>
+<p>The following plugin will always resolve all files relative to the current document:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// rollup.config.js</span>
+<span class="token function">resolveFileUrl</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>fileName<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">new URL(&apos;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>fileName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&apos;, document.baseURI).href</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="resolveimportmeta"><code>resolveImportMeta</code></h4>
+<p>Type: <code>(property: string | null, {chunkId: string, moduleId: string, format: string}) =&gt; string | null</code><br>
+Kind: <code>sync, first</code><br>
+Previous Hook: <a href="guide/en#augmentchunkhash"><code>augmentChunkHash</code></a> for each chunk that would contain a hash in the file name.<br>
+Next Hook: <a href="guide/en#renderchunk"><code>renderChunk</code></a> for each chunk.</p>
+<p>Allows to customize how Rollup handles <code>import.meta</code> and <code>import.meta.someProperty</code>, in particular <code>import.meta.url</code>. In ES modules, <code>import.meta</code> is an object and <code>import.meta.url</code> contains the URL of the current module, e.g. <code>http://server.net/bundle.js</code> for browsers or <code>file:///path/to/bundle.js</code> in Node.</p>
+<p>By default for formats other than ES modules, Rollup replaces <code>import.meta.url</code> with code that attempts to match this behaviour by returning the dynamic URL of the current chunk. Note that all formats except CommonJS and UMD assume that they run in a browser environment where <code>URL</code> and <code>document</code> are available. For other properties, <code>import.meta.someProperty</code> is replaced with <code>undefined</code> while <code>import.meta</code> is replaced with an object containing a <code>url</code> property.</p>
+<p> This behaviour can be changed&#x2014;also for ES modules&#x2014;via this hook. For each occurrence of <code>import.meta<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>.someProperty</span><span class="token punctuation">&gt;</span></span></code>, this hook is called with the name of the property or <code>null</code> if <code>import.meta</code> is accessed directly. For example, the following code will resolve <code>import.meta.url</code> using the relative path of the original module to the current working directory and again resolve this path against the base URL of the current document at runtime:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// rollup.config.js</span>
+<span class="token function">resolveImportMeta</span><span class="token punctuation">(</span><span class="token parameter">property<span class="token punctuation">,</span> <span class="token punctuation">{</span>moduleId<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>property <span class="token operator">===</span> <span class="token string">&apos;url&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">new URL(&apos;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>path<span class="token punctuation">.</span><span class="token function">relative</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span><span class="token function">cwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> moduleId<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&apos;, document.baseURI).href</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Note that since this hook has access to the filename of the current chunk, its return value will not be considered when generating the hash of this chunk.</p>
+<h4 id="writebundle"><code>writeBundle</code></h4>
+<p>Type: <code>(options: OutputOptions, bundle: { [fileName: string]: AssetInfo | ChunkInfo }) =&gt; void</code><br>
+Kind: <code>async, parallel</code><br>
+Previous Hook: <a href="guide/en#generatebundle"><code>generateBundle</code></a><br>
+Next Hook: If it is called, this is the last hook of the output generation phase and may again be followed by <a href="guide/en#outputoptions"><code>outputOptions</code></a> if another output is generated.</p>
+<p>Called only at the end of <code>bundle.write()</code> once all files have been written. Similar to the <a href="guide/en#generatebundle"><code>generateBundle</code></a> hook, <code>bundle</code> provides the full list of files being written along with their details.</p>
+<h3 id="deprecated-hooks">Deprecated Hooks</h3>
+<p>&#x2622;&#xFE0F; These hooks have been deprecated and may be removed in a future Rollup version.</p>
+<ul>
+<li><code>resolveAssetUrl</code> - <em><strong>Use <a href="guide/en#resolvefileurl"><code>resolveFileUrl</code></a></strong></em> - Function hook that allows to customize the generated code for asset URLs.</li>
+</ul>
+<p>More properties may be supported in the future, as and when they prove necessary.</p>
+<h3 id="plugin-context">Plugin Context</h3>
+<p>A number of utility functions and informational bits can be accessed from within most <a href="guide/en#build-hooks">hooks</a> via <code>this</code>:</p>
+<h4 id="thisaddwatchfileid-string--void"><code>this.addWatchFile(id: string) =&gt; void</code></h4>
+<p>Adds additional files to be monitored in watch mode so that changes to these files will trigger rebuilds. <code>id</code> can be an absolute path to a file or directory or a path relative to the current working directory. This context function can only be used in hooks during the build phase, i.e. in <code>buildStart</code>, <code>load</code>, <code>resolveId</code>, and <code>transform</code>.</p>
+<p><strong>Note:</strong> Usually in watch mode to improve rebuild speed, the <code>transform</code> hook will only be triggered for a given module if its contents actually changed. Using <code>this.addWatchFile</code> from within the <code>transform</code> hook will make sure the <code>transform</code> hook is also reevaluated for this module if the watched file changes.</p>
+<p>In general, it is recommended to use <code>this.addWatchFile</code> from within the hook that depends on the watched file.</p>
+<h4 id="thisemitfileemittedfile-emittedchunk--emittedasset--string"><code>this.emitFile(emittedFile: EmittedChunk | EmittedAsset) =&gt; string</code></h4>
+<p>Emits a new file that is included in the build output and returns a <code>referenceId</code> that can be used in various places to reference the emitted file. <code>emittedFile</code> can have one of two forms:</p>
+<pre class="language-"><code>// EmittedChunk
+{
+  type: &apos;chunk&apos;,
+  id: string,
+  name?: string,
+  fileName?: string,
+  implicitlyLoadedAfterOneOf?: string[],
+  importer?: string,
+  preserveSignature?: &apos;strict&apos; | &apos;allow-extension&apos; | &apos;exports-only&apos; | false,
+}
+
+// EmittedAsset
+{
+  type: &apos;asset&apos;,
+  name?: string,
+  fileName?: string,
+  source?: string | Uint8Array
+}
+</code></pre><p>In both cases, either a <code>name</code> or a <code>fileName</code> can be supplied. If a <code>fileName</code> is provided, it will be used unmodified as the name of the generated file, throwing an error if this causes a conflict. Otherwise if a <code>name</code> is supplied, this will be used as substitution for <code>[name]</code> in the corresponding <a href="guide/en#outputchunkfilenames"><code>output.chunkFileNames</code></a> or <a href="guide/en#outputassetfilenames"><code>output.assetFileNames</code></a> pattern, possibly adding a unique number to the end of the file name to avoid conflicts. If neither a <code>name</code> nor <code>fileName</code> is supplied, a default name will be used.</p>
+<p>You can reference the URL of an emitted file in any code returned by a <a href="guide/en#load"><code>load</code></a> or <a href="guide/en#transform"><code>transform</code></a> plugin hook via <code>import.meta.ROLLUP_FILE_URL_referenceId</code>. See <a href="guide/en#file-urls">File URLs</a> for more details and an example.</p>
+<p>The generated code that replaces <code>import.meta.ROLLUP_FILE_URL_referenceId</code> can be customized via the <a href="guide/en#resolvefileurl"><code>resolveFileUrl</code></a> plugin hook. You can also use <a href="guide/en#thisgetfilenamereferenceid-string--string"><code>this.getFileName(referenceId)</code></a> to determine the file name as soon as it is available</p>
+<p>If the <code>type</code> is <em><code>chunk</code></em>, then this emits a new chunk with the given module <code>id</code> as entry point. To resolve it, the <code>id</code> will be passed through build hooks just like regular entry points, starting with <a href="guide/en#resolveid"><code>resolveId</code></a>. If an <code>importer</code> is provided, this acts as the second parameter of <code>resolveId</code> and is important to properly resolve relative paths. If it is not provided, paths will be resolved relative to the current working directory. If a value for <code>preserveSignature</code> is provided, this will override <a href="guide/en#preserveentrysignatures"><code>preserveEntrySignatures</code></a> for this particular chunk.</p>
+<p>This will not result in duplicate modules in the graph, instead if necessary, existing chunks will be split or a facade chunk with reexports will be created. Chunks with a specified <code>fileName</code> will always generate separate chunks while other emitted chunks may be deduplicated with existing chunks even if the <code>name</code> does not match. If such a chunk is not deduplicated, the <a href="guide/en#outputchunkfilenames"><code>output.chunkFileNames</code></a> name pattern will be used.</p>
+<p>By default, Rollup assumes that emitted chunks are executed independent of other entry points, possibly even before any other code is executed. This means that if an emitted chunk shares a dependency with an existing entry point, Rollup will create an additional chunk for dependencies that are shared between those entry points. Providing a non-empty array of module ids for <code>implicitlyLoadedAfterOneOf</code> will change that behaviour by giving Rollup additional information to prevent this in some cases. Those ids will be resolved the same way as the <code>id</code> property, respecting the <code>importer</code> property if it is provided. Rollup will now assume that the emitted chunk is only executed if at least one of the entry points that lead to one of the ids in <code>implicitlyLoadedAfterOneOf</code> being loaded has already been executed, creating the same chunks as if the newly emitted chunk was only reachable via dynamic import from the modules in <code>implicitlyLoadedAfterOneOf</code>. Here is an example that uses this to create a simple HTML file with several scripts, creating optimized chunks to respect their execution order:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">function</span> <span class="token function">generateHtml</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> ref1<span class="token punctuation">,</span> ref2<span class="token punctuation">,</span> ref3<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token function">buildStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      ref1 <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">emitFile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> <span class="token string">&apos;chunk&apos;</span><span class="token punctuation">,</span>
+        id<span class="token punctuation">:</span> <span class="token string">&apos;src/entry1&apos;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      ref2 <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">emitFile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> <span class="token string">&apos;chunk&apos;</span><span class="token punctuation">,</span>
+        id<span class="token punctuation">:</span> <span class="token string">&apos;src/entry2&apos;</span><span class="token punctuation">,</span>
+        implicitlyLoadedAfterOneOf<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;src/entry1&apos;</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      ref3 <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">emitFile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> <span class="token string">&apos;chunk&apos;</span><span class="token punctuation">,</span>
+        id<span class="token punctuation">:</span> <span class="token string">&apos;src/entry3&apos;</span><span class="token punctuation">,</span>
+        implicitlyLoadedAfterOneOf<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;src/entry2&apos;</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">generateBundle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">emitFile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token punctuation">:</span> <span class="token string">&apos;asset&apos;</span><span class="token punctuation">,</span> fileName<span class="token punctuation">:</span> <span class="token string">&apos;index.html&apos;</span><span class="token punctuation">,</span> source<span class="token punctuation">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;Title&lt;/title&gt;
+       &lt;/head&gt;
+      &lt;body&gt;
+        &lt;script src=&quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getFileName</span><span class="token punctuation">(</span>ref1<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; type=&quot;module&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getFileName</span><span class="token punctuation">(</span>ref2<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; type=&quot;module&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getFileName</span><span class="token punctuation">(</span>ref3<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; type=&quot;module&quot;&gt;&lt;/script&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  preserveEntrySignatures<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token function">generateHtml</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;es&apos;</span><span class="token punctuation">,</span>
+    dir<span class="token punctuation">:</span> <span class="token string">&apos;dist&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If there are no dynamic imports, this will create exactly three chunks where the first chunk contains all dependencies of <code>src/entry1</code>, the second chunk contains only the dependencies of <code>src/entry2</code> that are not contained in the first chunk, importing those from the first chunk, and again the same for the third chunk.</p>
+<p>Note that even though any module id can be used in <code>implicitlyLoadedAfterOneOf</code>, Rollup will throw an error if such an id cannot be uniquely associated with a chunk, e.g. because the <code>id</code> cannot be reached implicitly or explicitly from the existing static entry points, or because the file is completely tree-shaken. Using only entry points, either defined by the user or of previously emitted chunks, will always work, though.</p>
+<p>If the <code>type</code> is <em><code>asset</code></em>, then this emits an arbitrary new file with the given <code>source</code> as content. It is possible to defer setting the <code>source</code> via <a href="guide/en#thissetassetsourcereferenceid-string-source-string--uint8array--void"><code>this.setAssetSource(referenceId, source)</code></a> to a later time to be able to reference a file during the build phase while setting the source separately for each output during the generate phase. Assets with a specified <code>fileName</code> will always generate separate files while other emitted assets may be deduplicated with existing assets if they have the same source even if the <code>name</code> does not match. If such an asset is not deduplicated, the <a href="guide/en#outputassetfilenames"><code>output.assetFileNames</code></a> name pattern will be used.</p>
+<h4 id="thiserrorerror-string--error-position-number---column-number-line-number---never"><code>this.error(error: string | Error, position?: number | { column: number; line: number }) =&gt; never</code></h4>
+<p>Structurally equivalent to <code>this.warn</code>, except that it will also abort the bundling process.</p>
+<h4 id="thisgetcombinedsourcemap--sourcemap"><code>this.getCombinedSourcemap() =&gt; SourceMap</code></h4>
+<p>Get the combined source maps of all previous plugins. This context function can only be used in the <a href="guide/en#transform"><code>transform</code></a> plugin hook.</p>
+<h4 id="thisgetfilenamereferenceid-string--string"><code>this.getFileName(referenceId: string) =&gt; string</code></h4>
+<p>Get the file name of a chunk or asset that has been emitted via <a href="guide/en#thisemitfileemittedfile-emittedchunk--emittedasset--string"><code>this.emitFile</code></a>. The file name will be relative to <code>outputOptions.dir</code>.</p>
+<h4 id="thisgetmoduleids--iterableiteratorstring"><code>this.getModuleIds() =&gt; IterableIterator<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code></h4>
+<p>Returns an <code>Iterator</code> that gives access to all module ids in the current graph. It can be iterated via</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> moduleId <span class="token keyword">of</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getModuleIds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* ... */</span> <span class="token punctuation">}</span>
+</code></pre>
+<p>or converted into an Array via <code>Array.from(this.getModuleIds())</code>.</p>
+<h4 id="thisgetmoduleinfomoduleid-string--moduleinfo--null"><code>this.getModuleInfo(moduleId: string) =&gt; (ModuleInfo | null)</code></h4>
+<p>Returns additional information about the module in question in the form</p>
+<pre class="language-"><code>{
+  id: string, // the id of the module, for convenience
+  code: string | null, // the source code of the module, `null` if external or not yet available
+  ast: ESTree.Program, // the parsed abstract syntax tree if available
+  isEntry: boolean, // is this a user- or plugin-defined entry point
+  isExternal: boolean, // for external modules that are referenced but not included in the graph
+  importedIds: string[], // the module ids statically imported by this module
+  importers: string[], // the ids of all modules that statically import this module
+  dynamicallyImportedIds: string[], // the module ids imported by this module via dynamic import()
+  dynamicImporters: string[], // the ids of all modules that import this module via dynamic import()
+  implicitlyLoadedAfterOneOf: string[], // implicit relationships, declared via this.emitChunk
+  implicitlyLoadedBefore: string[], // implicit relationships, declared via this.emitChunk
+  hasModuleSideEffects: boolean | &quot;no-treeshake&quot; // are imports of this module included if nothing is imported from it
+  meta: {[plugin: string]: any} // custom module meta-data
+  syntheticNamedExports: boolean | string // final value of synthetic named exports
+}
+</code></pre><p>During the build, this object represents currently available information about the module. Before the <a href="guide/en#buildend"><code>buildEnd</code></a> hook, this information may be incomplete as e.g.
+ the <code>importedIds</code> are not yet resolved or additional <code>importers</code> are discovered.</p>
+<p>Returns <code>null</code> if the module id cannot be found.</p>
+<h4 id="thisgetwatchfiles--string"><code>this.getWatchFiles() =&gt; string[]</code></h4>
+<p>Get ids of the files which has been watched previously. Include both files added by plugins with <code>this.addWatchFile</code> and files added implicitly by rollup during the build.</p>
+<h4 id="thismeta-rollupversion-string-watchmode-boolean"><code>this.meta: {rollupVersion: string, watchMode: boolean}</code></h4>
+<p>An object containing potentially useful Rollup metadata:</p>
+<ul>
+<li><code>rollupVersion</code>: The currently running version of Rollup as define in <code>package.json</code>.</li>
+<li><code>watchMode</code>: <code>true</code> if Rollup was started via <code>rollup.watch(...)</code> or from the command line with <code>--watch</code>, <code>false</code> otherwise.</li>
+</ul>
+<p><code>meta</code> is the only context property accessible from the <a href="guide/en#options"><code>options</code></a> hook.</p>
+<h4 id="thisparsecode-string-acornoptions-acornoptions--estreeprogram"><code>this.parse(code: string, acornOptions?: AcornOptions) =&gt; ESTree.Program</code></h4>
+<p>Use Rollup&apos;s internal acorn instance to parse code to an AST.</p>
+<h4 id="thisresolvesource-string-importer-string-options-skipself-boolean-custom-plugin-string-any--promiseid-string-external-boolean--absolute-modulesideeffects-boolean--no-treeshake-syntheticnamedexports-boolean--string-meta-plugin-string-any--null"><code>this.resolve(source: string, importer?: string, options?: {skipSelf?: boolean, custom?: {[plugin: string]: any}}) =&gt; Promise<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">{id:</span></span> <span class="token attr-name">string,</span> <span class="token attr-name"><span class="token namespace">external:</span></span> <span class="token attr-name">boolean</span> <span class="token attr-name">|</span> <span class="token attr-name">&quot;absolute&quot;,</span> <span class="token attr-name"><span class="token namespace">moduleSideEffects:</span></span> <span class="token attr-name">boolean</span> <span class="token attr-name">|</span> <span class="token attr-name">&apos;no-treeshake&apos;,</span> <span class="token attr-name"><span class="token namespace">syntheticNamedExports:</span></span> <span class="token attr-name">boolean</span> <span class="token attr-name">|</span> <span class="token attr-name">string,</span> <span class="token attr-name"><span class="token namespace">meta:</span></span> <span class="token attr-name"><span class="token namespace">{[plugin:</span></span> <span class="token attr-name"><span class="token namespace">string]:</span></span> <span class="token attr-name">any}}</span> <span class="token attr-name">|</span> <span class="token attr-name">null</span><span class="token punctuation">&gt;</span></span></code></h4>
+<p>Resolve imports to module ids (i.e. file names) using the same plugins that Rollup uses, and determine if an import should be external. If <code>null</code> is returned, the import could not be resolved by Rollup or any plugin but was not explicitly marked as external by the user. If an absolute external id is returned that should remain absolute in the output either via the <a href="guide/en#makeabsoluteexternalsrelative"><code>makeAbsoluteExternalsRelative</code></a> option or by explicit plugin choice in the <a href="guide/en#resolveid"><code>resolveId</code></a> hook, <code>external</code> will be <code>&quot;absolute&quot;</code> instead of <code>true</code>.</p>
+<p>If you pass <code>skipSelf: true</code>, then the <code>resolveId</code> hook of the plugin from which <code>this.resolve</code> is called will be skipped when resolving. When other plugins themselves also call <code>this.resolve</code> in their <code>resolveId</code> hooks with the <em>exact same <code>source</code> and <code>importer</code></em> while handling the original <code>this.resolve</code> call, then the <code>resolveId</code> hook of the original plugin will be skipped for those calls as well. The rationale here is that the plugin already stated that it &quot;does not know&quot; how to resolve this particular combination of <code>source</code> and <code>importer</code> at this point in time. If you do not want this behaviour, do not use <code>skipSelf</code> but implement your own infinite loop prevention mechanism if necessary.</p>
+<p>You can also pass an object of plugin-specific options via the <code>custom</code> option, see <a href="guide/en#custom-resolver-options">custom resolver options</a> for details.</p>
+<h4 id="thissetassetsourcereferenceid-string-source-string--uint8array--void"><code>this.setAssetSource(referenceId: string, source: string | Uint8Array) =&gt; void</code></h4>
+<p>Set the deferred source of an asset. Note that you can also pass a Node <code>Buffer</code> as <code>source</code> as it is a sub-class of <code>Uint8Array</code>.</p>
+<h4 id="thiswarnwarning-string--rollupwarning-position-number---column-number-line-number---void"><code>this.warn(warning: string | RollupWarning, position?: number | { column: number; line: number }) =&gt; void</code></h4>
+<p>Using this method will queue warnings for a build. These warnings will be printed by the CLI just like internally generated warnings (except with the plugin name), or captured by custom <code>onwarn</code> handlers.</p>
+<p>The <code>warning</code> argument can be a <code>string</code> or an object with (at minimum) a <code>message</code> property:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span> <span class="token string">&apos;hmm...&apos;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// is equivalent to</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token punctuation">{</span> message<span class="token punctuation">:</span> <span class="token string">&apos;hmm...&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Use the second form if you need to add additional properties to your warning object. Rollup will augment the warning object with a <code>plugin</code> property containing the plugin name, <code>code</code> (<code>PLUGIN_WARNING</code>) and <code>id</code> (the file being transformed) properties.</p>
+<p>The <code>position</code> argument is a character index where the warning was raised. If present, Rollup will augment the warning object with <code>pos</code>, <code>loc</code> (a standard <code>{ file, line, column }</code> object) and <code>frame</code> (a snippet of code showing the error).</p>
+<h3 id="deprecated-context-functions">Deprecated Context Functions</h3>
+<p>&#x2622;&#xFE0F; These context utility functions have been deprecated and may be removed in a future Rollup version.</p>
+<ul>
+<li><p><code>this.emitAsset(assetName: string, source: string) =&gt; string</code> - <em><strong>Use <a href="guide/en#thisemitfileemittedfile-emittedchunk--emittedasset--string"><code>this.emitFile</code></a></strong></em> - Emits a custom file that is included in the build output, returning a <code>referenceId</code> that can be used to reference the emitted file. You can defer setting the source if you provide it later via <a href="guide/en#thissetassetsourcereferenceid-string-source-string--uint8array--void"><code>this.setAssetSource(referenceId, source)</code></a>. A string or <code>Uint8Array</code>/<code>Buffer</code> source must be set for each asset through either method or an error will be thrown on generate completion.</p>
+<p>Emitted assets will follow the <a href="guide/en#outputassetfilenames"><code>output.assetFileNames</code></a> naming scheme. You can reference the URL of the file in any code returned by a <a href="guide/en#load"><code>load</code></a> or <a href="guide/en#transform"><code>transform</code></a> plugin hook via <code>import.meta.ROLLUP_ASSET_URL_referenceId</code>.</p>
+<p>The generated code that replaces <code>import.meta.ROLLUP_ASSET_URL_referenceId</code> can be customized via the <a href="guide/en#resolvefileurl"><code>resolveFileUrl</code></a> plugin hook. Once the asset has been finalized during <code>generate</code>, you can also use <a href="guide/en#thisgetfilenamereferenceid-string--string"><code>this.getFileName(referenceId)</code></a> to determine the file name.</p>
+</li>
+<li><p><code>this.emitChunk(moduleId: string, options?: {name?: string}) =&gt; string</code> - <em><strong>Use <a href="guide/en#thisemitfileemittedfile-emittedchunk--emittedasset--string"><code>this.emitFile</code></a></strong></em> - Emits a new chunk with the given module as entry point. This will not result in duplicate modules in the graph, instead if necessary, existing chunks will be split. It returns a <code>referenceId</code> that can be used to later access the generated file name of the chunk.</p>
+<p>Emitted chunks will follow the <a href="guide/en#outputchunkfilenames"><code>output.chunkFileNames</code></a>, <a href="guide/en#outputentryfilenames"><code>output.entryFileNames</code></a> naming scheme. If a <code>name</code> is provided, this will be used for the <code>[name]</code> file name placeholder, otherwise the name will be derived from the file name. If a <code>name</code> is provided, this name must not conflict with any other entry point names unless the entry points reference the same entry module. You can reference the URL of the emitted chunk in any code returned by a <a href="guide/en#load"><code>load</code></a> or <a href="guide/en#transform"><code>transform</code></a> plugin hook via <code>import.meta.ROLLUP_CHUNK_URL_referenceId</code>.</p>
+<p>The generated code that replaces <code>import.meta.ROLLUP_CHUNK_URL_referenceId</code> can be customized via the <a href="guide/en#resolvefileurl"><code>resolveFileUrl</code></a> plugin hook. Once the chunk has been rendered during <code>generate</code>, you can also use <a href="guide/en#thisgetfilenamereferenceid-string--string"><code>this.getFileName(referenceId)</code></a> to determine the file name.</p>
+</li>
+<li><p><code>this.getAssetFileName(referenceId: string) =&gt; string</code> - <em><strong>Use <a href="guide/en#thisgetfilenamereferenceid-string--string"><code>this.getFileName</code></a></strong></em> - Get the file name of an asset, according to the <code>assetFileNames</code> output option pattern. The file name will be relative to <code>outputOptions.dir</code>.</p>
+</li>
+<li><p><code>this.getChunkFileName(referenceId: string) =&gt; string</code> - <em><strong>Use <a href="guide/en#thisgetfilenamereferenceid-string--string"><code>this.getFileName</code></a></strong></em> - Get the file name of an emitted chunk. The file name will be relative to <code>outputOptions.dir</code>.</p>
+</li>
+<li><p><code>this.isExternal(id: string, importer: string | undefined, isResolved: boolean) =&gt; boolean</code> - <em><strong>Use <a href="guide/en#thisresolvesource-string-importer-string-options-skipself-boolean-custom-plugin-string-any--promiseid-string-external-boolean-modulesideeffects-boolean--no-treeshake-syntheticnamedexports-boolean--string-meta-plugin-string-any--null"><code>this.resolve</code></a></strong></em> - Determine if a given module ID is external when imported by <code>importer</code>. When <code>isResolved</code> is false, Rollup will try to resolve the id before testing if it is external.</p>
+</li>
+<li><p><code>this.moduleIds: IterableIterator<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code> - <em><strong>Use <a href="guide/en#thisgetmoduleids--iterableiteratorstring"><code>this.getModuleIds</code></a></strong></em> - An <code>Iterator</code> that gives access to all module ids in the current graph. It can be iterated via</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> moduleId <span class="token keyword">of</span> <span class="token keyword">this</span><span class="token punctuation">.</span>moduleIds<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/* ... */</span> <span class="token punctuation">}</span>
+</code></pre>
+<p>or converted into an Array via <code>Array.from(this.moduleIds)</code>.</p>
+</li>
+</ul>
+<ul>
+<li><code>this.resolveId(source: string, importer?: string) =&gt; Promise<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span> <span class="token attr-name">|</span> <span class="token attr-name">null</span><span class="token punctuation">&gt;</span></span></code> - <em><strong>Use <a href="guide/en#thisresolvesource-string-importer-string-options-skipself-boolean-custom-plugin-string-any--promiseid-string-external-boolean-modulesideeffects-boolean--no-treeshake-syntheticnamedexports-boolean--string-meta-plugin-string-any--null"><code>this.resolve</code></a></strong></em> - Resolve imports to module ids (i.e. file names) using the same plugins that Rollup uses. Returns <code>null</code> if an id cannot be resolved.</li>
+</ul>
+<h3 id="file-urls">File URLs</h3>
+<p>To reference a file URL reference from within JS code, use the <code>import.meta.ROLLUP_FILE_URL_referenceId</code> replacement. This will generate code that depends on the output format and generates a URL that points to the emitted file in the target environment. Note that all formats except CommonJS and UMD assume that they run in a browser environment where <code>URL</code> and <code>document</code> are available.</p>
+<p>The following example will detect imports of <code>.svg</code> files, emit the imported files as assets, and return their URLs to be used e.g. as the <code>src</code> attribute of an <code>img</code> tag:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// plugin</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">svgResolverPlugin</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function">resolveId</span><span class="token punctuation">(</span><span class="token parameter">source<span class="token punctuation">,</span> importer</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>source<span class="token punctuation">.</span><span class="token function">endsWith</span><span class="token punctuation">(</span><span class="token string">&apos;.svg&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">dirname</span><span class="token punctuation">(</span>importer<span class="token punctuation">)</span><span class="token punctuation">,</span> source<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">load</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>id<span class="token punctuation">.</span><span class="token function">endsWith</span><span class="token punctuation">(</span><span class="token string">&apos;.svg&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">const</span> referenceId <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">emitFile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          type<span class="token punctuation">:</span> <span class="token string">&apos;asset&apos;</span><span class="token punctuation">,</span>
+          name<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">basename</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          source<span class="token punctuation">:</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">export default import.meta.ROLLUP_FILE_URL_</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>referenceId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Usage:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> logo <span class="token keyword">from</span> <span class="token string">&apos;../images/logo.svg&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> image <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&apos;img&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+image<span class="token punctuation">.</span>src <span class="token operator">=</span> logo<span class="token punctuation">;</span>
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Similar to assets, emitted chunks can be referenced from within JS code via <code>import.meta.ROLLUP_FILE_URL_referenceId</code> as well.</p>
+<p>The following example will detect imports prefixed with <code>register-paint-worklet:</code> and generate the necessary code and separate chunk to generate a CSS paint worklet. Note that this will only work in modern browsers and will only work if the output format is set to <code>es</code>.</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// plugin</span>
+<span class="token keyword">const</span> <span class="token constant">REGISTER_WORKLET</span> <span class="token operator">=</span> <span class="token string">&apos;register-paint-worklet:&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">paintWorkletPlugin</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function">load</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>id<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token constant">REGISTER_WORKLET</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">CSS.paintWorklet.addModule(import.meta.ROLLUP_FILE_URL_</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">emitFile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          type<span class="token punctuation">:</span> <span class="token string">&apos;chunk&apos;</span><span class="token punctuation">,</span>
+          id<span class="token punctuation">:</span> id<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token constant">REGISTER_WORKLET</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">);</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">resolveId</span><span class="token punctuation">(</span><span class="token parameter">source<span class="token punctuation">,</span> importer</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// We remove the prefix, resolve everything to absolute ids and add the prefix again</span>
+      <span class="token comment">// This makes sure that you can use relative imports to define worklets</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>source<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token constant">REGISTER_WORKLET</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>source<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token constant">REGISTER_WORKLET</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">,</span> importer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+          <span class="token parameter">resolvedId</span> <span class="token operator">=&gt;</span> <span class="token constant">REGISTER_WORKLET</span> <span class="token operator">+</span> resolvedId<span class="token punctuation">.</span>id
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Usage:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// main.js</span>
+<span class="token keyword">import</span> <span class="token string">&apos;register-paint-worklet:./worklet.js&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> color<span class="token punctuation">,</span> size <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./config.js&apos;</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>innerHTML <span class="token operator">+=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;h1 style=&quot;background-image: paint(vertical-lines);&quot;&gt;color: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>color<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, size: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>size<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/h1&gt;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token comment">// worklet.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> color<span class="token punctuation">,</span> size <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./config.js&apos;</span><span class="token punctuation">;</span>
+<span class="token function">registerPaint</span><span class="token punctuation">(</span>
+  <span class="token string">&apos;vertical-lines&apos;</span><span class="token punctuation">,</span>
+  <span class="token keyword">class</span> <span class="token punctuation">{</span>
+    <span class="token function">paint</span><span class="token punctuation">(</span><span class="token parameter">ctx<span class="token punctuation">,</span> geom</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> x <span class="token operator">&lt;</span> geom<span class="token punctuation">.</span>width <span class="token operator">/</span> size<span class="token punctuation">;</span> x<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> color<span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">rect</span><span class="token punctuation">(</span>x <span class="token operator">*</span> size<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> geom<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> color <span class="token operator">=</span> <span class="token string">&apos;greenyellow&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> size <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If you build this code, both the main chunk and the worklet will share the code from <code>config.js</code> via a shared chunk. This enables us to make use of the browser cache to reduce transmitted data and speed up loading the worklet.</p>
+<h3 id="transformers">Transformers</h3>
+<p>Transformer plugins (i.e. those that return a <code>transform</code> function for e.g. transpiling non-JS files) should support <code>options.include</code> and <code>options.exclude</code>, both of which can be a minimatch pattern or an array of minimatch patterns. If <code>options.include</code> is omitted or of zero length, files should be included by default; otherwise they should only be included if the ID matches one of the patterns.</p>
+<p>The <code>transform</code> hook, if returning an object, can also include an <code>ast</code> property. Only use this feature if you know what you&apos;re doing. Note that only the last AST in a chain of transforms will be used (and if there are transforms, any ASTs generated by the <code>load</code> hook will be discarded for the transformed modules.)</p>
+<h4 id="example-transformer">Example Transformer</h4>
+<p>(Use <a href="https://github.com/rollup/plugins/tree/master/packages/pluginutils" target="_blank">@rollup/pluginutils</a> for
+commonly needed functions, and to implement a transformer in the recommended
+manner.)</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> createFilter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@rollup/pluginutils&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">myPlugin</span> <span class="token punctuation">(</span> <span class="token parameter">options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> filter <span class="token operator">=</span> <span class="token function">createFilter</span><span class="token punctuation">(</span> options<span class="token punctuation">.</span>include<span class="token punctuation">,</span> options<span class="token punctuation">.</span>exclude <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token function">transform</span> <span class="token punctuation">(</span> <span class="token parameter">code<span class="token punctuation">,</span> id</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">!</span><span class="token function">filter</span><span class="token punctuation">(</span> id <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// proceed with the transformation...</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        code<span class="token punctuation">:</span> generatedCode<span class="token punctuation">,</span>
+        map<span class="token punctuation">:</span> generatedSourceMap
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="source-code-transformations">Source Code Transformations</h4>
+<p>If a plugin transforms source code, it should generate a sourcemap automatically, unless there&apos;s a specific <code>sourceMap: false</code> option. Rollup only cares about the <code>mappings</code> property (everything else is handled automatically). If it doesn&apos;t make sense to generate a sourcemap, (e.g. <a href="https://github.com/TrySound/rollup-plugin-string" target="_blank">rollup-plugin-string</a>), return an empty sourcemap:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">return</span> <span class="token punctuation">{</span>
+  code<span class="token punctuation">:</span> transformedCode<span class="token punctuation">,</span>
+  map<span class="token punctuation">:</span> <span class="token punctuation">{</span> mappings<span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If the transformation does not move code, you can preserve existing sourcemaps
+by returning <code>null</code>:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">return</span> <span class="token punctuation">{</span>
+  code<span class="token punctuation">:</span> transformedCode<span class="token punctuation">,</span>
+  map<span class="token punctuation">:</span> <span class="token keyword">null</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If you create a plugin that you think would be useful to others, please publish
+it to NPM and add submit it to <a href="https://github.com/rollup/awesome" target="_blank">github.com/rollup/awesome</a>!</p>
+<h3 id="synthetic-named-exports">Synthetic named exports</h3>
+<p>It is possible to designate a fallback export for missing exports by setting the <code>syntheticNamedExports</code> option for a module in the <a href="guide/en#resolveid"><code>resolveId</code></a>, <a href="guide/en#load"><code>load</code></a> or <a href="guide/en#transform"><code>transform</code></a> hook. If a string value is used for <code>syntheticNamedExports</code>, this module will fallback the resolution of any missing named exports to properties of the named export of the given name:</p>
+<p><strong>dep.js: (<code>{syntheticNamedExports: &apos;__synthetic&apos;}</code>)</strong></p>
+<pre class="language-"><code>export const foo = &apos;explicit&apos;;
+export const __synthetic = {
+  foo: &apos;foo&apos;,
+  bar: &apos;bar&apos;
+}
+</code></pre><p><strong>main.js:</strong></p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> foo<span class="token punctuation">,</span> bar<span class="token punctuation">,</span> baz<span class="token punctuation">,</span> __synthetic <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./dep.js&apos;</span>
+
+<span class="token comment">// logs &quot;explicit&quot; as non-synthetic exports take precedence</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// logs &quot;bar&quot;, picking the property from __synthetic</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// logs &quot;undefined&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>baz<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// logs &quot;{foo:&apos;foo&apos;,bar:&apos;bar&apos;}&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>__synthetic<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>When used as an entry point, only explicit exports will be exposed. The synthetic fallback export, i.e. <code>__synthetic</code> in the example, will not be exposed for string values of <code>syntheticNamedExports</code>. However if the value is <code>true</code>, the default export will be exposed. This is the only notable difference between <code>syntheticNamedExports: true</code> and <code>syntheticNamedExports: &apos;default&apos;</code>.</p>
+<h3 id="inter-plugin-communication">Inter-plugin communication</h3>
+<p>At some point when using many dedicated plugins, there may be the need for unrelated plugins to be able to exchange information during the build. There are several mechanisms through which Rollup makes this possible.</p>
+<h4 id="custom-resolver-options">Custom resolver options</h4>
+<p>Assume you have a plugin that should resolve a module to different ids depending on how it is imported. One way to achieve this would be to use special proxy ids when importing this module, e.g. a transpiled import via <code>require(&quot;foo&quot;)</code> could be denoted with an id <code>foo?require=true</code> so that a resolver plugin knows this.</p>
+<p>The problem here, however, is that this proxy id may or may not cause unintended side-effects when passed to other resolvers. Moreover, if the id is created by plugin <code>A</code> and the resolution happens in plugin <code>B</code>, it creates a dependency between these plugins so that one <code>A</code> is not usable without <code>B</code>.</p>
+<p>Custom resolver option offer a solution here by allowing to pass additional options for plugins when manually resolving a module. This happens without changing the id and thus without impairing the ability for other plugins to resolve the module correctly if the intended target plugin is not present.</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">requestingPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">&apos;requesting&apos;</span><span class="token punctuation">,</span>
+    <span class="token keyword">async</span> <span class="token function">buildStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> resolution <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&apos;foo&apos;</span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        custom<span class="token punctuation">:</span> <span class="token punctuation">{</span>resolving<span class="token punctuation">:</span> <span class="token punctuation">{</span>specialResolution<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>resolution<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;special&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">resolvingPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">&apos;resolving&apos;</span><span class="token punctuation">,</span>
+    <span class="token function">resolveId</span><span class="token punctuation">(</span><span class="token parameter">id<span class="token punctuation">,</span> importer<span class="token punctuation">,</span> <span class="token punctuation">{</span> custom <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>custom<span class="token punctuation">.</span>resolving<span class="token operator">?</span><span class="token punctuation">.</span>specialResolution<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&apos;special&apos;</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Note the convention that custom options should be added using a property corresponding to the plugin name of the resolving plugin. It is responsibility of the resolving plugin to specify which options it respects.</p>
+<h4 id="custom-module-meta-data">Custom module meta-data</h4>
+<p>Plugins can annotate modules with custom meta-data which can be accessed by themselves and other plugins via the <a href="guide/en#resolveid"><code>resolveId</code></a>, <a href="guide/en#load"><code>load</code></a>, and <a href="guide/en#transform"><code>transform</code></a> hooks. This meta-data should always be JSON.stringifyable and will be persisted in the cache e.g. in watch mode.</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">annotatingPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">&apos;annotating&apos;</span><span class="token punctuation">,</span>
+    <span class="token function">transform</span><span class="token punctuation">(</span><span class="token parameter">code<span class="token punctuation">,</span> id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">thisModuleIsSpecial</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span> id<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>annotating<span class="token punctuation">:</span> <span class="token punctuation">{</span>special<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">readingPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> parentApi<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">&apos;reading&apos;</span><span class="token punctuation">,</span>
+    <span class="token function">buildEnd</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> specialModules <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getModuleIds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">id</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getModuleInfo</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">.</span>meta<span class="token punctuation">.</span>annotating<span class="token operator">?</span><span class="token punctuation">.</span>special<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// do something with this list</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Note the convention that plugins that add or modify data should use a property corresponding to the plugin name, in this case <code>annotating</code>. On the other hand, any plugin can read all meta-data from other plugins via <code>this.getModuleInfo</code>.</p>
+<p>If several plugins add meta-data or meta-data is added in different hooks, then these <code>meta</code> objects will be merged shallowly. That means if plugin <code>first</code> adds <code>{meta: {first: {resolved: &quot;first&quot;}}}</code> in the resolveId hook and <code>{meta: {first: {loaded: &quot;first&quot;}}}</code> in the load hook while plugin <code>second</code> adds <code>{meta: {second: {transformed: &quot;second&quot;}}}</code> in the <code>transform</code> hook, then the resulting <code>meta</code> object will be <code>{first: {loaded: &quot;first&quot;}, second: {transformed: &quot;second&quot;}}</code>. Here the result of the <code>resolveId</code> hook will be overwritten by the result of the <code>load</code> hook as the plugin was both storing them under its <code>first</code> top-level property. The <code>transform</code> data of the other plugin on the other hand will be placed next to it.</p>
+<h4 id="direct-plugin-communication">Direct plugin communication</h4>
+<p>For any other kind of inter-plugin communication, we recommend the pattern below. Note that <code>api</code> will never conflict with any upcoming plugin hooks.</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">parentPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">&apos;parent&apos;</span><span class="token punctuation">,</span>
+    api<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">//...methods and properties exposed for other plugins</span>
+      <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// do something interesting</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// ...plugin hooks</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">dependentPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> parentApi<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">&apos;dependent&apos;</span><span class="token punctuation">,</span>
+    <span class="token function">buildStart</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> plugins <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> parentName <span class="token operator">=</span> <span class="token string">&apos;parent&apos;</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> parentPlugin <span class="token operator">=</span> options<span class="token punctuation">.</span>plugins
+        <span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">plugin</span> <span class="token operator">=&gt;</span> plugin<span class="token punctuation">.</span>name <span class="token operator">===</span> parentName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>parentPlugin<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// or handle this silently if it is optional</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">This plugin depends on the &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>parentName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; plugin.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment">// now you can access the API methods in subsequent hooks</span>
+      parentApi <span class="token operator">=</span> parentPlugin<span class="token punctuation">.</span>api<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">transform</span><span class="token punctuation">(</span><span class="token parameter">code<span class="token punctuation">,</span> id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">thereIsAReasonToDoSomething</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        parentApi<span class="token punctuation">.</span><span class="token function">doSomething</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04-tutorial.html" class="navigation navigation-prev " aria-label="Previous page: Tutorial">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06-faqs.html" class="navigation navigation-next " aria-label="Next page: Frequently Asked Questions">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Plugin Development","level":"1.5","depth":1,"next":{"title":"Frequently Asked Questions","level":"1.6","depth":1,"path":"06-faqs.md","ref":"06-faqs.md","articles":[]},"previous":{"title":"Tutorial","level":"1.4","depth":1,"path":"04-tutorial.md","ref":"04-tutorial.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Rollup 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"05-plugin-development.md","mtime":"2021-05-16T01:16:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-16T01:16:38.048Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,414 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Troubleshooting · Rollup 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="999-big-list-of-options.html" />
+    
+    
+    <link rel="prev" href="07-tools.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="01-command-line-reference.html">
+            
+                <a href="01-command-line-reference.html">
+            
+                    
+                    Command Line Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="02-javascript-api.html">
+            
+                <a href="02-javascript-api.html">
+            
+                    
+                    02 Javascript Api
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="03-es-module-syntax.html">
+            
+                <a href="03-es-module-syntax.html">
+            
+                    
+                    ES Module Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04-tutorial.html">
+            
+                <a href="04-tutorial.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="05-plugin-development.html">
+            
+                <a href="05-plugin-development.html">
+            
+                    
+                    Plugin Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="06-faqs.html">
+            
+                <a href="06-faqs.html">
+            
+                    
+                    Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="07-tools.html">
+            
+                <a href="07-tools.html">
+            
+                    
+                    Integrating Rollup With Other Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="08-troubleshooting.html">
+            
+                <a href="08-troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="999-big-list-of-options.html">
+            
+                <a href="999-big-list-of-options.html">
+            
+                    
+                    Big List Of Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Troubleshooting</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>If you get stuck, please try discussing the issue on the <a href="https://is.gd/rollup_chat" target="_blank">Rollup Discord</a> or posting a question to <a href="https://stackoverflow.com/questions/tagged/rollupjs" target="_blank">Stackoverflow</a>. If you&apos;ve found a bug, or Rollup can&apos;t meet your needs, please try <a href="https://github.com/rollup/rollup/issues" target="_blank">raising an issue</a>. Lastly, you may try contacting <a href="https://twitter.com/RollupJS" target="_blank">@RollupJS</a> on Twitter.</p>
+<h3 id="avoiding-eval">Avoiding <code>eval</code></h3>
+<p>You probably already know that &apos;<code>eval</code> is evil&apos;, at least according to some people. But it&apos;s particularly harmful with Rollup, because of how it works &#x2013; unlike other module bundlers, which wrap each module in a function, Rollup puts all your code in the same scope.</p>
+<p>That&apos;s more efficient, but it means that the shared scope is &apos;polluted&apos; whenever you use <code>eval</code>, whereas with a different bundler, modules that <em>didn&apos;t</em> use eval would not be polluted. A minifier can&apos;t mangle variable names in polluted code, because it can&apos;t guarantee that the code to be evaluated doesn&apos;t reference those variable names.</p>
+<p>Furthermore, <strong>it poses a security risk</strong> in that a malicious module could access another module&apos;s private variables with <code>eval(&apos;SUPER_SEKRIT&apos;)</code>.</p>
+<p>Luckily, unless you <em>really do</em> intend for the evaluated code to have access to local variables (in which case you&apos;re probably doing something wrong!), you can achieve the same effect in one of two ways:</p>
+<h4 id="eval2--eval">eval2 = eval</h4>
+<p>Simply &apos;copying&apos; <code>eval</code> provides you with a function that does exactly the same thing, but which runs in the global scope rather than the local one:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> eval2 <span class="token operator">=</span> eval<span class="token punctuation">;</span>
+
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+  <span class="token function">eval</span><span class="token punctuation">(</span><span class="token string">&apos;console.log(&quot;with eval:&quot;,foo)&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// logs &apos;with eval: 42&apos;</span>
+  <span class="token function">eval2</span><span class="token punctuation">(</span><span class="token string">&apos;console.log(&quot;with eval2:&quot;,foo)&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// throws ReferenceError</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="new-function"><code>new Function</code></h4>
+<p>Using the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" target="_blank">Function constructor</a> generates a function from the supplied string. Again, it runs in the global scope. If you need to call the function repeatedly, this is much, <em>much</em> faster than using <code>eval</code>.</p>
+<h3 id="tree-shaking-doesnt-seem-to-be-working">Tree-shaking Doesn&apos;t Seem to be Working</h3>
+<p>Sometimes, you&apos;ll end up with code in your bundle that doesn&apos;t seem like it should be there. For example, if you import a utility from <code>lodash-es</code>, you might expect that you&apos;ll get the bare minimum of code necessary for that utility to work.</p>
+<p>But Rollup has to be conservative about what code it removes in order to guarantee that the end result will run correctly. If an imported module appears to have <em>side-effects</em>, either on bits of the module that you&apos;re using or on the global environment, Rollup plays it safe and includes those side-effects.</p>
+<p>Because static analysis in a dynamic language like JavaScript is hard, there will occasionally be false positives. Lodash is a good example of a module that <em>looks</em> like it has lots of side-effects, even in places that it doesn&apos;t. You can often mitigate those false positives by importing submodules (e.g. <code>import map from &apos;lodash-es/map&apos;</code> rather than <code>import { map } from &apos;lodash-es&apos;</code>).</p>
+<p>Rollup&apos;s static analysis will improve over time, but it will never be perfect in all cases &#x2013; that&apos;s just JavaScript.</p>
+<h3 id="error-name-is-not-exported-by-module">Error: &quot;[name] is not exported by [module]&quot;</h3>
+<p>Occasionally you will see an error message like this:</p>
+<blockquote>
+<p>&apos;foo&apos; is not exported by bar.js (imported by baz.js)</p>
+</blockquote>
+<p>Import declarations must have corresponding export declarations in the imported module. For example, if you have <code>import a from &apos;./a.js&apos;</code> in a module, and a.js doesn&apos;t have an <code>export default</code> declaration, or <code>import {foo} from &apos;./b.js&apos;</code>, and b.js doesn&apos;t export <code>foo</code>, Rollup cannot bundle the code.</p>
+<p>This error frequently occurs with CommonJS modules converted by <a href="https://github.com/rollup/plugins/tree/master/packages/commonjs" target="_blank">@rollup/plugin-commonjs</a>, which makes a reasonable attempt to generate named exports from the CommonJS code but won&apos;t always succeed, because the freewheeling nature of CommonJS is at odds with the rigorous approach we benefit from in JavaScript modules. It can be solved by using the <a href="https://github.com/rollup/plugins/tree/master/packages/commonjs#custom-named-exports" target="_blank">namedExports</a> option, which allows you to manually fill in the information gaps.</p>
+<h3 id="error-this-is-undefined">Error: &quot;this is undefined&quot;</h3>
+<p>In a JavaScript module, <code>this</code> is <code>undefined</code> at the top level (i.e., outside functions). Because of that, Rollup will rewrite any <code>this</code> references to <code>undefined</code> so that the resulting behaviour matches what will happen when modules are natively supported.</p>
+<p>There are occasional valid reasons for <code>this</code> to mean something else. If you&apos;re getting errors in your bundle, you can use <code>options.context</code> and <code>options.moduleContext</code> to change this behaviour.</p>
+<h3 id="warning-sourcemap-is-likely-to-be-incorrect">Warning: &quot;Sourcemap is likely to be incorrect&quot;</h3>
+<p>You&apos;ll see this warning if you generate a sourcemap with your bundle (<code>sourcemap: true</code> or <code>sourcemap: &apos;inline&apos;</code>) but you&apos;re using one or more plugins that transformed code without generating a sourcemap for the transformation.</p>
+<p>Usually, a plugin will only omit the sourcemap if it (the plugin, not the bundle) was configured with <code>sourcemap: false</code> &#x2013; so all you need to do is change that. If the plugin doesn&apos;t generate a sourcemap, consider raising an issue with the plugin author.</p>
+<h3 id="warning-treating-module-as-external-dependency">Warning: &quot;Treating [module] as external dependency&quot;</h3>
+<p>Rollup will only resolve <em>relative</em> module IDs by default. This means that an import statement like this&#x2026;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> moment <span class="token keyword">from</span> <span class="token string">&apos;moment&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x2026;won&apos;t result in <code>moment</code> being included in your bundle &#x2013; instead, it will be an external dependency that is required at runtime. If that&apos;s what you want, you can suppress this warning with the <code>external</code> option, which makes your intentions explicit:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  entry<span class="token punctuation">:</span> <span class="token string">&apos;src/index.js&apos;</span><span class="token punctuation">,</span>
+  dest<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span><span class="token punctuation">,</span>
+  format<span class="token punctuation">:</span> <span class="token string">&apos;cjs&apos;</span><span class="token punctuation">,</span>
+  external<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">&apos;moment&apos;</span> <span class="token punctuation">]</span> <span class="token comment">// &lt;-- suppresses the warning</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If you <em>do</em> want to include the module in your bundle, you need to tell Rollup how to find it. In most cases, this is a question of using <a href="https://github.com/rollup/plugins/tree/master/packages/node-resolve" target="_blank">@rollup/plugin-node-resolve</a>.</p>
+<p>Some modules, like <code>events</code> or <code>util</code>, are built in to Node.js. If you want to include those (for example, so that your bundle runs in the browser), you may need to include <a href="https://github.com/ionic-team/rollup-plugin-node-polyfills" target="_blank">rollup-plugin-node-polyfills</a>.</p>
+<h3 id="error-emfile-too-many-open-files">Error: &quot;EMFILE: too many open files&quot;</h3>
+<p>For large projects, you may run into an EMFILE error when running Rollup in watch mode on macOS. If you experience this, disabling FSEvents may eliminate the problem:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    chokidar<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      useFsEvents<span class="token punctuation">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="07-tools.html" class="navigation navigation-prev " aria-label="Previous page: Integrating Rollup With Other Tools">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="999-big-list-of-options.html" class="navigation navigation-next " aria-label="Next page: Big List Of Options">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Troubleshooting","level":"1.8","depth":1,"next":{"title":"Big List Of Options","level":"1.9","depth":1,"path":"999-big-list-of-options.md","ref":"999-big-list-of-options.md","articles":[]},"previous":{"title":"Integrating Rollup With Other Tools","level":"1.7","depth":1,"path":"07-tools.md","ref":"07-tools.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Rollup 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"08-troubleshooting.md","mtime":"2021-05-16T01:16:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-16T01:16:38.048Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

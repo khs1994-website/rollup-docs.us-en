@@ -1,0 +1,1703 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Big List Of Options · Rollup 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="./" />
+    
+    
+    <link rel="prev" href="08-troubleshooting.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="01-command-line-reference.html">
+            
+                <a href="01-command-line-reference.html">
+            
+                    
+                    Command Line Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="02-javascript-api.html">
+            
+                <a href="02-javascript-api.html">
+            
+                    
+                    02 Javascript Api
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="03-es-module-syntax.html">
+            
+                <a href="03-es-module-syntax.html">
+            
+                    
+                    ES Module Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04-tutorial.html">
+            
+                <a href="04-tutorial.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="05-plugin-development.html">
+            
+                <a href="05-plugin-development.html">
+            
+                    
+                    Plugin Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="06-faqs.html">
+            
+                <a href="06-faqs.html">
+            
+                    
+                    Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="07-tools.html">
+            
+                <a href="07-tools.html">
+            
+                    
+                    Integrating Rollup With Other Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="08-troubleshooting.html">
+            
+                <a href="08-troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="999-big-list-of-options.html">
+            
+                <a href="999-big-list-of-options.html">
+            
+                    
+                    Big List Of Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Big List Of Options</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="core-functionality">Core functionality</h3>
+<h4 id="external">external</h4>
+<p>Type: <code>(string | RegExp)[] | RegExp | string | (id: string, parentId: string, isResolved: boolean) =&gt; boolean</code><br>
+CLI: <code>-e</code>/<code>--external <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>external-id,another-external-id,...</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Either a function that takes an <code>id</code> and returns <code>true</code> (external) or <code>false</code> (not external), or an <code>Array</code> of module IDs, or regular expressions to match module IDs, that should remain external to the bundle. Can also be just a single ID or regular expression. The matched IDs should be either:</p>
+<ol>
+<li>the name of an external dependency, exactly the way it is written in the import statement. I.e. to mark <code>import &quot;dependency.js&quot;</code> as external, use <code>&quot;dependency.js&quot;</code> while to mark <code>import &quot;dependency&quot;</code> as external, use <code>&quot;dependency&quot;</code>.</li>
+<li>a resolved ID (like an absolute path to a file).</li>
+</ol>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">&apos;path&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  external<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&apos;some-externally-required-library&apos;</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span> __dirname<span class="token punctuation">,</span> <span class="token string">&apos;src/some-local-file-that-should-not-be-bundled.js&apos;</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token regex">/node_modules/</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Note that if you want to filter out package imports, e.g. <code>import {rollup} from &apos;rollup&apos;</code>, via a <code>/node_modules/</code> regular expression, you need something like <a href="https://github.com/rollup/plugins/tree/master/packages/node-resolve" target="_blank">@rollup/plugin-node-resolve</a> to resolve the imports to <code>node_modules</code> first.</p>
+<p>When given as a command line argument, it should be a comma-separated list of IDs:</p>
+<pre class="language-"><code class="lang-bash">rollup -i src/main.js <span class="token punctuation">..</span>. -e foo,bar,baz
+</code></pre>
+<p>When providing a function, it is called with three parameters <code>(id, parent, isResolved)</code> that can give you more fine-grained control:</p>
+<ul>
+<li><code>id</code> is the id of the module in question</li>
+<li><code>parent</code> is the id of the module doing the import</li>
+<li><code>isResolved</code> signals whether the <code>id</code> has been resolved by e.g. plugins</li>
+</ul>
+<p>When creating an <code>iife</code> or <code>umd</code> bundle, you will need to provide global variable names to replace your external imports via the <code>output.globals</code> option.</p>
+<p>If a relative import, i.e. starting with <code>./</code> or <code>../</code>, is marked as &quot;external&quot;, rollup will internally resolve the id to an absolute file system location so that different imports of the external module can be merged. When the resulting bundle is written, the import will again be converted to a relative import. Example:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// input</span>
+<span class="token comment">// src/main.js (entry point)</span>
+<span class="token keyword">import</span> x <span class="token keyword">from</span> <span class="token string">&apos;../external.js&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&apos;./nested/nested.js&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// src/nested/nested.js</span>
+<span class="token comment">// the import would point to the same file if it existed</span>
+<span class="token keyword">import</span> x <span class="token keyword">from</span> <span class="token string">&apos;../../external.js&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// output</span>
+<span class="token comment">// the different imports are merged</span>
+<span class="token keyword">import</span> x <span class="token keyword">from</span> <span class="token string">&apos;../external.js&apos;</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The conversion back to a relative import is done as if <code>output.file</code> or <code>output.dir</code> were in the same location as the entry point or the common base directory of all entry points if there is more than one.</p>
+<h4 id="input">input</h4>
+<p>Type: <code>string | string [] | { [entryName: string]: string }</code><br>
+CLI: <code>-i</code>/<code>--input <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filename</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>The bundle&apos;s entry point(s) (e.g. your <code>main.js</code> or <code>app.js</code> or <code>index.js</code>). If you provide an array of entry points or an object mapping names to entry points, they will be bundled to separate output chunks. Unless the <a href="guide/en#outputfile"><code>output.file</code></a> option is used, generated chunk names will follow the <a href="guide/en#outputentryfilenames"><code>output.entryFileNames</code></a> option. When using the object form, the <code>[name]</code> portion of the file name will be the name of the object property while for the array form, it will be the file name of the entry point.</p>
+<p>Note that it is possible when using the object form to put entry points into different sub-folders by adding a <code>/</code> to the name. The following will generate at least two entry chunks with the names <code>entry-a.js</code> and <code>entry-b/index.js</code>, i.e. the file <code>index.js</code> is placed in the folder <code>entry-b</code>:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  input<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    a<span class="token punctuation">:</span> <span class="token string">&apos;src/main-a.js&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;b/index&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;src/main-b.js&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+    entryFileNames<span class="token punctuation">:</span> <span class="token string">&apos;entry-[name].js&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The option can be omitted if some plugin emits at least one chunk (using <a href="guide/en#thisemitfileemittedfile-emittedchunk--emittedasset--string"><code>this.emitFile</code></a>) by the end of the <a href="guide/en#buildstart"><code>buildStart</code></a> hook.</p>
+<p>When using the command line interface, multiple inputs can be provided by using the option multiple times. When provided as the first options, it is equivalent to not prefix them with <code>--input</code>:</p>
+<pre class="language-"><code class="lang-sh">rollup --format es --input src/entry1.js --input src/entry2.js
+<span class="token comment"># is equivalent to</span>
+rollup src/entry1.js src/entry2.js --format es
+</code></pre>
+<p>Chunks can be named by adding an <code>=</code> to the provided value:</p>
+<pre class="language-"><code class="lang-sh">rollup <span class="token assign-left variable">main</span><span class="token operator">=</span>src/entry1.js <span class="token assign-left variable">other</span><span class="token operator">=</span>src/entry2.js --format es
+</code></pre>
+<p>File names containing spaces can be specified by using quotes:</p>
+<pre class="language-"><code class="lang-sh">rollup <span class="token string">&quot;main entry&quot;</span><span class="token operator">=</span><span class="token string">&quot;src/entry 1.js&quot;</span> <span class="token string">&quot;src/other entry.js&quot;</span> --format es
+</code></pre>
+<h4 id="outputdir">output.dir</h4>
+<p>Type: <code>string</code><br>
+CLI: <code>-d</code>/<code>--dir <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dirname</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>The directory in which all generated chunks are placed. This option is required if more than one chunk is generated. Otherwise, the <code>file</code> option can be used instead.</p>
+<h4 id="outputfile">output.file</h4>
+<p>Type: <code>string</code><br>
+CLI: <code>-o</code>/<code>--file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filename</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>The file to write to. Will also be used to generate sourcemaps, if applicable. Can only be used if not more than one chunk is generated.</p>
+<h4 id="outputformat">output.format</h4>
+<p>Type: <code>string</code><br>
+CLI: <code>-f</code>/<code>--format <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>formatspecifier</span><span class="token punctuation">&gt;</span></span></code><br>
+Default: <code>&quot;es&quot;</code></p>
+<p>Specifies the format of the generated bundle. One of the following:</p>
+<ul>
+<li><code>amd</code> &#x2013; Asynchronous Module Definition, used with module loaders like RequireJS</li>
+<li><code>cjs</code> &#x2013; CommonJS, suitable for Node and other bundlers (alias: <code>commonjs</code>)</li>
+<li><code>es</code> &#x2013; Keep the bundle as an ES module file, suitable for other bundlers and inclusion as a <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span>module</span><span class="token punctuation">&gt;</span></span></code> tag in modern browsers (alias: <code>esm</code>, <code>module</code>)</li>
+<li><code>iife</code> &#x2013; A self-executing function, suitable for inclusion as a <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span></code> tag. (If you want to create a bundle for your application, you probably want to use this.). &quot;iife&quot; stands for &quot;immediately-invoked <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function" target="_blank">Function Expression</a>&quot;</li>
+<li><code>umd</code> &#x2013; Universal Module Definition, works as <code>amd</code>, <code>cjs</code> and <code>iife</code> all in one</li>
+<li><code>system</code> &#x2013; Native format of the SystemJS loader (alias: <code>systemjs</code>)</li>
+</ul>
+<h4 id="outputglobals">output.globals</h4>
+<p>Type: <code>{ [id: string]: string } | ((id: string) =&gt; string)</code><br>
+CLI: <code>-g</code>/<code>--globals <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">external-id:</span><span class="token namespace">variableName,another-external-id:</span>anotherVariableName,...</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Specifies <code>id: variableName</code> pairs necessary for external imports in <code>umd</code>/<code>iife</code> bundles. For example, in a case like this&#x2026;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> $ <span class="token keyword">from</span> <span class="token string">&apos;jquery&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x2026;we want to tell Rollup that <code>jquery</code> is external and the <code>jquery</code> module ID equates to the global <code>$</code> variable:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  external<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;jquery&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;iife&apos;</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">&apos;MyBundle&apos;</span><span class="token punctuation">,</span>
+    globals<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      jquery<span class="token punctuation">:</span> <span class="token string">&apos;$&apos;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/*
+var MyBundle = (function ($) {
+  // code goes here
+}($));
+*/</span>
+</code></pre>
+<p>Alternatively, supply a function that will turn an external module ID into a global variable name.</p>
+<p>When given as a command line argument, it should be a comma-separated list of <code>id:variableName</code> pairs:</p>
+<pre class="language-"><code>rollup -i src/main.js ... -g jquery:$,underscore:_
+</code></pre><p>To tell Rollup that a local file should be replaced by a global variable, use an absolute id:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">&apos;path&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> externalId <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span> __dirname<span class="token punctuation">,</span> <span class="token string">&apos;src/some-local-file-that-should-not-be-bundled.js&apos;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  external<span class="token punctuation">:</span> <span class="token punctuation">[</span>externalId<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;iife&apos;</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">&apos;MyBundle&apos;</span><span class="token punctuation">,</span>
+    globals<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">[</span>externalId<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;globalVariable&apos;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="outputname">output.name</h4>
+<p>Type: <code>string</code><br>
+CLI: <code>-n</code>/<code>--name <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>variableName</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Necessary for <code>iife</code>/<code>umd</code> bundles that exports values in which case it is the global variable name  representing your bundle. Other scripts on the same page can use this variable name to access the exports of your bundle.</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;iife&apos;</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">&apos;MyBundle&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// var MyBundle = (function () {...</span>
+</code></pre>
+<p>Namespaces are supported i.e. your name can contain dots. The resulting bundle will contain the setup necessary for the namespacing.</p>
+<pre class="language-"><code>rollup -n &quot;a.b.c&quot;
+
+/* -&gt;
+this.a = this.a || {};
+this.a.b = this.a.b || {};
+this.a.b.c = ...
+*/
+</code></pre><h4 id="outputplugins">output.plugins</h4>
+<p>Type: <code>OutputPlugin | (OutputPlugin | void)[]</code></p>
+<p>Adds a plugin just to this output. See <a href="guide/en#using-output-plugins">Using output plugins</a> for more information on how to use output-specific plugins and <a href="guide/en#plugin-development">Plugins</a> on how to write your own. For plugins imported from packages, remember to call the imported plugin function (i.e. <code>commonjs()</code>, not just <code>commonjs</code>). Falsy plugins will be ignored, which can be used to easily activate or deactivate plugins.</p>
+<p>Not every plugin can be used here. <code>output.plugins</code> is limited to plugins that only use hooks that run during <code>bundle.generate()</code> or <code>bundle.write()</code>, i.e. after Rollup&apos;s main analysis is complete. If you are a plugin author, see <a href="guide/en#output-generation-hooks">output generation hooks</a> to find out which hooks can be used.</p>
+<p>The following will add minification to one of the outputs:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>terser<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;rollup-plugin-terser&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token string">&apos;main.js&apos;</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span><span class="token punctuation">,</span>
+      format<span class="token punctuation">:</span> <span class="token string">&apos;es&apos;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.min.js&apos;</span><span class="token punctuation">,</span>
+      format<span class="token punctuation">:</span> <span class="token string">&apos;es&apos;</span><span class="token punctuation">,</span>
+      plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token function">terser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="plugins">plugins</h4>
+<p>Type: <code>Plugin | (Plugin | void)[]</code></p>
+<p>See <a href="guide/en#using-plugins">Using plugins</a> for more information on how to use plugins and <a href="guide/en#plugin-development">Plugins</a> on how to write your own (try it out, it&apos;s not as difficult as it may sound and very much extends what you can do with Rollup). For plugins imported from packages, remember to call the imported plugin function (i.e. <code>commonjs()</code>, not just <code>commonjs</code>). Falsy plugins will be ignored, which can be used to easily activate or deactivate plugins.</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">import</span> resolve <span class="token keyword">from</span> <span class="token string">&apos;@rollup/plugin-node-resolve&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> commonjs <span class="token keyword">from</span> <span class="token string">&apos;@rollup/plugin-commonjs&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> isProduction <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">&apos;production&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token string">&apos;main.js&apos;</span><span class="token punctuation">,</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">commonjs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    isProduction <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token keyword">await</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;rollup-plugin-terser&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">terser</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;cjs&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>(This example also demonstrates how to use an async IIFE and dynamic imports to avoid unnecessary module loading, which can be surprisingly slow.)</p>
+<h3 id="advanced-functionality">Advanced functionality</h3>
+<h4 id="cache">cache</h4>
+<p>Type: <code>RollupCache | false</code></p>
+<p>The <code>cache</code> property of a previous bundle. Use it to speed up subsequent builds in watch mode &#x2014; Rollup will only reanalyse the modules that have changed. Setting this option explicitly to <code>false</code> will prevent generating the <code>cache</code> property on the bundle and also deactivate caching for plugins.</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> rollup <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;rollup&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> cache<span class="token punctuation">;</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">buildWithCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> bundle <span class="token operator">=</span> <span class="token keyword">await</span> rollup<span class="token punctuation">.</span><span class="token function">rollup</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    cache<span class="token punctuation">,</span> <span class="token comment">// is ignored if falsy</span>
+    <span class="token comment">// ... other input options</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cache <span class="token operator">=</span> bundle<span class="token punctuation">.</span>cache<span class="token punctuation">;</span> <span class="token comment">// store the cache object of the previous build</span>
+  <span class="token keyword">return</span> bundle<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">buildWithCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">bundle</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ... do something with the bundle</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">buildWithCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// will use the cache of the previous build</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">bundle</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ... do something with the bundle</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="makeabsoluteexternalsrelative">makeAbsoluteExternalsRelative</h4>
+<p>Type: <code>boolean | &quot;ifRelativeSource&quot;</code><br>
+CLI: <code>--makeAbsoluteExternalsRelative</code>/<code>--no-makeAbsoluteExternalsRelative</code><br>
+Default: <code>true</code></p>
+<p>Determines if absolute external paths should be converted to relative paths in the output. This does not only apply to paths that are absolute in the source but also to paths that are resolved to an absolute path by either a plugin or Rollup core.</p>
+<p>For <code>true</code>, an external import like <code>import &quot;/Users/Rollup/project/relative.js&quot;</code> would be converted to a relative path. When converting an absolute path to a relative path, Rollup does <em>not</em> take the <code>file</code> or <code>dir</code> options into account, because those may not be present e.g. for builds using the JavaScript API. Instead, it assumes that the root of the generated bundle is located at the common shared parent directory of all modules that were included in the bundle. Assuming that the common parent directory of all modules is <code>&quot;/Users/Rollup/project&quot;</code>, the import from above would likely be converted to <code>import &quot;./relative.js&quot;</code> in the output. If the output chunk is itself nested in a sub-directory by choosing e.g. <code>chunkFileNames: &quot;chunks/[name].js&quot;</code>, the import would be <code>&quot;../relative.js&quot;</code>.</p>
+<p>As stated before, this would also apply to originally relative imports like <code>import &quot;./relative.js&quot;</code> that are resolved to an absolute path before they are marked as external by the <a href="guide/en#external"><code>external</code></a> option.</p>
+<p>One common problem is that this mechanism will also apply to imports like <code>import &quot;/absolute.js&apos;&quot;</code>, resulting in unexpected relative paths in the output.</p>
+<p>For this case, choosing <code>&quot;ifRelativeSource&quot;</code> will check if the original import was a relative import and only then convert it to a relative import in the output. Choosing <code>false</code> will keep all paths as absolute paths in the output.</p>
+<p>Note that when a relative path is directly marked as &quot;external&quot; using the <a href="guide/en#external"><code>external</code></a> option, then it will be the same relative path in the output. When it is resolved first via a plugin or Rollup core and then marked as external, the above logic will apply.</p>
+<h4 id="onwarn">onwarn</h4>
+<p>Type: <code>(warning: RollupWarning, defaultHandler: (warning: string | RollupWarning) =&gt; void) =&gt; void;</code></p>
+<p>A function that will intercept warning messages. If not supplied, warnings will be deduplicated and printed to the console. When using the <a href="guide/en#--silent"><code>--silent</code></a> CLI option, this handler is the only way to get notified about warnings.</p>
+<p>The function receives two arguments: the warning object and the default handler. Warnings objects have, at a minimum, a <code>code</code> and a <code>message</code> property, allowing you to control how different kinds of warnings are handled. Other properties are added depending on the type of warning.</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  <span class="token function">onwarn</span> <span class="token punctuation">(</span><span class="token parameter">warning<span class="token punctuation">,</span> warn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// skip certain warnings</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>warning<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token string">&apos;UNUSED_EXTERNAL_IMPORT&apos;</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// throw on others</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>warning<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token string">&apos;NON_EXISTENT_EXPORT&apos;</span><span class="token punctuation">)</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>warning<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Use default for everything else</span>
+    <span class="token function">warn</span><span class="token punctuation">(</span>warning<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Many warnings also have a <code>loc</code> property and a <code>frame</code> allowing you to locate the source of the warning:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  <span class="token function">onwarn</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> loc<span class="token punctuation">,</span> frame<span class="token punctuation">,</span> message <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>loc<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>loc<span class="token punctuation">.</span>file<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> (</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>loc<span class="token punctuation">.</span>line<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>loc<span class="token punctuation">.</span>column<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">) </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>message<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>frame<span class="token punctuation">)</span> console<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span>frame<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="outputassetfilenames">output.assetFileNames</h4>
+<p>Type: <code>string | ((assetInfo: AssetInfo) =&gt; string)</code><br>
+CLI: <code>--assetFileNames <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pattern</span><span class="token punctuation">&gt;</span></span></code><br>
+Default: <code>&quot;assets/[name]-[hash][extname]&quot;</code></p>
+<p>The pattern to use for naming custom emitted assets to include in the build output, or a function that is called per asset to return such a pattern. Patterns support the following placeholders:</p>
+<ul>
+<li><code>[extname]</code>: The file extension of the asset including a leading dot, e.g. <code>.css</code>.</li>
+<li><code>[ext]</code>: The file extension without a leading dot, e.g. <code>css</code>.</li>
+<li><code>[hash]</code>: A hash based on the name and content of the asset.</li>
+<li><code>[name]</code>: The file name of the asset excluding any extension.</li>
+</ul>
+<p>Forward slashes <code>/</code> can be used to place files in sub-directories. When using a function, <code>assetInfo</code> is a reduced version of the one in <a href="guide/en#generatebundle"><code>generateBundle</code></a> without the <code>fileName</code>. See also <a href="guide/en#outputchunkfilenames"><code>output.chunkFileNames</code></a>, <a href="guide/en#outputentryfilenames"><code>output.entryFileNames</code></a>. </p>
+<h4 id="outputbanneroutputfooter">output.banner/output.footer</h4>
+<p>Type: <code>string | (() =&gt; string | Promise<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>)</code><br>
+CLI: <code>--banner</code>/<code>--footer <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>A string to prepend/append to the bundle. You can also supply a function that returns a <code>Promise</code> that resolves to a <code>string</code> to generate it asynchronously (Note: <code>banner</code> and <code>footer</code> options will not break sourcemaps).</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+    banner<span class="token punctuation">:</span> <span class="token string">&apos;/* my-library version &apos;</span> <span class="token operator">+</span> version <span class="token operator">+</span> <span class="token string">&apos; */&apos;</span><span class="token punctuation">,</span>
+    footer<span class="token punctuation">:</span> <span class="token string">&apos;/* follow me on Twitter! @rich_harris */&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>See also <a href="guide/en#outputintrooutputoutro"><code>output.intro/output.outro</code></a>.</p>
+<h4 id="outputchunkfilenames">output.chunkFileNames</h4>
+<p>Type: <code>string | ((chunkInfo: ChunkInfo) =&gt; string)</code><br>
+CLI: <code>--chunkFileNames <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pattern</span><span class="token punctuation">&gt;</span></span></code><br>
+Default: <code>&quot;[name]-[hash].js&quot;</code></p>
+<p>The pattern to use for naming shared chunks created when code-splitting, or a function that is called per chunk to return such a pattern. Patterns support the following placeholders:</p>
+<ul>
+<li><code>[format]</code>: The rendering format defined in the output options, e.g. <code>es</code> or <code>cjs</code>.</li>
+<li><code>[hash]</code>: A hash based on the content of the chunk and the content of all its dependencies.</li>
+<li><code>[name]</code>: The name of the chunk. This can be explicitly set via the <a href="guide/en#outputmanualchunks"><code>output.manualChunks</code></a> option or when the chunk is created by a plugin via <a href="guide/en#thisemitfileemittedfile-emittedchunk--emittedasset--string"><code>this.emitFile</code></a>. Otherwise, it will be derived from the chunk contents.</li>
+</ul>
+<p>Forward slashes <code>/</code> can be used to place files in sub-directories. When using a function, <code>chunkInfo</code> is a reduced version of the one in <a href="guide/en#generatebundle"><code>generateBundle</code></a> without properties that depend on file names. See also <a href="guide/en#outputassetfilenames"><code>output.assetFileNames</code></a>, <a href="guide/en#outputentryfilenames"><code>output.entryFileNames</code></a>.</p>
+<h4 id="outputcompact">output.compact</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--compact</code>/<code>--no-compact</code><br>
+Default: <code>false</code></p>
+<p>This will minify the wrapper code generated by rollup. Note that this does not affect code written by the user. This option is useful when bundling pre-minified code.</p>
+<h4 id="outputentryfilenames">output.entryFileNames</h4>
+<p>Type: <code>string | ((chunkInfo: ChunkInfo) =&gt; string)</code><br>
+CLI: <code>--entryFileNames <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pattern</span><span class="token punctuation">&gt;</span></span></code><br>
+Default: <code>&quot;[name].js&quot;</code></p>
+<p>The pattern to use for chunks created from entry points, or a function that is called per entry chunk to return such a pattern. Patterns support the following placeholders:</p>
+<ul>
+<li><code>[format]</code>: The rendering format defined in the output options, e.g. <code>es</code> or <code>cjs</code>.</li>
+<li><code>[hash]</code>: A hash based on the content of the entry point and the content of all its dependencies.</li>
+<li><code>[name]</code>: The file name (without extension) of the entry point, unless the object form of input was used to define a different name.</li>
+</ul>
+<p>Forward slashes <code>/</code> can be used to place files in sub-directories. When using a function, <code>chunkInfo</code> is a reduced version of the one in <a href="guide/en#generatebundle"><code>generateBundle</code></a> without properties that depend on file names. See also <a href="guide/en#outputassetfilenames"><code>output.assetFileNames</code></a>, <a href="guide/en#outputchunkfilenames"><code>output.chunkFileNames</code></a>.</p>
+<p>This pattern will also be used when setting the <a href="guide/en#outputpreservemodules"><code>output.preserveModules</code></a> option. Here a different set of placeholders is available, though:</p>
+<ul>
+<li><code>[format]</code>: The rendering format defined in the output options.</li>
+<li><code>[name]</code>: The file name (without extension) of the file.</li>
+<li><code>[ext]</code>: The extension of the file.</li>
+<li><code>[extname]</code>: The extension of the file, prefixed by <code>.</code> if it is not empty.</li>
+<li><code>[assetExtname]</code>: The extension of the file, prefixed by <code>.</code> if it is not empty and it is not one of <code>js</code>, <code>jsx</code>, <code>ts</code> or <code>tsx</code>.</li>
+</ul>
+<h4 id="outputextend">output.extend</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--extend</code>/<code>--no-extend</code><br>
+Default: <code>false</code></p>
+<p>Whether to extend the global variable defined by the <code>name</code> option in <code>umd</code> or <code>iife</code> formats. When <code>true</code>, the global variable will be defined as <code>(global.name = global.name || {})</code>. When false, the global defined by <code>name</code> will be overwritten like <code>(global.name = {})</code>.</p>
+<h4 id="outputhoisttransitiveimports">output.hoistTransitiveImports</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--hoistTransitiveImports</code>/<code>--no-hoistTransitiveImports</code><br>
+Default: <code>true</code></p>
+<p>By default when creating multiple chunks, transitive imports of entry chunks will be added as empty imports to the entry chunks. See <a href="guide/en#why-do-additional-imports-turn-up-in-my-entry-chunks-when-code-splitting">&quot;Why do additional imports turn up in my entry chunks when code-splitting?&quot;</a> for details and background. Setting this option to <code>false</code> will disable this behaviour. This option is ignored when using the <a href="guide/en#outputpreservemodules"><code>output.preserveModules</code></a> option as here, imports will never be hoisted.</p>
+<h4 id="outputinlinedynamicimports">output.inlineDynamicImports</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--inlineDynamicImports</code>/<code>--no-inlineDynamicImports</code>
+Default: <code>false</code></p>
+<p>This will inline dynamic imports instead of creating new chunks to create a single bundle. Only possible if a single input is provided. Note that this will change the execution order: A module that is only imported dynamically will be executed immediately if the dynamic import is inlined.</p>
+<h4 id="outputinterop">output.interop</h4>
+<p>Type: <code>&quot;auto&quot; | &quot;esModule&quot; | &quot;default&quot; | &quot;defaultOnly&quot; | boolean | ((id: string) =&gt; &quot;auto&quot; | &quot;esModule&quot; | &quot;default&quot; | &quot;defaultOnly&quot; | boolean)</code><br>
+CLI: <code>--interop <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span></code><br>
+Default: <code>true</code></p>
+<p>Controls how Rollup handles default, namespace and dynamic imports from external dependencies in formats like CommonJS that do not natively support these concepts. Note that even though <code>true</code> is the current default value, this value is deprecated and will be replaced by <code>&quot;auto&quot;</code> in the next major version of Rollup. In the examples, we will be using the CommonJS format, but the interop similarly applies to AMD, IIFE and UMD targets as well.</p>
+<p>To understand the different values, assume we are bundling the following code for a <code>cjs</code> target:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> ext_default<span class="token punctuation">,</span> <span class="token operator">*</span> <span class="token keyword">as</span> external <span class="token keyword">from</span> <span class="token string">&apos;external1&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ext_default<span class="token punctuation">,</span> external<span class="token punctuation">.</span>bar<span class="token punctuation">,</span> external<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;external2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span>log<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Keep in mind that for Rollup, <code>import * as ext_namespace from &apos;external&apos;; console.log(ext_namespace.bar);</code> is completely equivalent to <code>import {bar} from &apos;external&apos;; console.log(bar);</code> and will produce the same code. In the example above however, the namespace object itself is passed to a global function as well, which means we need it as a properly formed object.</p>
+<ul>
+<li><p><code>&quot;esModule&quot;</code> assumes that required modules are transpiled ES modules where the required value corresponds to the module namespace, and the default export is the <code>.default</code> property of the exported object:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> external <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;external1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>external<span class="token punctuation">[</span><span class="token string">&apos;default&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> external<span class="token punctuation">.</span>bar<span class="token punctuation">,</span> external<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;external2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span>log<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>When <code>esModule</code> is used, Rollup adds no additional interop helpers and also supports live-bindings for default exports.</p>
+</li>
+<li><p><code>&quot;default&quot;</code> assumes that the required value should be treated as the default export of the imported module, just like when importing CommonJS from an ES module context in Node. In contrast to Node, though, named imports are supported as well which are treated as properties of the default import. To create the namespace object, Rollup injects helpers:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> external <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;external1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">_interopNamespaceDefault</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> n <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">k</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">!==</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> d <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> k<span class="token punctuation">,</span> d<span class="token punctuation">.</span>get <span class="token operator">?</span> d <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          enumerable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token function-variable function">get</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> e<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  n<span class="token punctuation">[</span><span class="token string">&apos;default&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> e<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">freeze</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> external__namespace <span class="token operator">=</span> <span class="token comment">/*#__PURE__*/</span><span class="token function">_interopNamespaceDefault</span><span class="token punctuation">(</span>external<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>external<span class="token punctuation">,</span> external<span class="token punctuation">.</span>bar<span class="token punctuation">,</span> external__namespace<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token comment">/*#__PURE__*/</span><span class="token function">_interopNamespaceDefault</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;external2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span>log<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p><code>&quot;auto&quot;</code> combines both <code>&quot;esModule&quot;</code> and <code>&quot;default&quot;</code> by injecting helpers that contain code that detects at runtime if the required value contains the <a href="guide/en#outputesmodule"><code>__esModule</code> property</a>. Adding this property is a standard implemented by Rollup, Babel and many other tools to signify that the required value is the namespace of a transpiled ES module:</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> external <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;external1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">_interopNamespace</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>e <span class="token operator">&amp;&amp;</span> e<span class="token punctuation">.</span>__esModule<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> e<span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> n <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">k</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">!==</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">var</span> d <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> k<span class="token punctuation">,</span> d<span class="token punctuation">.</span>get <span class="token operator">?</span> d <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            enumerable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token function-variable function">get</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> e<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    n<span class="token punctuation">[</span><span class="token string">&apos;default&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> e<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">freeze</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> external__namespace <span class="token operator">=</span> <span class="token comment">/*#__PURE__*/</span><span class="token function">_interopNamespace</span><span class="token punctuation">(</span>external<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>external__namespace<span class="token punctuation">[</span><span class="token string">&apos;default&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> external<span class="token punctuation">.</span>bar<span class="token punctuation">,</span> external__namespace<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token comment">/*#__PURE__*/</span><span class="token function">_interopNamespace</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;external2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span>log<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Note how Rollup is reusing the created namespace object to get the <code>default</code> export. If the namespace object is not needed, Rollup will use a simpler helper:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// input</span>
+<span class="token keyword">import</span> ext_default <span class="token keyword">from</span> <span class="token string">&apos;external&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ext_default<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// output</span>
+<span class="token keyword">var</span> ext_default <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;external&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">_interopDefault</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> e <span class="token operator">&amp;&amp;</span> e<span class="token punctuation">.</span>__esModule <span class="token operator">?</span> e <span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">:</span> e <span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> ext_default__default <span class="token operator">=</span> <span class="token comment">/*#__PURE__*/</span><span class="token function">_interopDefault</span><span class="token punctuation">(</span>ext_default<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ext_default__default<span class="token punctuation">[</span><span class="token string">&apos;default&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p><code>&quot;defaultOnly&quot;</code> is similar to <code>&quot;default&quot;</code> except for the following:</p>
+<ul>
+<li>Named imports are forbidden. If such an import is encountered, Rollup throws an error even in <code>es</code> and <code>system</code> formats. That way it is ensures that the <code>es</code> version of the code is able to import non-builtin CommonJS modules in Node correctly.</li>
+<li>While namespace reexports <code>export * from &apos;external&apos;;</code> are not prohibited, they are ignored and will cause Rollup to display a warning because they would not have an effect if there are no named exports.</li>
+<li>When a namespace object is generated, Rollup uses a much simpler helper.</li>
+</ul>
+<p>Here is what Rollup will create from the example code.  Note that we removed <code>external.bar</code> from the code as otherwise, Rollup would have thrown an error because, as stated before, this is equivalent to a named import.</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> ext_default <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;external1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">_interopNamespaceDefaultOnly</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">freeze</span><span class="token punctuation">(</span><span class="token punctuation">{</span>__proto__<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">:</span> e<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> ext_default__namespace <span class="token operator">=</span> <span class="token comment">/*#__PURE__*/</span><span class="token function">_interopNamespaceDefaultOnly</span><span class="token punctuation">(</span>ext_default<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ext_default<span class="token punctuation">,</span> ext_default__namespace<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token comment">/*#__PURE__*/</span><span class="token function">_interopNamespaceDefaultOnly</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;external2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span>log<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>When a function is supplied, Rollup will pass each external id to this function once to control the interop type per dependency.</p>
+<p>As an example if all dependencies are CommonJs, the following config will ensure that named imports are only permitted from Node builtins:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">import</span> builtins <span class="token keyword">from</span> <span class="token string">&apos;builtins&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> nodeBuiltins <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token function">builtins</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+    <span class="token function">interop</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>nodeBuiltins<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> <span class="token string">&apos;defaultOnly&apos;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p><code>true</code> is equivalent to <code>&quot;auto&quot;</code> except that it uses a slightly different helper for the default export that checks for the presence of a <code>default</code> property instead of the <code>__esModule</code> property.</p>
+<p>&#x2622;&#xFE0F; <em>This value is deprecated and will be removed in a future Rollup version.</em></p>
+</li>
+<li><p><code>false</code> is equivalent to using <code>default</code> when importing a default export and <code>esModule</code> when importing a namespace.</p>
+<p>&#x2622;&#xFE0F; <em>This value is deprecated and will be removed in a future Rollup version.</em></p>
+</li>
+</ul>
+<p>There are some additional options that have an effect on the generated interop code:</p>
+<ul>
+<li>Setting <a href="guide/en#outputexternallivebindings"><code>output.exernalLiveBindings</code></a> to <code>false</code> will generate simplified namespace helpers as well as simplified code for extracted default imports.</li>
+<li>Setting <a href="guide/en#outputfreeze"><code>output.freeze</code></a> to <code>false</code> will prevent generated interop namespace objects from being frozen.</li>
+</ul>
+<h4 id="outputintrooutputoutro">output.intro/output.outro</h4>
+<p>Type: <code>string | (() =&gt; string | Promise<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>)</code><br>
+CLI: <code>--intro</code>/<code>--outro <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Similar to <a href="guide/en#outputbanneroutputfooter"><code>output.banner/output.footer</code></a>, except that the code goes <em>inside</em> any format-specific wrapper.</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+    intro<span class="token punctuation">:</span> <span class="token string">&apos;const ENVIRONMENT = &quot;production&quot;;&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="outputmanualchunks">output.manualChunks</h4>
+<p>Type: <code>{ [chunkAlias: string]: string[] } | ((id: string, {getModuleInfo, getModuleIds}) =&gt; string | void)</code></p>
+<p>Allows the creation of custom shared common chunks. When using the object form, each property represents a chunk that contains the listed modules and all their dependencies if they are part of the module graph unless they are already in another manual chunk. The name of the chunk will be determined by the property key.</p>
+<p>Note that it is not necessary for the listed modules themselves to be part of the module graph, which is useful if you are working with <code>@rollup/plugin-node-resolve</code> and use deep imports from packages. For instance</p>
+<pre class="language-"><code>manualChunks: {
+  lodash: [&apos;lodash&apos;]
+}
+</code></pre><p>will put all lodash modules into a manual chunk even if you are only using imports of the form <code>import get from &apos;lodash/get&apos;</code>.</p>
+<p>When using the function form, each resolved module id will be passed to the function. If a string is returned, the module and all its dependency will be added to the manual chunk with the given name. For instance this will create a <code>vendor</code> chunk containing all dependencies inside <code>node_modules</code>:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token function">manualChunks</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>id<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span><span class="token string">&apos;node_modules&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">&apos;vendor&apos;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Be aware that manual chunks can change the behaviour of the application if side effects are triggered before the corresponding modules are actually used.</p>
+<p>When using the function form, <code>manualChunks</code> will be passed an object as second parameter containing the functions <code>getModuleInfo</code> and <code>getModuleIds</code> that work the same way as <a href="guide/en#thisgetmoduleinfomoduleid-string--moduleinfo--null"><code>this.getModuleInfo</code></a> and <a href="guide/en#thisgetmoduleids--iterableiteratorstring"><code>this.getModuleIds</code></a> on the plugin context.</p>
+<p>This can be used to dynamically determine into which manual chunk a module should be placed depending on its position in the module graph. For instance consider a scenario where you have a set of components, each of which dynamically imports a set of translated strings, i.e.</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// Inside the &quot;foo&quot; component</span>
+
+<span class="token keyword">function</span> <span class="token function">getTranslatedStrings</span><span class="token punctuation">(</span><span class="token parameter">currentLanguage</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>currentLanguage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token string">&apos;en&apos;</span><span class="token punctuation">:</span> <span class="token keyword">return</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;./foo.strings.en.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token string">&apos;de&apos;</span><span class="token punctuation">:</span> <span class="token keyword">return</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;./foo.strings.de.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>If a lot of such components are used together, this will result in a lot of dynamic imports of very small chunks: Even though we known that all language files of the same language that are imported by the same chunk will always be used together, Rollup does not have this information.</p>
+<p>The following code will merge all files of the same language that are only used by a single entry point:</p>
+<pre class="language-"><code class="lang-js"><span class="token function">manualChunks</span><span class="token punctuation">(</span><span class="token parameter">id<span class="token punctuation">,</span> <span class="token punctuation">{</span> getModuleInfo <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> match <span class="token operator">=</span> <span class="token regex">/.*\.strings\.(\w+)\.js/</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>match<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> language <span class="token operator">=</span> match<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// e.g. &quot;en&quot;</span>
+    <span class="token keyword">const</span> dependentEntryPoints <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// we use a Set here so we handle each module at most once. This</span>
+    <span class="token comment">// prevents infinite loops in case of circular dependencies</span>
+    <span class="token keyword">const</span> idsToHandle <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token function">getModuleInfo</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">.</span>dynamicImporters<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> moduleId <span class="token keyword">of</span> idsToHandle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> isEntry<span class="token punctuation">,</span> dynamicImporters<span class="token punctuation">,</span> importers <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">getModuleInfo</span><span class="token punctuation">(</span>moduleId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>isEntry <span class="token operator">||</span> dynamicImporters<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> dependentEntryPoints<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>moduleId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// The Set iterator is intelligent enough to iterate over elements that</span>
+      <span class="token comment">// are added during iteration</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> importerId <span class="token keyword">of</span> importers<span class="token punctuation">)</span> idsToHandle<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>importerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// If there is a unique entry, we put it into into a chunk based on the entry name</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>dependentEntryPoints<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>dependentEntryPoints<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">&apos;/&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">&apos;.&apos;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.strings.</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>language<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// For multiple entries, we put it into a &quot;shared&quot; chunk</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>dependentEntryPoints<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">shared.strings.</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>language<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="outputminifyinternalexports">output.minifyInternalExports</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--minifyInternalExports</code>/<code>--no-minifyInternalExports</code><br>
+Default: <code>true</code> for formats <code>es</code> and <code>system</code> or if <code>output.compact</code> is <code>true</code>, <code>false</code> otherwise</p>
+<p>By default for formats <code>es</code> and <code>system</code> or if <code>output.compact</code> is <code>true</code>, Rollup will try to export internal variables as single letter variables to allow for better minification.</p>
+<p><strong>Example</strong><br>
+Input:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// main.js</span>
+<span class="token keyword">import</span> <span class="token string">&apos;./lib.js&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// lib.js</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;./dynamic.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+
+<span class="token comment">// dynamic.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>value<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./lib.js&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Output with <code>output.minifyInternalExports: true</code>:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// main.js</span>
+<span class="token keyword">import</span> <span class="token string">&apos;./main-5532def0.js&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// main-5532def0.js</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;./dynamic-402de2f0.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> importantValue <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token punctuation">{</span> importantValue <span class="token keyword">as</span> i <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// dynamic-402de2f0.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> i <span class="token keyword">as</span> importantValue <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./main-5532def0.js&apos;</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>importantValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Output with <code>output.minifyInternalExports: false</code>:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// main.js</span>
+<span class="token keyword">import</span> <span class="token string">&apos;./main-5532def0.js&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// main-5532def0.js</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;./dynamic-402de2f0.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> importantValue <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token punctuation">{</span> importantValue <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// dynamic-402de2f0.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> importantValue <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./main-5532def0.js&apos;</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>importantValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Even though it appears that setting this option to <code>true</code> makes the output larger, it actually makes it smaller if a minifier is used. In this case, <code>export { importantValue as i }</code> can become e.g. <code>export{a as i}</code> or even <code>export{i}</code>, while otherwise it would produce <code>export{ a as importantValue }</code> because a minifier usually will not change export signatures.</p>
+<h4 id="outputpaths">output.paths</h4>
+<p>Type: <code>{ [id: string]: string } | ((id: string) =&gt; string)</code></p>
+<p>Maps external module IDs to paths. External ids are ids that <a href="guide/en#warning-treating-module-as-external-dependency">cannot be resolved</a> or ids explicitly provided by the <a href="guide/en#external"><code>external</code></a> option. Paths supplied by <code>output.paths</code> will be used in the generated bundle instead of the module ID, allowing you to, for example, load dependencies from a CDN:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// app.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> selectAll <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;d3&apos;</span><span class="token punctuation">;</span>
+<span class="token function">selectAll</span><span class="token punctuation">(</span><span class="token string">&apos;p&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">style</span><span class="token punctuation">(</span><span class="token string">&apos;color&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;purple&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// ...</span>
+
+<span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token string">&apos;app.js&apos;</span><span class="token punctuation">,</span>
+  external<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;d3&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;amd&apos;</span><span class="token punctuation">,</span>
+    paths<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      d3<span class="token punctuation">:</span> <span class="token string">&apos;https://d3js.org/d3.v4.min&apos;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// bundle.js</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&apos;https://d3js.org/d3.v4.min&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">d3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  d3<span class="token punctuation">.</span><span class="token function">selectAll</span><span class="token punctuation">(</span><span class="token string">&apos;p&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">style</span><span class="token punctuation">(</span><span class="token string">&apos;color&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;purple&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// ...</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="outputpreservemodules">output.preserveModules</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--preserveModules</code>/<code>--no-preserveModules</code><br>
+Default: <code>false</code></p>
+<p>Instead of creating as few chunks as possible, this mode will create separate chunks for all modules using the original module names as file names. Requires the <a href="guide/en#outputdir"><code>output.dir</code></a> option. Tree-shaking will still be applied, suppressing files that are not used by the provided entry points or do not have side effects when executed. This mode can be used to transform a file structure to a different module format.</p>
+<p>Note that when transforming to <code>cjs</code> or <code>amd</code> format, each file will by default be treated as an entry point with <a href="guide/en#outputexports"><code>output.exports</code></a> set to <code>auto</code>. This means that e.g. for <code>cjs</code>, a file that only contains a default export will be rendered as</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// input main.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token number">42</span><span class="token punctuation">;</span>
+
+<span class="token comment">// output main.js</span>
+<span class="token string">&apos;use strict&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> main <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> main<span class="token punctuation">;</span>
+</code></pre>
+<p>assigning the value directly to <code>module.exports</code>. If someone imports this file, they will get access to the default export via</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">const</span> main <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;./main.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>main<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 42</span>
+</code></pre>
+<p>As with regular entry points, files that mix default and named exports will produce warnings. You can avoid the warnings by forcing all files to use named export mode via <code>output.exports: &quot;named&quot;</code>. In that case, the default export needs to be accessed via the <code>.default</code> property of the export:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// input main.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token number">42</span><span class="token punctuation">;</span>
+
+<span class="token comment">// output main.js</span>
+<span class="token string">&apos;use strict&apos;</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> <span class="token string">&apos;__esModule&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> main <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+
+exports<span class="token punctuation">.</span>default <span class="token operator">=</span> main<span class="token punctuation">;</span>
+
+<span class="token comment">// consuming file</span>
+<span class="token keyword">const</span> main <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;./main.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>main<span class="token punctuation">.</span>default<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 42</span>
+</code></pre>
+<h4 id="outputpreservemodulesroot">output.preserveModulesRoot</h4>
+<p>Type: <code>string</code><br>
+CLI: <code>--preserveModulesRoot <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory-name</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>A directory path to input modules that should be stripped away from <a href="guide/en#outputdir"><code>output.dir</code></a> path while <a href="guide/en#outputpreservemodules"><code>output.preserveModules</code></a> is <code>true</code>.</p>
+<p>For example, given the following configuration:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">&apos;src/module.js&apos;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">src/another/module.js</span><span class="token template-punctuation string">`</span></span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;es&apos;</span><span class="token punctuation">,</span>
+    dir<span class="token punctuation">:</span> <span class="token string">&apos;dist&apos;</span><span class="token punctuation">,</span>
+    preserveModules<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    preserveModulesRoot<span class="token punctuation">:</span> <span class="token string">&apos;src&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The <code>preserveModulesRoot</code> setting ensures that the input modules will be output to the paths <code>dist/module.js</code> and <code>dist/another/module.js</code>.</p>
+<p>This option is particularly useful while using plugins such as <code>@rollup/plugin-node-resolve</code>, which may cause changes in the output directory structure. This can happen when third-party modules are not marked <a href="guide/en#external"><code>external</code></a>, or while developing in a monorepo of multiple packages that rely on one another and are not marked <a href="guide/en#external"><code>external</code></a>.</p>
+<h4 id="outputsourcemap">output.sourcemap</h4>
+<p>Type: <code>boolean | &apos;inline&apos; | &apos;hidden&apos;</code><br>
+CLI: <code>-m</code>/<code>--sourcemap</code>/<code>--no-sourcemap</code><br>
+Default: <code>false</code></p>
+<p>If <code>true</code>, a separate sourcemap file will be created. If <code>&quot;inline&quot;</code>, the sourcemap will be appended to the resulting <code>output</code> file as a data URI. <code>&quot;hidden&quot;</code> works like <code>true</code> except that the corresponding sourcemap comments in the bundled files are suppressed.</p>
+<h4 id="outputsourcemapexcludesources">output.sourcemapExcludeSources</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--sourcemapExcludeSources</code>/<code>--no-sourcemapExcludeSources</code><br>
+Default: <code>false</code></p>
+<p>If <code>true</code>, the actual code of the sources will not be added to the sourcemaps making them considerably smaller.</p>
+<h4 id="outputsourcemapfile">output.sourcemapFile</h4>
+<p>Type: <code>string</code><br>
+CLI: <code>--sourcemapFile <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file-name-with-path</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>The location of the generated bundle. If this is an absolute path, all the <code>sources</code> paths in the sourcemap will be relative to it. The <code>map.file</code> property is the basename of <code>sourcemapFile</code>, as the location of the sourcemap is assumed to be adjacent to the bundle.</p>
+<p><code>sourcemapFile</code> is not required if <code>output</code> is specified, in which case an output filename will be inferred by adding &quot;.map&quot;  to the output filename for the bundle.</p>
+<h4 id="outputsourcemappathtransform">output.sourcemapPathTransform</h4>
+<p>Type: <code>(relativeSourcePath: string, sourcemapPath: string) =&gt; string</code></p>
+<p>A transformation to apply to each path in a sourcemap. <code>relativeSourcePath</code> is a relative path from the generated <code>.map</code> file to the corresponding source file while <code>sourcemapPath</code> is the fully resolved path of the generated sourcemap file.</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">&apos;path&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  input<span class="token punctuation">:</span> <span class="token string">&apos;src/main&apos;</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">sourcemapPathTransform</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">relativeSourcePath<span class="token punctuation">,</span> sourcemapPath</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// will replace relative paths with absolute paths</span>
+      <span class="token keyword">return</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">dirname</span><span class="token punctuation">(</span>sourcemapPath<span class="token punctuation">)</span><span class="token punctuation">,</span> relativeSourcePath<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    format<span class="token punctuation">:</span> <span class="token string">&apos;es&apos;</span><span class="token punctuation">,</span>
+    sourcemap<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="outputvalidate">output.validate</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--validate</code>/<code>--no-validate</code><br>
+Default: <code>false</code></p>
+<p>Re-parses each generated chunk to detect if the generated code is valid JavaScript. This can be useful to debug output generated by plugins that use the <a href="guide/en#renderchunk"><code>renderChunk</code></a> hook to transform code.</p>
+<p>If the code is invalid, a warning will be issued. Note that no error is thrown so that you can still inspect the generated output. To promote this warning to an error, you can watch for it in an <a href="guide/en#onwarn"><code>onwarn</code></a> handler.</p>
+<h4 id="preserveentrysignatures">preserveEntrySignatures</h4>
+<p>Type: <code>&quot;strict&quot; | &quot;allow-extension&quot; | &quot;exports-only&quot; | false</code><br>
+CLI: <code>--preserveEntrySignatures <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strict|allow-extension</span><span class="token punctuation">&gt;</span></span></code>/<code>--no-preserveEntrySignatures</code><br>
+Default: <code>&quot;strict&quot;</code></p>
+<p>Controls if Rollup tries to ensure that entry chunks have the same exports as the underlying entry module.</p>
+<ul>
+<li>If set to <code>&quot;strict&quot;</code>, Rollup will create exactly the same exports in the entry chunk as there are in the corresponding entry module. If this is not possible because additional internal exports need to be added to a chunk, Rollup will instead create a &quot;facade&quot; entry chunk that reexports just the necessary bindings from other chunks but contains no code otherwise. This is the recommended setting for libraries.</li>
+<li><code>&quot;allow-extension&quot;</code> will create all exports of the entry module in the entry chunk but may also add additional exports if necessary, avoiding a &quot;facade&quot; entry chunk. This setting makes sense for libraries where a strict signature is not required.</li>
+<li><code>&quot;exports-only&quot;</code> behaves like <code>&quot;strict&quot;</code> if the entry module has exports, otherwise it behaves like <code>&quot;allow-extension&quot;</code>.</li>
+<li><code>false</code> will not add any exports of an entry module to the corresponding chunk and does not even include the corresponding code unless those exports are used elsewhere in the bundle. Internal exports may be added to entry chunks, though. This is the recommended setting for web apps where the entry chunks are to be placed in script tags as it may reduce both the number of chunks and possibly the bundle size.</li>
+</ul>
+<p><strong>Example</strong><br>
+Input:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// main.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> shared <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./lib.js&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">value: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>shared<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;./dynamic.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// lib.js</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> shared <span class="token operator">=</span> <span class="token string">&apos;shared&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// dynamic.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> shared <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./lib.js&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>shared<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Output for <code>preserveEntrySignatures: &quot;strict&quot;</code>:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// main.js</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> v <span class="token keyword">as</span> value <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./main-50a71bb6.js&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// main-50a71bb6.js</span>
+<span class="token keyword">const</span> shared <span class="token operator">=</span> <span class="token string">&apos;shared&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">value: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>shared<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;./dynamic-cd23645f.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token punctuation">{</span> shared <span class="token keyword">as</span> s<span class="token punctuation">,</span> value <span class="token keyword">as</span> v <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// dynamic-cd23645f.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> s <span class="token keyword">as</span> shared <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./main-50a71bb6.js&apos;</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>shared<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Output for <code>preserveEntrySignatures: &quot;allow-extension&quot;</code>:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// main.js</span>
+<span class="token keyword">const</span> shared <span class="token operator">=</span> <span class="token string">&apos;shared&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">value: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>shared<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;./dynamic-298476ec.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token punctuation">{</span> shared <span class="token keyword">as</span> s<span class="token punctuation">,</span> value <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// dynamic-298476ec.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> s <span class="token keyword">as</span> shared <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./main.js&apos;</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>shared<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Output for <code>preserveEntrySignatures: false</code>:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// main.js</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;./dynamic-39821cef.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// dynamic-39821cef.js</span>
+<span class="token keyword">const</span> shared <span class="token operator">=</span> <span class="token string">&apos;shared&apos;</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>shared<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>At the moment, the only way to override this setting for individual entry chunks is to use the plugin API and emit those chunks via <a href="guide/en#thisemitfileemittedfile-emittedchunk--emittedasset--string"><code>this.emitFile</code></a> instead of using the <a href="guide/en#input"><code>input</code></a> option.</p>
+<h4 id="strictdeprecations">strictDeprecations</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--strictDeprecations</code>/<code>--no-strictDeprecations</code><br>
+Default: <code>false</code></p>
+<p>When this flag is enabled, Rollup will throw an error instead of showing a warning when a deprecated feature is used. Furthermore, features that are marked to receive a deprecation warning with the next major version will also throw an error when used.</p>
+<p>This flag is intended to be used by e.g. plugin authors to be able to adjust their plugins for upcoming major releases as early as possible.</p>
+<h3 id="danger-zone">Danger zone</h3>
+<p>You probably don&apos;t need to use these options unless you know what you are doing!</p>
+<h4 id="acorn">acorn</h4>
+<p>Type: <code>AcornOptions</code></p>
+<p>Any options that should be passed through to Acorn&apos;s <code>parse</code> function, such as <code>allowReserved: true</code>. Cf. the <a href="https://github.com/acornjs/acorn/tree/master/acorn#interface" target="_blank">Acorn documentation</a> for more available options.</p>
+<h4 id="acorninjectplugins">acornInjectPlugins</h4>
+<p>Type: <code>AcornPluginFunction | AcornPluginFunction[]</code></p>
+<p>A single plugin or an array of plugins to be injected into Acorn. For instance to use JSX syntax, you can specify</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">import</span> jsx <span class="token keyword">from</span> <span class="token string">&apos;acorn-jsx&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x2026; other options &#x2026;</span>
+    acornInjectPlugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token function">jsx</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>in your rollup configuration. Note that this is different from using Babel in that the generated output will still contain JSX while Babel will replace it with valid JavaScript.</p>
+<h4 id="context">context</h4>
+<p>Type: <code>string</code><br>
+CLI: <code>--context <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>contextVariable</span><span class="token punctuation">&gt;</span></span></code><br>
+Default: <code>undefined</code></p>
+<p>By default, the context of a module &#x2013; i.e., the value of <code>this</code> at the top level &#x2013; is <code>undefined</code>. In rare cases you might need to change this to something else, like <code>&apos;window&apos;</code>.</p>
+<h4 id="modulecontext">moduleContext</h4>
+<p>Type: <code>((id: string) =&gt; string) | { [id: string]: string }</code><br></p>
+<p>Same as <a href="guide/en#context"><code>context</code></a>, but per-module &#x2013; can either be an object of <code>id: context</code> pairs, or an <code>id =&gt; context</code> function.</p>
+<h4 id="outputamd">output.amd</h4>
+<p>Type: <code>{ id?: string, autoId?: boolean, basePath?: string, define?: string }</code></p>
+<p>Note <code>id</code> can only be used for single-file builds, and cannot be combined with <code>autoId</code>/<code>basePath</code>.</p>
+<p><strong>output.amd.id</strong><br>
+Type: <code>string</code><br>
+CLI: <code>--amd.id <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>amdId</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>An ID to use for AMD/UMD bundles:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  format<span class="token punctuation">:</span> <span class="token string">&apos;amd&apos;</span><span class="token punctuation">,</span>
+  amd<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    id<span class="token punctuation">:</span> <span class="token string">&apos;my-bundle&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// -&gt; define(&apos;my-bundle&apos;, [&apos;dependency&apos;], ...</span>
+</code></pre>
+<p><strong>output.amd.autoId</strong><br>
+Type: <code>boolean</code><br>
+CLI: <code>--amd.autoId</code></p>
+<p>Set the ID to the chunk ID (with the &apos;.js&apos; extension removed).</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  format<span class="token punctuation">:</span> <span class="token string">&apos;amd&apos;</span><span class="token punctuation">,</span>
+  amd<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    autoId<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// -&gt; define(&apos;main&apos;, [&apos;dependency&apos;], ...</span>
+<span class="token comment">// -&gt; define(&apos;dynamic-chunk&apos;, [&apos;dependency&apos;], ...</span>
+</code></pre>
+<p><strong>output.amd.basePath</strong><br>
+Type: <code>string</code><br>
+CLI: <code>--amd.basePath</code></p>
+<p>The path that will be prepended to the auto generated ID. This is useful if the build is going to be placed inside another AMD project, and is not at the root.</p>
+<p>Only valid with <code>output.amd.autoId</code>.</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  format<span class="token punctuation">:</span> <span class="token string">&apos;amd&apos;</span><span class="token punctuation">,</span>
+  amd<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    autoId<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    basePath<span class="token punctuation">:</span> <span class="token string">&apos;some/where&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// -&gt; define(&apos;some/where/main&apos;, [&apos;dependency&apos;], ...</span>
+<span class="token comment">// -&gt; define(&apos;some/where/dynamic-chunk&apos;, [&apos;dependency&apos;], ...</span>
+</code></pre>
+<p><strong>output.amd.define</strong><br>
+Type: <code>string</code><br>
+CLI: <code>--amd.define <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>defineFunctionName</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>A function name to use instead of <code>define</code>:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  format<span class="token punctuation">:</span> <span class="token string">&apos;amd&apos;</span><span class="token punctuation">,</span>
+  amd<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    define<span class="token punctuation">:</span> <span class="token string">&apos;def&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// -&gt; def([&apos;dependency&apos;],...</span>
+</code></pre>
+<h4 id="outputesmodule">output.esModule</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--esModule</code>/<code>--no-esModule</code><br>
+Default: <code>true</code></p>
+<p>Whether to add a <code>__esModule: true</code> property when generating exports for non-ES formats. This property signifies that the exported value is the namespace of an ES module and that the default export of this module corresponds to the <code>.default</code> property of the exported object. By default, Rollup adds this property when using <a href="guide/en#outputexports">named exports mode</a> for a chunk. See also <a href="https://rollupjs.org/guide/en/#outputinterop" target="_blank"><code>output.interop</code></a>.</p>
+<h4 id="outputexports">output.exports</h4>
+<p>Type: <code>string</code><br>
+CLI: <code>--exports <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exportMode</span><span class="token punctuation">&gt;</span></span></code><br>
+Default: <code>&apos;auto&apos;</code></p>
+<p>What export mode to use. Defaults to <code>auto</code>, which guesses your intentions based on what the <code>input</code> module exports:</p>
+<ul>
+<li><code>default</code> &#x2013; if you are only exporting one thing using <code>export default ...</code>; note that this can cause issues when generating CommonJS output that is meant to be interchangeable with ESM output, see below</li>
+<li><code>named</code> &#x2013; if you are using named exports</li>
+<li><code>none</code> &#x2013; if you are not exporting anything (e.g. you are building an app, not a library)</li>
+</ul>
+<p>As this is only an output transformation, you can only choose <code>default</code> if a default export is the only export for all entry chunks. Likewise, you can only choose <code>none</code> if there are no exports, otherwise Rollup will throw an error.</p>
+<p>The difference between <code>default</code> and <code>named</code> affects how other people can consume your bundle. If you use <code>default</code>, a CommonJS user could do this, for example:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// your-lib package entry</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token string">&quot;Hello world&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// a CommonJS consumer</span>
+<span class="token comment">/* require( &quot;your-lib&quot; ) returns &quot;Hello World&quot; */</span>
+<span class="token keyword">const</span> hello <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span> <span class="token string">&quot;your-lib&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>With <code>named</code>, a user would do this instead:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// your-lib package entry</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> hello <span class="token operator">=</span> <span class="token string">&quot;Hello world&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// a CommonJS consumer</span>
+<span class="token comment">/* require( &quot;your-lib&quot; ) returns {hello: &quot;Hello World&quot;} */</span>
+<span class="token keyword">const</span> hello <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span> <span class="token string">&quot;your-lib&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">.</span>hello<span class="token punctuation">;</span>
+<span class="token comment">/* or using destructuring */</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span>hello<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span> <span class="token string">&quot;your-lib&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The wrinkle is that if you use <code>named</code> exports but <em>also</em> have a <code>default</code> export, a user would have to do something like this to use the default export:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// your-lib package entry</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token string">&quot;foo&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token string">&quot;bar&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// a CommonJS consumer</span>
+<span class="token comment">/* require( &quot;your-lib&quot; ) returns {default: &quot;foo&quot;, bar: &quot;bar&quot;} */</span>
+<span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span> <span class="token string">&quot;your-lib&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">.</span>default<span class="token punctuation">;</span>
+<span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span> <span class="token string">&quot;your-lib&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">.</span>bar<span class="token punctuation">;</span>
+<span class="token comment">/* or using destructuring */</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span><span class="token keyword">default</span><span class="token punctuation">:</span> foo<span class="token punctuation">,</span> bar<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span> <span class="token string">&quot;your-lib&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Note: There are some tools such as Babel, TypeScript, Webpack, and <code>@rollup/plugin-commonjs</code> that are capable of resolving a CommonJS <code>require(...)</code> call with an ES module. If you are generating CommonJS output that is meant to be interchangeable with ESM output for those tools, you should always use <code>named</code> export mode. The reason is that most of those tools will by default return the namespace of an ES module on <code>require</code> where the default export is the <code>.default</code> property.</p>
+<p>In other words for those tools, you cannot create a package interface where <code>const lib = require(&quot;your-lib&quot;)</code> yields the same as <code>import lib from &quot;your-lib&quot;</code>. With named export mode however, <code>const {lib} = require(&quot;your-lib&quot;)</code> will be equivalent to <code>import {lib} from &quot;your-lib&quot;</code>.</p>
+<p>To alert you to this, Rollup will generate a warning when you encounter such a situation and did not select an explicit value for <code>output.exports</code>.</p>
+<h4 id="outputexternallivebindings">output.externalLiveBindings</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--externalLiveBindings</code>/<code>--no-externalLiveBindings</code><br>
+Default: <code>true</code></p>
+<p>When set to <code>false</code>, Rollup will not generate code to support live bindings for external imports but instead assume that exports do not change over time. This will enable Rollup to generate more optimized code. Note that this can cause issues when there are circular dependencies involving an external dependency.</p>
+<p>This will avoid most cases where Rollup generates getters in the code and can therefore be used to make code IE8 compatible in many cases.</p>
+<p>Example:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// input</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span>x<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;external&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// CJS output with externalLiveBindings: true</span>
+<span class="token string">&apos;use strict&apos;</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> <span class="token string">&apos;__esModule&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> external <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;external&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> <span class="token string">&apos;x&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    enumerable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">get</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> external<span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// CJS output with externalLiveBindings: false</span>
+<span class="token string">&apos;use strict&apos;</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> <span class="token string">&apos;__esModule&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> external <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;external&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+exports<span class="token punctuation">.</span>x <span class="token operator">=</span> external<span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+</code></pre>
+<h4 id="outputfreeze">output.freeze</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--freeze</code>/<code>--no-freeze</code><br>
+Default: <code>true</code></p>
+<p>Whether to <code>Object.freeze()</code> namespace import objects (i.e. <code>import * as namespaceImportObject from...</code>) that are accessed dynamically.</p>
+<h4 id="outputindent">output.indent</h4>
+<p>Type: <code>boolean | string</code><br>
+CLI: <code>--indent</code>/<code>--no-indent</code><br>
+Default: <code>true</code></p>
+<p>The indent string to use, for formats that require code to be indented (<code>amd</code>, <code>iife</code>, <code>umd</code>, <code>system</code>). Can also be <code>false</code> (no indent), or <code>true</code> (the default &#x2013; auto-indent)</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+    indent<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="outputnamespacetostringtag">output.namespaceToStringTag</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--namespaceToStringTag</code>/<code>--no-namespaceToStringTag</code><br>
+Default: <code>false</code></p>
+<p>Whether to add spec compliant <code>.toString()</code> tags to namespace objects. If this option is set,</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> namespace <span class="token keyword">from</span> <span class="token string">&apos;./file.js&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">String</span><span class="token punctuation">(</span>namespace<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>will always log <code>[object Module]</code>;</p>
+<h4 id="outputnoconflict">output.noConflict</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--noConflict</code>/<code>--no-noConflict</code><br>
+Default: <code>false</code></p>
+<p>This will generate an additional <code>noConflict</code> export to UMD bundles. When called in an IIFE scenario, this method will return the bundle exports while restoring the corresponding global variable to its previous value.</p>
+<h4 id="outputpreferconst">output.preferConst</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--preferConst</code>/<code>--no-preferConst</code><br>
+Default: <code>false</code></p>
+<p>Generate <code>const</code> declarations for exports rather than <code>var</code> declarations.</p>
+<h4 id="outputsanitizefilename">output.sanitizeFileName</h4>
+<p>Type: <code>boolean | (string) =&gt; string</code><br>
+CLI: <code>--sanitizeFileName</code>/<code>no-sanitizeFileName</code>
+Default: <code>true</code></p>
+<p>Set to <code>false</code> to disable all chunk name sanitizations (removal of <code>\0</code>, <code>?</code> and <code>*</code> characters).</p>
+<p>Alternatively set to a function to allow custom chunk name sanitization.</p>
+<h4 id="outputstrict">output.strict</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--strict</code>/<code>--no-strict</code><br>
+Default: <code>true</code></p>
+<p>Whether to include the &apos;use strict&apos; pragma at the top of generated non-ES bundles. Strictly speaking, ES modules are <em>always</em> in strict mode, so you shouldn&apos;t disable this without good reason.</p>
+<h4 id="outputsystemnullsetters">output.systemNullSetters</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--systemNullSetters</code>/<code>--no-systemNullSetters</code><br>
+Default: <code>false</code></p>
+<p>When outputting the <code>system</code> module format, this will replace empty setter functions with <code>null</code> as an output simplification. This is <em>only supported in SystemJS 6.3.3 and above</em>.</p>
+<h4 id="preservesymlinks">preserveSymlinks</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--preserveSymlinks</code><br>
+Default: <code>false</code></p>
+<p>When set to <code>false</code>, symbolic links are followed when resolving a file. When set to <code>true</code>, instead of being followed, symbolic links are treated as if the file is where the link is. To illustrate, consider the following situation:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// /main.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>x<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./linked.js&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// /linked.js</span>
+<span class="token comment">// this is a symbolic link to /nested/file.js</span>
+
+<span class="token comment">// /nested/file.js</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span>x<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./dep.js&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// /dep.js</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> x <span class="token operator">=</span> <span class="token string">&apos;next to linked&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// /nested/dep.js</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> x <span class="token operator">=</span> <span class="token string">&apos;next to original&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If <code>preserveSymlinks</code> is <code>false</code>, then the bundle created from <code>/main.js</code> will log &quot;next to original&quot; as it will use the location of the symbolically linked file to resolve its dependencies. If <code>preserveSymlinks</code> is <code>true</code>, however, it will log &quot;next to linked&quot; as the symbolic link will not be resolved.</p>
+<h4 id="shimmissingexports">shimMissingExports</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--shimMissingExports</code>/<code>--no-shimMissingExports</code><br>
+Default: <code>false</code></p>
+<p>If this option is provided, bundling will not fail if bindings are imported from a file that does not define these bindings. Instead, new variables will be created for these bindings with the value <code>undefined</code>.</p>
+<h4 id="treeshake">treeshake</h4>
+<p>Type: <code>boolean | { annotations?: boolean, moduleSideEffects?: ModuleSideEffectsOption, propertyReadSideEffects?: boolean | &apos;always&apos;, tryCatchDeoptimization?: boolean, unknownGlobalSideEffects?: boolean }</code><br>
+CLI: <code>--treeshake</code>/<code>--no-treeshake</code><br>
+Default: <code>true</code></p>
+<p>Whether to apply tree-shaking and to fine-tune the tree-shaking process. Setting this option to <code>false</code> will produce bigger bundles but may improve build performance. If you discover a bug caused by the tree-shaking algorithm, please file an issue!
+Setting this option to an object implies tree-shaking is enabled and grants the following additional options:</p>
+<p><strong>treeshake.annotations</strong><br>
+Type: <code>boolean</code><br>
+CLI: <code>--treeshake.annotations</code>/<code>--no-treeshake.annotations</code><br>
+Default: <code>true</code></p>
+<p>If <code>false</code>, ignore hints from pure annotations, i.e. comments containing <code>@__PURE__</code> or <code>#__PURE__</code>, when determining side effects of function calls and constructor invocations. These annotations need to immediately precede the call invocation to take effect. The following code will be completely removed unless this option is set to <code>false</code>, in which case it will remain unchanged.</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">/*@__PURE__*/</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;side-effect&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Impure</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;side-effect&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*@__PURE__*/</span><span class="token keyword">new</span> <span class="token class-name">Impure</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>treeshake.moduleSideEffects</strong><br>
+Type: <code>boolean | &quot;no-external&quot; | string[] | (id: string, external: boolean) =&gt; boolean</code><br>
+CLI: <code>--treeshake.moduleSideEffects</code>/<code>--no-treeshake.moduleSideEffects</code>/<code>--treeshake.moduleSideEffects no-external</code><br>
+Default: <code>true</code></p>
+<p>If <code>false</code>, assume modules and external dependencies from which nothing is imported do not have other side effects like mutating global variables or logging without checking. For external dependencies, this will suppress empty imports:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// input file</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>unused<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;external-a&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&apos;external-b&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// output with treeshake.moduleSideEffects === true</span>
+<span class="token keyword">import</span> <span class="token string">&apos;external-a&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&apos;external-b&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// output with treeshake.moduleSideEffects === false</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>For non-external modules, <code>false</code> will not include any statements from a module unless at least one import from this module is included:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// input file a.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>unused<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./b.js&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// input file b.js</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;side-effect&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> ignored <span class="token operator">=</span> <span class="token string">&apos;will still be removed&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// output with treeshake.moduleSideEffects === true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;side-effect&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// output with treeshake.moduleSideEffects === false</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>You can also supply a list of modules with side effects or a function to determine it for each module individually. The value <code>&quot;no-external&quot;</code> will only remove external imports if possible and is equivalent to the function <code>(id, external) =&gt; !external</code>;</p>
+<p>If a module that has this flag set to <code>false</code> reexports a variable from another module and this variable is used, the question if the reexporting module is scanned for side effects depends on how the variable is reexported:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// input file a.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>foo<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./b.js&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// input file b.js</span>
+<span class="token comment">// direct reexports will ignore side effects</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span>foo<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./c.js&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;this side-effect is ignored&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// input file c.js</span>
+<span class="token comment">// indirect reexports will include side effects</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>foo<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./d.js&apos;</span><span class="token punctuation">;</span>
+foo<span class="token punctuation">.</span>mutated <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;this side-effect and the mutation are retained&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span>foo<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// input file d.js</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// output with treeshake.moduleSideEffects === false</span>
+<span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+
+foo<span class="token punctuation">.</span>mutated <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;this side-effect and the mutation are retained&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Note that despite the name, this option does not &quot;add&quot; side effects to modules that do not have side effects. If it is important that e.g. an empty module is &quot;included&quot; in the bundle because you need this for dependency tracking, the plugin interface allows you to designate modules as being excluded from tree-shaking via the <a href="guide/en#resolveid"><code>resolveId</code></a>, <a href="guide/en#load"><code>load</code></a> or <a href="guide/en#transform"><code>transform</code></a> hook.</p>
+<p><strong>treeshake.propertyReadSideEffects</strong><br>
+Type: <code>boolean | &apos;always&apos;</code><br>
+CLI: <code>--treeshake.propertyReadSideEffects</code>/<code>--no-treeshake.propertyReadSideEffects</code><br>
+Default: <code>true</code></p>
+<p>If <code>true</code>, retain unused property reads that Rollup can determine to have side-effects. This includes accessing properties of <code>null</code> or <code>undefined</code> or triggering explicit getters via property access. Note that this does not cover destructuring assignment or getters on objects passed as function parameters.</p>
+<p>If <code>false</code>, assume reading a property of an object never has side effects. Depending on your code, disabling this option can significantly reduce bundle size but can potentially break functionality if you rely on getters or errors from illegal property access.</p>
+<p>If <code>&apos;always&apos;</code>, assume all member property accesses, including destructuring, have side effects. This setting is recommended for code relying on getters with side effects. It typically results in larger bundle size, but smaller than disabling <code>treeshake</code> altogether.</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// Will be removed if treeshake.propertyReadSideEffects === false</span>
+<span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">get</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;effect&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token string">&apos;bar&apos;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> result <span class="token operator">=</span> foo<span class="token punctuation">.</span>bar<span class="token punctuation">;</span>
+<span class="token keyword">const</span> illegalAccess <span class="token operator">=</span> foo<span class="token punctuation">.</span>quux<span class="token punctuation">.</span>tooDeep<span class="token punctuation">;</span>
+</code></pre>
+<p><strong>treeshake.tryCatchDeoptimization</strong><br>
+Type: <code>boolean</code><br>
+CLI: <code>--treeshake.tryCatchDeoptimization</code>/<code>--no-treeshake.tryCatchDeoptimization</code><br>
+Default: <code>true</code></p>
+<p>By default, Rollup assumes that many builtin globals of the runtime behave according to the latest specs when tree-shaking and do not throw unexpected errors. In order to support e.g. feature detection workflows that rely on those errors being thrown, Rollup will by default deactivate tree-shaking inside try-statements. If a function parameter is called from within a try-statement, this parameter will be deoptimized as well. Set <code>treeshake.tryCatchDeoptimization</code> to <code>false</code> if you do not need this feature and want to have tree-shaking inside try-statements.</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">function</span> <span class="token function">otherFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// even though this function is called from a try-statement, the next line</span>
+  <span class="token comment">// will be removed as side-effect-free</span>
+  Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token parameter">callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token comment">// calls to otherwise side-effect-free global functions are retained</span>
+      <span class="token comment">// inside try-statements for tryCatchDeoptimization: true</span>
+    Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// calls to other function are retained as well but the body of this</span>
+      <span class="token comment">// function may again be subject to tree-shaking</span>
+    <span class="token function">otherFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// if a parameter is called, then all arguments passed to that function</span>
+    <span class="token comment">// parameter will be deoptimized</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// will be ratained</span>
+  Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// call will be retained but again, otherFn is not deoptimized</span>
+<span class="token function">test</span><span class="token punctuation">(</span>otherFn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>treeshake.unknownGlobalSideEffects</strong><br>
+Type: <code>boolean</code><br>
+CLI: <code>--treeshake.unknownGlobalSideEffects</code>/<code>--no-treeshake.unknownGlobalSideEffects</code><br>
+Default: <code>true</code></p>
+<p>Since accessing a non-existing global variable will throw an error, Rollup does by default retain any accesses to non-builtin global variables. Set this option to <code>false</code> to avoid this check. This is probably safe for most code-bases.</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// input</span>
+<span class="token keyword">const</span> jQuery <span class="token operator">=</span> $<span class="token punctuation">;</span>
+<span class="token keyword">const</span> requestTimeout <span class="token operator">=</span> setTimeout<span class="token punctuation">;</span>
+<span class="token keyword">const</span> element <span class="token operator">=</span> angular<span class="token punctuation">.</span>element<span class="token punctuation">;</span>
+
+<span class="token comment">// output with unknownGlobalSideEffects == true</span>
+<span class="token keyword">const</span> jQuery <span class="token operator">=</span> $<span class="token punctuation">;</span>
+<span class="token keyword">const</span> element <span class="token operator">=</span> angular<span class="token punctuation">.</span>element<span class="token punctuation">;</span>
+
+<span class="token comment">// output with unknownGlobalSideEffects == false</span>
+<span class="token keyword">const</span> element <span class="token operator">=</span> angular<span class="token punctuation">.</span>element<span class="token punctuation">;</span>
+</code></pre>
+<p>In the example, the last line is always retained as accessing the <code>element</code> property could also throw an error if <code>angular</code> is e.g. <code>null</code>. To avoid this check, set <code>treeshake.propertyReadSideEffects</code> to <code>false</code> as well.</p>
+<h3 id="experimental-options">Experimental options</h3>
+<p>These options reflect new features that have not yet been fully finalized. Availability, behaviour and usage may therefore be subject to change between minor versions.</p>
+<h4 id="experimentalcacheexpiry">experimentalCacheExpiry</h4>
+<p>Type: <code>number</code><br>
+CLI: <code>--experimentalCacheExpiry <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>numberOfRuns</span><span class="token punctuation">&gt;</span></span></code><br>
+Default: <code>10</code></p>
+<p>Determines after how many runs cached assets that are no longer used by plugins should be removed.</p>
+<h4 id="perf">perf</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--perf</code>/<code>--no-perf</code><br>
+Default: <code>false</code></p>
+<p>Whether to collect performance timings. When used from the command line or a configuration file, detailed measurements about the current bundling process will be displayed. When used from the <a href="guide/en#javascript-api">JavaScript API</a>, the returned bundle object will contain an additional <code>getTimings()</code> function that can be called at any time to retrieve all accumulated measurements.</p>
+<p><code>getTimings()</code> returns an object of the following form:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;# BUILD&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token number">698.020877</span><span class="token punctuation">,</span> <span class="token number">33979632</span><span class="token punctuation">,</span> <span class="token number">45328080</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;## parse modules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token number">537.509342</span><span class="token punctuation">,</span> <span class="token number">16295024</span><span class="token punctuation">,</span> <span class="token number">27660296</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;load modules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token number">33.253778999999994</span><span class="token punctuation">,</span> <span class="token number">2277104</span><span class="token punctuation">,</span> <span class="token number">38204152</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  ...
+<span class="token punctuation">}</span>
+</code></pre>
+<p>For each key, the first number represents the elapsed time while the second represents the change in memory consumption, and the third represents the total memory consumption after this step. The order of these steps is the order used by <code>Object.keys</code>. Top level keys start with <code>#</code> and contain the timings of nested steps, i.e. in the example above, the 698ms of the <code># BUILD</code> step include the 538ms of the <code>## parse modules</code> step.</p>
+<h3 id="watch-options">Watch options</h3>
+<p>Type: <code>{ buildDelay?: number, chokidar?: ChokidarOptions, clearScreen?: boolean, exclude?: string, include?: string, skipWrite?: boolean } | false</code><br>
+Default: <code>{}</code><br></p>
+<p>Specify options for watch mode or prevent this configuration from being watched. Specifying <code>false</code> is only really useful when an array of configurations is used. In that case, this configuration will not be built or rebuilt on change in watch mode, but it will be built when running Rollup regularly:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    input<span class="token punctuation">:</span> <span class="token string">&apos;main.js&apos;</span><span class="token punctuation">,</span>
+    output<span class="token punctuation">:</span> <span class="token punctuation">{</span> file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.cjs.js&apos;</span><span class="token punctuation">,</span> format<span class="token punctuation">:</span> <span class="token string">&apos;cjs&apos;</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    input<span class="token punctuation">:</span> <span class="token string">&apos;main.js&apos;</span><span class="token punctuation">,</span>
+    watch<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    output<span class="token punctuation">:</span> <span class="token punctuation">{</span> file<span class="token punctuation">:</span> <span class="token string">&apos;bundle.es.js&apos;</span><span class="token punctuation">,</span> format<span class="token punctuation">:</span> <span class="token string">&apos;es&apos;</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<p>These options only take effect when running Rollup with the <code>--watch</code> flag, or using <code>rollup.watch</code>.</p>
+<h4 id="watchbuilddelay">watch.buildDelay</h4>
+<p>Type: <code>number</code><br>
+CLI: <code>--watch.buildDelay <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code><br>
+Default: <code>0</code></p>
+<p>Configures how long Rollup will wait for further changes until it triggers a rebuild in milliseconds. By default, Rollup does not wait but there is a small debounce timeout configured in the chokidar instance. Setting this to a value greater than <code>0</code> will mean that Rollup will only trigger a rebuild if there was no change for the configured number of milliseconds. If several configurations are watched, Rollup will use the largest configured build delay.</p>
+<h4 id="watchchokidar">watch.chokidar</h4>
+<p>Type: <code>ChokidarOptions</code><br></p>
+<p>An optional object of watch options that will be passed to the bundled <a href="https://github.com/paulmillr/chokidar" target="_blank">chokidar</a> instance. See the <a href="https://github.com/paulmillr/chokidar#api" target="_blank">chokidar documentation</a> to find out what options are available.</p>
+<h4 id="watchclearscreen">watch.clearScreen</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--watch.clearScreen</code>/<code>--no-watch.clearScreen</code><br>
+Default: <code>true</code></p>
+<p>Whether to clear the screen when a rebuild is triggered.</p>
+<h4 id="watchexclude">watch.exclude</h4>
+<p>Type: <code>string | RegExp | (string | RegExp)[]</code><br>
+CLI: <code>--watch.exclude <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>files</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Prevent files from being watched:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    exclude<span class="token punctuation">:</span> <span class="token string">&apos;node_modules/**&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="watchinclude">watch.include</h4>
+<p>Type: <code>string | RegExp | (string | RegExp)[]</code><br>
+CLI: <code>--watch.include <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>files</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Limit the file-watching to certain files. Note that this only filters the module graph but does not allow adding additional watch files:</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  watch<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    include<span class="token punctuation">:</span> <span class="token string">&apos;src/**&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="watchskipwrite">watch.skipWrite</h4>
+<p>Type: <code>boolean</code><br>
+CLI: <code>--watch.skipWrite</code>/<code>--no-watch.skipWrite</code><br>
+Default: <code>false</code></p>
+<p>Whether to skip the <code>bundle.write()</code> step when a rebuild is triggered.</p>
+<h3 id="deprecated-options">Deprecated options</h3>
+<p>&#x2622;&#xFE0F; These options have been deprecated and may be removed in a future Rollup version.</p>
+<h4 id="inlinedynamicimports">inlineDynamicImports</h4>
+<p><em>Use the <a href="guide/en#outputinlinedynamicimports"><code>output.inlineDynamicImports</code></a> output option instead, which has the same signature.</em></p>
+<h4 id="manualchunks">manualChunks</h4>
+<p><em>Use the <a href="guide/en#outputmanualchunks"><code>output.manualChunks</code></a> output option instead, which has the same signature.</em></p>
+<h4 id="preservemodules">preserveModules</h4>
+<p><em>Use the <a href="guide/en#outputpreservemodules"><code>output.preserveModules</code></a> output option instead, which has the same signature.</em></p>
+<h4 id="outputdynamicimportfunction">output.dynamicImportFunction</h4>
+<p><em>Use the <a href="guide/en#renderdynamicimport"><code>renderDynamicImport</code></a> plugin hook instead.</em><br>
+Type: <code>string</code><br>
+CLI: <code>--dynamicImportFunction <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span></code><br>
+Default: <code>import</code></p>
+<p>This will rename the dynamic import function to the chosen name when outputting ES bundles. This is useful for generating code that uses a dynamic import polyfill such as <a href="https://github.com/uupaa/dynamic-import-polyfill" target="_blank">this one</a>.</p>
+<h4 id="treeshakepureexternalmodules">treeshake.pureExternalModules</h4>
+<p><em>Use <a href="guide/en#treeshake"><code>treeshake.moduleSideEffects: &apos;no-external&apos;</code></a> instead.</em><br>
+Type: <code>boolean | string[] | (id: string) =&gt; boolean | null</code><br>
+CLI: <code>--treeshake.pureExternalModules</code>/<code>--no-treeshake.pureExternalModules</code><br>
+Default: <code>false</code></p>
+<p>If <code>true</code>, assume external dependencies from which nothing is imported do not have other side effects like mutating global variables or logging.</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// input file</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>unused<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;external-a&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&apos;external-b&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// output with treeshake.pureExternalModules === false</span>
+<span class="token keyword">import</span> <span class="token string">&apos;external-a&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&apos;external-b&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// output with treeshake.pureExternalModules === true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>You can also supply a list of external ids to be considered pure or a function that is called whenever an external import could be removed.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="08-troubleshooting.html" class="navigation navigation-prev " aria-label="Previous page: Troubleshooting">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="./" class="navigation navigation-next " aria-label="Next page: Introduction">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Big List Of Options","level":"1.9","depth":1,"next":{"title":"Introduction","level":"1.10","depth":1,"path":"README.md","ref":"README.md","articles":[]},"previous":{"title":"Troubleshooting","level":"1.8","depth":1,"path":"08-troubleshooting.md","ref":"08-troubleshooting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Rollup 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"999-big-list-of-options.md","mtime":"2021-05-16T01:16:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-16T01:16:38.048Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
